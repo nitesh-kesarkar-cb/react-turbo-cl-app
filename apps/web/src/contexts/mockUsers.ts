@@ -1,0 +1,96 @@
+import { hashPasswordSync } from "../utils/password";
+import type { User } from "./auth.types";
+
+export const mockUsers: User[] = [
+  {
+    id: "1",
+    username: "super-admin",
+    password: hashPasswordSync("super-admin"),
+    email: "super-admin@example.com",
+    name: "Super Admin",
+    role: "super_admin",
+    permissions: [
+      "users:create",
+      "users:read",
+      "users:update",
+      "users:delete",
+      "billing:view",
+      "reports:export",
+    ],
+    featureFlags: {
+      beta_dashboard: true,
+      new_payments: false,
+      singpass_login: false,
+    },
+  },
+  {
+    id: "2",
+    username: "patient",
+    password: hashPasswordSync("patient"),
+    email: "patient@example.com",
+    name: "Patient User",
+    role: "patient",
+    permissions: ["users:read"],
+    featureFlags: {
+      beta_dashboard: false,
+      new_payments: false,
+      singpass_login: false,
+    },
+  },
+  {
+    id: "3",
+    username: "facility-admin",
+    password: hashPasswordSync("facility-admin"),
+    email: "facility-admin@example.com",
+    name: "Facility Admin",
+    role: "facility_admin",
+    permissions: ["users:create", "users:read", "users:update"],
+    featureFlags: {
+      beta_dashboard: false,
+      new_payments: true,
+      singpass_login: false,
+    },
+  },
+  {
+    id: "4",
+    username: "department-admin",
+    password: hashPasswordSync("department-admin"),
+    email: "department-admin@example.com",
+    name: "Department Admin",
+    role: "department_admin",
+    permissions: ["users:read", "users:update", "reports:export"],
+    featureFlags: {
+      beta_dashboard: false,
+      new_payments: false,
+      singpass_login: false,
+    },
+  },
+  {
+    id: "5",
+    username: "org-admin",
+    password: hashPasswordSync("org-admin"),
+    email: "org-admin@example.com",
+    name: "Org Admin",
+    role: "org_admin",
+    permissions: ["users:create", "users:read", "users:update", "org:update"],
+    featureFlags: {
+      beta_dashboard: false,
+      new_payments: false,
+      singpass_login: false,
+    },
+  },
+  {
+    id: "6",
+    username: "doctor",
+    password: hashPasswordSync("doctor"),
+    email: "doctor@example.com",
+    name: "Doctor User",
+    role: "doctor",
+    permissions: ["users:read", "users:update"],
+    featureFlags: {
+      beta_dashboard: false,
+      new_payments: false,
+      singpass_login: true,
+    },
+  },
+];

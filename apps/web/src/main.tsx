@@ -1,26 +1,29 @@
-import React from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./style.css";
-import typescriptLogo from "/typescript.svg";
-import { Header, Counter } from "@repo/ui";
+import "./index.css";
+import { RouterApp } from "./routes/router";
+import { AuthProvider } from "./contexts/AuthContext";
+import { withSentryBoundary } from "./hoc/with-sentry-boundary";
+import './i18n';
 
-const App = () => (
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" className="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img
-        src={typescriptLogo}
-        className="logo vanilla"
-        alt="TypeScript logo"
-      />
-    </a>
-    <Header title="Web" />
-    <div className="card">
-      <Counter />
-    </div>
-  </div>
+// For TypeScript support
+// declare module "@tanstack/react-router" {
+//   interface Register {
+//     router: typeof router;
+//   }
+// }
+
+let MainComponent;  
+if (import.meta.env.VITE_SENTRY_DSN) {
+  MainComponent = withSentryBoundary(RouterApp);
+} else  {
+  MainComponent = RouterApp;
+}
+
+createRoot(document.getElementById("app")!).render(
+  <StrictMode>
+    <AuthProvider>
+      <MainComponent />
+    </AuthProvider>
+  </StrictMode>
 );
-
-createRoot(document.getElementById("app")!).render(<App />);
