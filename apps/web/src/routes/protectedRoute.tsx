@@ -1,6 +1,7 @@
 import type { JSX } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Navigate } from "@tanstack/react-router";
+import IdleTimerContainer from "../components/idle-timer-container";
 
 export function ProtectedRoute({
   children,
@@ -28,5 +29,10 @@ export function ProtectedRoute({
     return <Navigate to="/no-access" />;
   }
 
-  return children;
+  return (
+    <>
+      <IdleTimerContainer />
+      {children}
+    </>
+  );
 }
