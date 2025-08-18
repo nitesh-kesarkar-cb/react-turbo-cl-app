@@ -16,6 +16,10 @@ import LoginPage from "../pages/login";
 import PageNotFoundPage from "../pages/page-not-found";
 import { Navbar } from "../components/navbar";
 import { MapPage } from "../pages/map-page";
+import { useEffect } from "react";
+import { showNotification } from "../services/notificationService";
+import { generateToken, messaging } from "../utils/firebase";
+import { onMessage, type MessagePayload } from "firebase/messaging";
 
 // Root route config
 const rootRoute = createRootRoute({
@@ -114,5 +118,15 @@ export const router = createRouter({
 });
 
 export function RouterApp() {
+  useEffect(() => {
+    generateToken();
+    onMessage(messaging, onMessageReceived);
+  }, []);
+
+  const onMessageReceived = (payload: MessagePayload) => {
+    console.log("Message received:", payload);
+    showNotification(payload);
+  };
+
   return <RouterProvider router={router} />;
 }
