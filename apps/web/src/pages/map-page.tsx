@@ -3,11 +3,9 @@ import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import AppDiv from "../components/div";
-import AppH2 from "../components/h2";
 import MapViewWithMarker, {
   MapViewWithMarkerHandle,
 } from "../components/map-view-with-marker";
-
 import {
   Card,
   CardHeader,
@@ -19,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { LocateFixed, RotateCcw, Search } from "lucide-react";
+import { H2 } from "@/components/ui/heading";
 
 export const MapPage = () => {
   const { t } = useTranslation();
@@ -50,7 +49,7 @@ export const MapPage = () => {
   return (
     <AppDiv className="mx-auto max-w-6xl p-4 space-y-4">
       <header className="space-y-1">
-        <AppH2>{t("mapPage.title")}</AppH2>
+        <H2>{t("mapPage.title")}</H2>
         <p className="text-sm text-muted-foreground">{t("mapPage.subtitle")}</p>
       </header>
 

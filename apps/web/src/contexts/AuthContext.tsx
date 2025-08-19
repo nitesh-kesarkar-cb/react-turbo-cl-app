@@ -5,7 +5,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import type { AuthContextType, User } from "./auth.types";
+import type { AuthContextType, Permission, Role, User } from "./auth.types";
 import { mockUsers } from "./mockUsers";
 import { hashPasswordSync } from "../utils/password";
 
@@ -46,16 +46,23 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     sessionStorage.removeItem("username");
   };
 
-  const hasPermission = (perm: string) => {
+  const hasPermission = (perm: Permission) => {
     if (!user) return false;
 
     return user.permissions.includes(perm);
   };
 
-  const hasAnyPermission = (perms: string[]) => {
+  const hasAnyPermission = (perms: Permission[]) => {
     if (!user) return false;
 
+    if (!Array.isArray(user.permissions)) return false;
+
     return perms.some((p) => user.permissions.includes(p));
+  };
+
+  const hasAllPermissions = (perms: Permission[]) => {
+    if (!user) return false;
+    return perms.every((p) => user.permissions.includes(p));
   };
 
   const hasFeatureEnabled = (flag: string) => {
@@ -64,21 +71,23 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return !!user.featureFlags?.[flag];
   };
 
-  const hasRole = (role: string) => {
+  const hasRole = (role: Role) => {
     if (!user) return false;
-
-    return user.role === role;
+    return Array.isArray(user.roles) && user.roles.includes(role);
   };
 
-  const hasAnyRoles = (roles: string[]) => {
+  const hasAnyRoles = (roles: Role[]) => {
     if (!user) return false;
 
-    return roles.some((r) => user.role === r);
+    if (!Array.isArray(user.roles)) return false;
+
+    return roles.some((r) => user.roles.includes(r));
   };
 
-  const hasAllPermissions = (perms: string[]) => {
+  const hasAllRoles = (roles: Role[]) => {
     if (!user) return false;
-    return perms.every((p) => user.permissions.includes(p));
+    if (!Array.isArray(user.roles)) return false;
+    return roles.every((r) => user.roles.includes(r));
   };
 
   const value: AuthContextType = {
@@ -91,6 +100,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     hasAllPermissions,
     hasRole,
     hasAnyRoles,
+    hasAllRoles,
     hasFeatureEnabled,
   };
 

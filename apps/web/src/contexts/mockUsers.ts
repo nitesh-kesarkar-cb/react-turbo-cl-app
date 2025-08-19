@@ -8,7 +8,7 @@ export const mockUsers: User[] = [
     password: hashPasswordSync("super-admin"),
     email: "super-admin@example.com",
     name: "Super Admin",
-    role: "super_admin",
+    roles: ["super_admin"],
     permissions: [
       "users:create",
       "users:read",
@@ -29,7 +29,7 @@ export const mockUsers: User[] = [
     password: hashPasswordSync("patient"),
     email: "patient@example.com",
     name: "Patient User",
-    role: "patient",
+    roles: ["patient"],
     permissions: ["users:read"],
     featureFlags: {
       beta_dashboard: false,
@@ -43,7 +43,7 @@ export const mockUsers: User[] = [
     password: hashPasswordSync("facility-admin"),
     email: "facility-admin@example.com",
     name: "Facility Admin",
-    role: "facility_admin",
+    roles: ["facility_admin"],
     permissions: ["users:create", "users:read", "users:update"],
     featureFlags: {
       beta_dashboard: false,
@@ -57,7 +57,7 @@ export const mockUsers: User[] = [
     password: hashPasswordSync("department-admin"),
     email: "department-admin@example.com",
     name: "Department Admin",
-    role: "department_admin",
+    roles: ["department_admin"],
     permissions: ["users:read", "users:update", "reports:export"],
     featureFlags: {
       beta_dashboard: false,
@@ -71,7 +71,7 @@ export const mockUsers: User[] = [
     password: hashPasswordSync("org-admin"),
     email: "org-admin@example.com",
     name: "Org Admin",
-    role: "org_admin",
+    roles: ["org_admin"],
     permissions: ["users:create", "users:read", "users:update", "org:update"],
     featureFlags: {
       beta_dashboard: false,
@@ -85,7 +85,7 @@ export const mockUsers: User[] = [
     password: hashPasswordSync("doctor"),
     email: "doctor@example.com",
     name: "Doctor User",
-    role: "doctor",
+    roles: ["doctor"],
     permissions: ["users:read", "users:update"],
     featureFlags: {
       beta_dashboard: false,

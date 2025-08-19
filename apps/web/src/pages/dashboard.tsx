@@ -1,13 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useAuth, useFeatureFlags } from "../contexts/AuthContext";
 import { Can } from "../routes/can";
-import AppH2 from "../components/h2";
-import AppH3 from "../components/h3";
-import AppPre from "../components/pre";
-import AppP from "../components/p";
 import CanFeature from "../routes/can-feature";
 import AppDiv from "../components/div";
 import { Button } from "@/components/ui/button";
+import { H2, H3 } from "@/components/ui/heading";
+import { Paragraph } from "@/components/ui/paragraph";
+import { JSONViewer } from "@/components/ui/json-viewer";
 
 export default function DashboardPage() {
   const {
@@ -24,28 +23,27 @@ export default function DashboardPage() {
 
   return (
     <AppDiv>
-      <AppH2>Dashboard</AppH2>
-      <AppP>Welcome, {user?.username}</AppP>
+      <H2>Dashboard</H2>
+      <Paragraph>Welcome, {user?.username}</Paragraph>
 
-      <AppH3>User Object</AppH3>
-      <AppPre>{JSON.stringify(user, null, 2)}</AppPre>
+      <JSONViewer data={user} title="User Object" className="my-5" />
 
-      <AppH3>Feature Flag Checks</AppH3>
+      <H3>Feature Flag Checks</H3>
 
       {/* Feature Check using component */}
       <CanFeature feature_flag={"beta_dashboard"}>
-        <AppP>Beta Dashboard Feature is enabled</AppP>
+        <Paragraph>Beta Dashboard Feature is enabled</Paragraph>
       </CanFeature>
 
       {/* Singpass Login Feature Check from hook */}
-      {new_payments && <AppP>New Payments Feature is enabled</AppP>}
+      {new_payments && <Paragraph>New Payments Feature is enabled</Paragraph>}
 
       {/* Singpass Login Feature Check using hook method */}
       {hasFeatureEnabled("singpass_login") && (
-        <AppP>Singpass Login Feature is enabled</AppP>
+        <Paragraph>Singpass Login Feature is enabled</Paragraph>
       )}
 
-      <AppH3>Role Checks</AppH3>
+      <H3>Role Checks</H3>
       <AppDiv>
         <AppDiv className="flex flex-wrap gap-x-2 gap-y-2 my-2">
           {/* Single Role Check */}
@@ -73,7 +71,7 @@ export default function DashboardPage() {
           )}
         </AppDiv>
 
-        <AppH3>Permission Checks</AppH3>
+        <H3>Permission Checks</H3>
         <AppDiv className="flex flex-wrap gap-x-2 gap-y-2  my-2">
           {/* Single Permission Check */}
           <Can perm="users:create">

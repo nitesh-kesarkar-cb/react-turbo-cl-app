@@ -8,7 +8,7 @@ export type User = {
   password: string;
   email: string;
   name: string;
-  role: Role;
+  roles: Role[];
   permissions: string[];
   featureFlags: FeatureFlags;
 } | null;
@@ -18,11 +18,12 @@ export interface AuthContextType {
   isLoggedIn: boolean;
   login: (username: string, password: string) => boolean;
   logout: () => void;
-  hasPermission: (perm: string) => boolean;
-  hasAnyPermission: (perms: string[]) => boolean;
-  hasRole: (role: string) => boolean;
-  hasAnyRoles: (roles: string[]) => boolean;
-  hasAllPermissions: (perms: string[]) => boolean;
+  hasPermission: (perm: Permission) => boolean;
+  hasAnyPermission: (perms: Permission[]) => boolean;
+  hasAllPermissions: (perms: Permission[]) => boolean;
+  hasRole: (role: Role) => boolean;
+  hasAnyRoles: (roles: Role[]) => boolean;
+  hasAllRoles: (roles: Role[]) => boolean;
   hasFeatureEnabled: (flag: string) => boolean;
 }
 
