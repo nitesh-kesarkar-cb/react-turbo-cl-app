@@ -1,7 +1,5 @@
-// apps/web/src/pages/MapPage.tsx
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-
 import AppDiv from "../components/div";
 import MapViewWithMarker, {
   MapViewWithMarkerHandle,

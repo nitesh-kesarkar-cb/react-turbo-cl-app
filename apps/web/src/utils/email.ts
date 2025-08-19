@@ -1,5 +1,3 @@
-// apps/web/src/utils/email.ts
-
 /** Error keys you can translate per-page, e.g. "forgotPasswordPage.errorEmailRequired" */
 export type EmailErrorKey = "errorEmailRequired" | "errorEmailInvalid";
 

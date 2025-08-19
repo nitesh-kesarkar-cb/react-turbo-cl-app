@@ -1,4 +1,3 @@
-// apps/web/src/pages/PageNotFoundPage.tsx
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate, useRouter } from "@tanstack/react-router";
 import {

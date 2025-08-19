@@ -1,4 +1,3 @@
-// apps/web/src/pages/NoAccessPage.tsx
 import { useTranslation } from "react-i18next";
 import {
   Card,
