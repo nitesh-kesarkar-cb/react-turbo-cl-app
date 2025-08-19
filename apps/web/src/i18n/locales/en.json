@@ -2,7 +2,6 @@
   "translation": {
     "common": {
       "appName": "Connected Life",
-      "language_label": "Language",
       "language_placeholder": "Select language"
     },
     "nav": {

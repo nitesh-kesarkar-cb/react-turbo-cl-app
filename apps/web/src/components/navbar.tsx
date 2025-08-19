@@ -3,14 +3,17 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "../contexts/AuthContext";
 import LanguageSelector from "./language-selector";
 
-// shadcn/ui
-import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import { Separator } from "@/components/ui/separator";
-
-// icons (optional)
 import {
   LayoutDashboard,
-  Map,
+  Map as MapIcon,
   LogIn,
   LogOut,
   ShieldX,
@@ -22,12 +25,10 @@ export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
-  const handleLogout = () => {
+  const handleLogout = (e?: React.MouseEvent) => {
+    e?.preventDefault();
     logout();
-    // ensure context clears before routing
-    setTimeout(() => {
-      navigate({ to: "/login" });
-    }, 0);
+    setTimeout(() => navigate({ to: "/login" }), 0);
   };
 
   return (
@@ -35,81 +36,78 @@ export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
       className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur"
       {...props}
     >
-      <div className="mx-auto flex h-14 max-w-6xl items-center gap-3 px-4">
+      <div className="w-full flex h-14 items-center gap-3 px-4">
         {/* Brand */}
-        <Button asChild variant="link" className="px-0 text-base font-semibold">
-          <Link to="/">{t("common.appName")}</Link>
-        </Button>
+        <Link
+          to="/"
+          className="text-base font-semibold hover:opacity-90"
+          aria-label={t("common.appName")}
+        >
+          {t("common.appName")}
+        </Link>
 
         <Separator
           orientation="vertical"
           className="mx-1 hidden h-6 sm:block"
         />
 
-        {/* Left nav links */}
-        <div className="flex items-center gap-1 overflow-x-auto">
-          {!isLoggedIn && (
-            <>
-              <Button asChild variant="ghost" size="sm" className="bg-muted">
-                <Link to="/login">
-                  <LogIn className="mr-2 h-4 w-4" />
-                  {t("nav.login")}
-                </Link>
-              </Button>
+        {/* Navigation (top-level links styled like triggers) */}
+        <NavigationMenu className="max-w-none">
+          <NavigationMenuList>
+            {!isLoggedIn ? (
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link to="/login" activeProps={{ className: "bg-muted" }}>
+                    <span className="inline-flex items-center gap-2">
+                      <LogIn className="h-4 w-4" />
+                      {t("nav.login")}
+                    </span>
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            ) : (
+              <>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <Link
+                      to="/dashboard"
+                      activeProps={{ className: "bg-muted" }}
+                    >
+                      <span className="inline-flex items-center gap-2">
+                        <LayoutDashboard className="h-4 w-4" />
+                        {t("nav.dashboard")}
+                      </span>
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
 
-              <Button asChild variant="ghost" size="sm" className="bg-muted">
-                <Link to="/forget-password">{t("nav.forgotPassword")}</Link>
-              </Button>
-
-              <Button asChild variant="ghost" size="sm" className="bg-muted">
-                <Link to="/reset-password">{t("nav.resetPassword")}</Link>
-              </Button>
-            </>
-          )}
-
-          {isLoggedIn && (
-            <>
-              <Button asChild variant="ghost" size="sm" className="bg-muted">
-                <Link to="/dashboard">
-                  <LayoutDashboard className="mr-2 h-4 w-4" />
-                  {t("nav.dashboard")}
-                </Link>
-              </Button>
-
-              <Button asChild variant="ghost" size="sm" className="bg-muted">
-                <Link to="/map">
-                  <Map className="mr-2 h-4 w-4" />
-                  {t("nav.map")}
-                </Link>
-              </Button>
-            </>
-          )}
-
-          <Button asChild variant="ghost" size="sm" className="bg-muted">
-            <Link to="/no-access">
-              <ShieldX className="mr-2 h-4 w-4" />
-              {t("nav.noAccess")}
-            </Link>
-          </Button>
-
-          <Button asChild variant="ghost" size="sm" className="bg-muted">
-            <Link to="/page-not-found">
-              <FileSearch2 className="mr-2 h-4 w-4" />
-              {t("nav.notFound")}
-            </Link>
-          </Button>
-        </div>
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <a href="#" onClick={handleLogout}>
+                      <span className="inline-flex items-center gap-2">
+                        <LogOut className="h-4 w-4" />
+                        {t("nav.logout")}
+                      </span>
+                    </a>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              </>
+            )}
+          </NavigationMenuList>
+        </NavigationMenu>
 
         {/* Right side */}
         <div className="ml-auto flex items-center gap-2">
           <LanguageSelector />
-
-          {isLoggedIn ? (
-            <Button variant="outline" size="sm" onClick={handleLogout}>
-              <LogOut className="mr-2 h-4 w-4" />
-              {t("nav.logout")}
-            </Button>
-          ) : null}
         </div>
       </div>
     </nav>

@@ -70,16 +70,7 @@ const dashboardRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/dashboard",
   component: () => (
-    <ProtectedRoute
-      roles={[
-        "super_admin",
-        "org_admin",
-        "department_admin",
-        "facility_admin",
-        "patient",
-        "doctor",
-      ]}
-    >
+    <ProtectedRoute>
       <DashboardPage />
     </ProtectedRoute>
   ),
@@ -89,16 +80,7 @@ const mapRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/map",
   component: () => (
-    <ProtectedRoute
-      roles={[
-        "super_admin",
-        "org_admin",
-        "department_admin",
-        "facility_admin",
-        "patient",
-        "doctor",
-      ]}
-    >
+    <ProtectedRoute>
       <MapPage />
     </ProtectedRoute>
   ),

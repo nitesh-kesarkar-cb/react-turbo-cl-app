@@ -16,13 +16,21 @@ import {
   ArrowLeft,
   LifeBuoy,
 } from "lucide-react";
+import { useNavigate, useRouter } from "@tanstack/react-router";
 
 function NoAccessPage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const router = useRouter();
+  const supportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
 
   const goBack = () => {
-    if (history.length > 1) history.back();
-    else window.location.href = "/";
+    console.log(router.history);
+    if (router.history.length > 1) {
+      router.history.back();
+    } else {
+      navigate({ to: "/", replace: true });
+    }
   };
 
   return (
@@ -62,16 +70,17 @@ function NoAccessPage() {
             </a>
           </Button>
 
-          {/* Optional: wire to your help desk or mailto */}
-          <Button variant="ghost" asChild>
-            <a
-              href="mailto:support@connectedlife.example"
-              aria-label={t("noAccessPage.support")}
-            >
-              <LifeBuoy className="mr-2 h-4 w-4" />
-              {t("noAccessPage.support")}
-            </a>
-          </Button>
+          {supportEmail && (
+            <Button variant="ghost" asChild>
+              <a
+                href={`mailto:${supportEmail}`}
+                aria-label={t("noAccessPage.support")}
+              >
+                <LifeBuoy className="mr-2 h-4 w-4" />
+                {t("noAccessPage.support")}
+              </a>
+            </Button>
+          )}
         </CardFooter>
       </Card>
     </div>

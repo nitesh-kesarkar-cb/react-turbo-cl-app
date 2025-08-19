@@ -1,6 +1,6 @@
 // apps/web/src/pages/PageNotFoundPage.tsx
 import { useTranslation } from "react-i18next";
-import { Link } from "@tanstack/react-router";
+import { Link, useNavigate, useRouter } from "@tanstack/react-router";
 import {
   Card,
   CardContent,
@@ -14,10 +14,16 @@ import { SearchX, Home, LogIn, ArrowLeft } from "lucide-react";
 
 function PageNotFoundPage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  const router = useRouter();
 
   const goBack = () => {
-    if (history.length > 1) history.back();
-    else window.location.href = "/";
+    console.log(router.history);
+    if (router.history.length > 1) {
+      router.history.back();
+    } else {
+      navigate({ to: "/", replace: true });
+    }
   };
 
   return (

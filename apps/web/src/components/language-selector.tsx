@@ -10,13 +10,17 @@ import {
   SelectItem,
   SelectValue,
 } from "@/components/ui/select";
-import { Label } from "@/components/ui/label";
 import { Globe } from "lucide-react";
+
+function normalizeLanguageCode(lang?: string): Language {
+  if (!lang) return "en";
+  const base = lang.split?.("-")?.[0];
+  return (base || lang || "en") as Language;
+}
 
 const LanguageSelector: React.FC = () => {
   const { i18n, t } = useTranslation();
-  const currentLang = ((i18n.language?.split?.("-")?.[0] ?? i18n.language) ||
-    "en") as Language;
+  const currentLang = normalizeLanguageCode(i18n.language);
 
   const handleChange = (code: string) => {
     const selectedLang = code as Language;
@@ -27,14 +31,6 @@ const LanguageSelector: React.FC = () => {
 
   return (
     <div className="flex flex-wrap items-center gap-3">
-      {/* <Label
-        id="language-label"
-        htmlFor="language"
-        className="whitespace-nowrap text-sm text-muted-foreground"
-      >
-        {t("common.language_label")}
-      </Label> */}
-
       <div className="relative">
         <Globe
           className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 size-4 opacity-60"
