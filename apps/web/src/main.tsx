@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
 import { RouterApp } from "./routes/router";
 import { AuthProvider } from "./contexts/AuthContext";
 import { withSentryBoundary } from "./hoc/with-sentry-boundary";
-import './i18n';
+import "./i18n";
+import "./index.css";
 
 // For TypeScript support
 // declare module "@tanstack/react-router" {
@@ -13,10 +13,10 @@ import './i18n';
 //   }
 // }
 
-let MainComponent;  
+let MainComponent;
 if (import.meta.env.VITE_SENTRY_DSN) {
   MainComponent = withSentryBoundary(RouterApp);
-} else  {
+} else {
   MainComponent = RouterApp;
 }
 

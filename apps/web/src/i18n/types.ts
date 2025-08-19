@@ -1,20 +1,18 @@
 import * as hindiLanguge from "./locales/hi.json";
-import * as gbEnglishLanguage from "./locales/en-GB.json";
-import * as usElishLanguage from "./locales/en-US.json";
+import * as usElishLanguage from "./locales/en.json";
 
-export type Language = "en-GB" | "en-US" | "hi";
+export type Language = "en" | "hi";
 
-export const DEFAULT_LANGUAGE_CODE: Language = "en-US";
+export const DEFAULT_LANGUAGE_CODE: Language = "en";
 
-export const languages: Language[] = ["en-GB", "en-US", "hi"];
+export const languages: Language[] = ["en", "hi"];
 
 // the translations
 // (tip move them in a JSON file and import them,
 // or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
 export const translationConfig = {
   resources: {
-    "en-US": usElishLanguage,
-    "en-GB": gbEnglishLanguage,
+    en: usElishLanguage,
     hi: hindiLanguge,
   },
   fallbackLng: DEFAULT_LANGUAGE_CODE,
@@ -25,10 +23,10 @@ export const translationConfig = {
   interpolation: {
     escapeValue: false, // react already safes from xss
   },
+  defaultNS: "translation",
 };
 
 export const languageNames: Record<Language, string> = {
-  "en-GB": "English (UK)",
-  "en-US": "English (US)",
+  en: "English",
   hi: "हिंदी",
 };

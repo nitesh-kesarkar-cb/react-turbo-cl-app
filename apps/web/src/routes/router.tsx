@@ -20,14 +20,17 @@ import { useEffect } from "react";
 import { showNotification } from "../services/notificationService";
 import { generateToken, messaging } from "../utils/firebase";
 import { onMessage, type MessagePayload } from "firebase/messaging";
+import AppDiv from "@/components/div";
 
 // Root route config
 const rootRoute = createRootRoute({
   component: () => (
-    <>
+    <AppDiv className="min-h-svh flex flex-col">
       <Navbar />
-      <Outlet />
-    </>
+      <main className="flex-1 grid place-items-center p-4">
+        <Outlet />
+      </main>
+    </AppDiv>
   ),
   notFoundComponent: PageNotFoundPage,
 });
@@ -67,16 +70,7 @@ const dashboardRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/dashboard",
   component: () => (
-    <ProtectedRoute
-      roles={[
-        "super_admin",
-        "org_admin",
-        "department_admin",
-        "facility_admin",
-        "patient",
-        "doctor",
-      ]}
-    >
+    <ProtectedRoute>
       <DashboardPage />
     </ProtectedRoute>
   ),
@@ -86,16 +80,7 @@ const mapRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/map",
   component: () => (
-    <ProtectedRoute
-      roles={[
-        "super_admin",
-        "org_admin",
-        "department_admin",
-        "facility_admin",
-        "patient",
-        "doctor",
-      ]}
-    >
+    <ProtectedRoute>
       <MapPage />
     </ProtectedRoute>
   ),
