@@ -54,6 +54,44 @@
       "back": "वापस जाएँ",
       "home": "होम पर जाएँ",
       "login": "लॉगिन पर जाएँ"
+    },
+    "forgotPasswordPage": {
+      "title": "पासवर्ड भूल गए",
+      "subtitleEmail": "6-अंकों का कोड प्राप्त करने के लिए अपना ईमेल दर्ज करें।",
+      "subtitleOtp": "हमने आपके ईमेल पर भेजा 6-अंकों का कोड दर्ज करें।",
+      "cardTitleEmail": "कोड का अनुरोध करें",
+      "cardTitleOtp": "कोड सत्यापित करें",
+      "cardDescEmail": "हम आपके इनबॉक्स में एक बार उपयोग होने वाला कोड भेजेंगे।",
+      "cardDescOtp": "आगे बढ़ने के लिए 6-अंकों का कोड दर्ज करें।",
+      "labelEmail": "ईमेल",
+      "labelOtp": "सत्यापन कोड",
+      "placeholderEmail": "you@example.com",
+      "actionSendCode": "कोड भेजें",
+      "actionResend": "कोड पुनः भेजें",
+      "actionResendIn": "{{s}} सेकंड में पुनः भेजें",
+      "actionVerify": "सत्यापित करें और आगे बढ़ें",
+      "a11yOtp": "6-अंकों का कोड दर्ज करें",
+      "helpOtp": "कोड के लिए अपना इनबॉक्स (और स्पैम) जांचें।",
+      "errorEmailRequired": "ईमेल आवश्यक है।",
+      "errorEmailInvalid": "मान्य ईमेल पता दर्ज करें।"
+    },
+    "resetPasswordPage": {
+      "title": "पासवर्ड रीसेट करें",
+      "subtitle": "इसके लिए नया पासवर्ड सेट करें",
+      "cardTitle": "नया पासवर्ड बनाएं",
+      "cardDesc": "कम से कम 8 अक्षर, जिनमें अक्षर और अंक शामिल हों।",
+      "labelNewPassword": "नया पासवर्ड",
+      "labelConfirmPassword": "नए पासवर्ड की पुष्टि करें",
+      "placeholderNewPassword": "नया पासवर्ड दर्ज करें",
+      "placeholderConfirmPassword": "नया पासवर्ड पुनः दर्ज करें",
+      "actionSubmit": "पासवर्ड सहेजें",
+      "helpPolicy": "न्यूनतम 8 अक्षर, अक्षर और अंक शामिल करें।",
+      "errorNewPasswordRequired": "नया पासवर्ड आवश्यक है।",
+      "errorConfirmPasswordRequired": "कृपया नए पासवर्ड की पुष्टि करें।",
+      "errorPasswordWeak": "पासवर्ड कम से कम 8 अक्षरों का होना चाहिए और अक्षर व अंक शामिल होने चाहिए।",
+      "errorPasswordsMismatch": "पासवर्ड मेल नहीं खाते।",
+      "a11yShowPassword": "पासवर्ड दिखाएँ",
+      "a11yHidePassword": "पासवर्ड छुपाएँ"
     }
   }
 }

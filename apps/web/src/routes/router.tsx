@@ -7,7 +7,7 @@ import {
   Navigate,
 } from "@tanstack/react-router";
 
-import ForgetPasswordPage from "../pages/forget-password";
+import ForgotPasswordPage from "../pages/forgot-password";
 import ResetPasswordPage from "../pages/reset-password";
 import DashboardPage from "../pages/dashboard";
 import NoAccessPage from "../pages/no-access";
@@ -54,10 +54,10 @@ const noAccessRoute = createRoute({
   component: NoAccessPage,
 });
 
-const forgetPasswordRoute = createRoute({
+const forgotPasswordRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/forget-password",
-  component: ForgetPasswordPage,
+  path: "/forgot-password",
+  component: ForgotPasswordPage,
 });
 
 const resetPasswordRoute = createRoute({
@@ -90,7 +90,7 @@ const mapRoute = createRoute({
 const routeTree = rootRoute.addChildren([
   indexRoute,
   loginRoute,
-  forgetPasswordRoute,
+  forgotPasswordRoute,
   resetPasswordRoute,
   dashboardRoute,
   noAccessRoute,

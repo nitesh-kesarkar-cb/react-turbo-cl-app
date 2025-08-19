@@ -1,4 +1,3 @@
-// apps/web/src/pages/LoginPage.tsx
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -7,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuth } from "@/contexts/AuthContext";
-import { useNavigate } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 
 export default function LoginPage() {
   const { t } = useTranslation();
@@ -105,12 +104,12 @@ export default function LoginPage() {
           ) : null}
 
           <div className="flex items-center justify-between">
-            <a
-              href="/forgot-password"
+            <Link
+              to="/forgot-password"
               className="text-sm text-muted-foreground hover:underline"
             >
               {t("loginPage.forgotPassword")}
-            </a>
+            </Link>
             <Button type="submit" disabled={submitting}>
               {submitting ? t("loginPage.signIn") + "…" : t("loginPage.signIn")}
             </Button>

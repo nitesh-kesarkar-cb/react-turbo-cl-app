@@ -1,11 +1,13 @@
+import { Permission, Role } from "@/contexts/auth.types";
 import { useAuth } from "../contexts/AuthContext";
 
 type CanProps = {
-  perm?: string;
-  perms?: string[];
+  perm?: Permission;
+  perms?: Permission[];
   checkAllPerms?: boolean;
-  role?: string;
-  roles?: string[];
+  checkAllRoles?: boolean;
+  role?: Role;
+  roles?: Role[];
   children: React.ReactNode;
 };
 
@@ -15,6 +17,7 @@ export function Can({
   role,
   roles,
   checkAllPerms,
+  checkAllRoles,
   children,
 }: CanProps) {
   const {
@@ -22,6 +25,7 @@ export function Can({
     hasAnyPermission,
     hasRole,
     hasAnyRoles,
+    hasAllRoles,
     hasAllPermissions,
   } = useAuth();
 
@@ -45,7 +49,11 @@ export function Can({
     canRender = false;
   }
 
-  if (roles?.length && !hasAnyRoles(roles)) {
+  if (
+    roles?.length &&
+    ((checkAllRoles && !hasAllRoles(roles)) ||
+      (!checkAllRoles && !hasAnyRoles(roles)))
+  ) {
     canRender = false;
   }
 

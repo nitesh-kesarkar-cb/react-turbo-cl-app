@@ -2,6 +2,7 @@ import type { JSX } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Navigate } from "@tanstack/react-router";
 import IdleTimerContainer from "../components/idle-timer-container";
+import { Permission, Role } from "@/contexts/auth.types";
 
 export function ProtectedRoute({
   children,
@@ -9,8 +10,8 @@ export function ProtectedRoute({
   permissions,
 }: Readonly<{
   children: JSX.Element;
-  roles?: string[]; // Allowed roles
-  permissions?: string[]; // Required permissions
+  roles?: Role[];
+  permissions?: Permission[];
 }>) {
   const { user, hasAnyRoles, hasAnyPermission } = useAuth();
 

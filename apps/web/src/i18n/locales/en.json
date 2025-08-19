@@ -54,6 +54,44 @@
       "back": "Go back",
       "home": "Go to Home",
       "login": "Go to Login"
+    },
+    "forgotPasswordPage": {
+      "title": "Forgot password",
+      "subtitleEmail": "Enter your email to receive a 6-digit code.",
+      "subtitleOtp": "Enter the 6-digit code we sent to your email.",
+      "cardTitleEmail": "Request code",
+      "cardTitleOtp": "Verify code",
+      "cardDescEmail": "We’ll send a one-time code to your inbox.",
+      "cardDescOtp": "Please enter the 6-digit code to continue.",
+      "labelEmail": "Email",
+      "labelOtp": "Verification code",
+      "placeholderEmail": "you@example.com",
+      "actionSendCode": "Send code",
+      "actionResend": "Resend code",
+      "actionResendIn": "Resend in {{s}}s",
+      "actionVerify": "Verify & continue",
+      "a11yOtp": "Enter 6-digit code",
+      "helpOtp": "Check your inbox (and spam) for the code.",
+      "errorEmailRequired": "Email is required.",
+      "errorEmailInvalid": "Enter a valid email address."
+    },
+    "resetPasswordPage": {
+      "title": "Reset password",
+      "subtitle": "Set a new password for",
+      "cardTitle": "Create new password",
+      "cardDesc": "Use at least 8 characters with letters and numbers.",
+      "labelNewPassword": "New password",
+      "labelConfirmPassword": "Confirm new password",
+      "placeholderNewPassword": "Enter new password",
+      "placeholderConfirmPassword": "Re-enter new password",
+      "actionSubmit": "Save password",
+      "helpPolicy": "Minimum 8 characters, include letters and numbers.",
+      "errorNewPasswordRequired": "New password is required.",
+      "errorConfirmPasswordRequired": "Please confirm your new password.",
+      "errorPasswordWeak": "Password must be at least 8 characters and include letters and numbers.",
+      "errorPasswordsMismatch": "Passwords do not match.",
+      "a11yShowPassword": "Show password",
+      "a11yHidePassword": "Hide password"
     }
   }
 }
