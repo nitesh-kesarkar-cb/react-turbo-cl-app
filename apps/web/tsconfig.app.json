@@ -1,9 +1,9 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
-  "include": ["src"],
   "compilerOptions": {
     "jsx": "react-jsx",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": { "@/*": ["./src/*"] }
-  }
+  },
+  "include": ["src"]
 }

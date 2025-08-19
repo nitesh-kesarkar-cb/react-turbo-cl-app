@@ -20,14 +20,17 @@ import { useEffect } from "react";
 import { showNotification } from "../services/notificationService";
 import { generateToken, messaging } from "../utils/firebase";
 import { onMessage, type MessagePayload } from "firebase/messaging";
+import AppDiv from "@/components/div";
 
 // Root route config
 const rootRoute = createRootRoute({
   component: () => (
-    <>
+    <AppDiv className="min-h-svh flex flex-col">
       <Navbar />
-      <Outlet />
-    </>
+      <main className="flex-1 grid place-items-center p-4">
+        <Outlet />
+      </main>
+    </AppDiv>
   ),
   notFoundComponent: PageNotFoundPage,
 });

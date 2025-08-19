@@ -1,0 +1,60 @@
+{
+  "translation": {
+    "common": {
+      "appName": "Connected Life",
+      "language_label": "Language",
+      "language_placeholder": "Select language"
+    },
+    "nav": {
+      "login": "Login",
+      "logout": "Logout",
+      "forgotPassword": "Forgot password",
+      "resetPassword": "Reset password",
+      "dashboard": "Dashboard",
+      "map": "Map",
+      "noAccess": "No Access",
+      "notFound": "Page Not Found"
+    },
+    "loginPage": {
+      "title": "Sign in",
+      "username": "Username",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "signIn": "Sign in",
+      "authError": "Invalid username or password.",
+      "usernameRequired": "Username is required.",
+      "passwordRequired": "Password is required."
+    },
+    "mapPage": {
+      "title": "Map Page",
+      "subtitle": "Search a place, drop a pin, or recenter on your current location.",
+      "explore": "Explore",
+      "description": "Find locations and manage markers with quick actions.",
+      "searchPlaceholder": "Search a place...",
+      "btnSearch": "Search",
+      "btnLocate": "Locate",
+      "btnLocateTitle": "Use my location",
+      "btnReset": "Reset",
+      "tipZoom": "Tip: Scroll or pinch to zoom. Drag to pan the map.",
+      "tipPerms": "If location access is blocked, enable it in your browser settings."
+    },
+    "noAccessPage": {
+      "title": "Access denied",
+      "description": "You do not have permission to view this page.",
+      "code": "Error code: 403",
+      "hint": "If you believe this is a mistake, contact an administrator.",
+      "back": "Go back",
+      "home": "Go to Home",
+      "support": "Contact Support"
+    },
+    "notFoundPage": {
+      "title": "Page not found",
+      "description": "Oops! The page you’re looking for doesn’t exist.",
+      "code": "Error code: 404",
+      "hint": "The link may be broken or the page may have been moved.",
+      "back": "Go back",
+      "home": "Go to Home",
+      "login": "Go to Login"
+    }
+  }
+}

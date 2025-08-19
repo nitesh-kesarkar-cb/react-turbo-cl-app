@@ -2,7 +2,7 @@ import { useNavigate } from "@tanstack/react-router";
 import { useIdleTimer } from "react-idle-timer";
 import { useAuth } from "../contexts/AuthContext";
 
-const IDLE_TIMEOUT = 1000 * 60 * 0.25; // 15 seconds
+const IDLE_TIMEOUT = 1000 * 60 * 15; // 15 minutes
 
 const IdleTimerContainer = () => {
   const navigate = useNavigate();
@@ -21,8 +21,12 @@ const IdleTimerContainer = () => {
   useIdleTimer({
     timeout: IDLE_TIMEOUT,
     onIdle,
-    onActive: () => console.log("User is active again"),
-    onAction: () => console.log("User performed an action"),
+    onActive: () => {
+      // console.log("User is active again");
+    },
+    onAction: () => {
+      // console.log("User performed an action");
+    },
     throttle: 500, // throttle calls to event handlers
     events: ["mousemove", "keydown", "mousedown", "touchstart"], // custom events
     crossTab: true, // detect activity across tabs

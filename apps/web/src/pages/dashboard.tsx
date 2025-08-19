@@ -3,11 +3,11 @@ import { useAuth, useFeatureFlags } from "../contexts/AuthContext";
 import { Can } from "../routes/can";
 import AppH2 from "../components/h2";
 import AppH3 from "../components/h3";
-import AppButton from "../components/button";
 import AppPre from "../components/pre";
 import AppP from "../components/p";
 import CanFeature from "../routes/can-feature";
 import AppDiv from "../components/div";
+import { Button } from "@/components/ui/button";
 
 export default function DashboardPage() {
   const {
@@ -47,69 +47,75 @@ export default function DashboardPage() {
 
       <AppH3>Role Checks</AppH3>
       <AppDiv>
-        <AppDiv>
+        <AppDiv className="flex flex-wrap gap-x-2 gap-y-2 my-2">
           {/* Single Role Check */}
           <Can role="doctor">
-            <AppButton>User hasRole Doctor role</AppButton>
+            <Button variant="outline">User hasRole Doctor role</Button>
           </Can>
 
           {/* Either of multiple Roles Check*/}
           <Can roles={["facility_admin", "super_admin"]}>
-            <AppButton>
+            <Button variant="outline">
               User hasRole facility_admin | super_admin role
-            </AppButton>
+            </Button>
           </Can>
 
           {/* Single Role Check using hook */}
           {hasRole("facility_admin") && (
-            <AppButton>User hasRole facility_admin role</AppButton>
+            <Button variant="outline">User hasRole facility_admin role</Button>
           )}
 
           {/* Either of multiple Roles Check using hook */}
           {hasAnyRoles(["facility_admin", "super_admin"]) && (
-            <AppButton>
+            <Button variant="outline">
               User hasRole facility_admin | super_admin role
-            </AppButton>
+            </Button>
           )}
         </AppDiv>
 
         <AppH3>Permission Checks</AppH3>
-        <AppDiv>
+        <AppDiv className="flex flex-wrap gap-x-2 gap-y-2  my-2">
           {/* Single Permission Check */}
           <Can perm="users:create">
-            <AppButton>Create User</AppButton>
+            <Button variant="outline">Create User</Button>
           </Can>
 
           {/* All of multiple Permission Check */}
           <Can perms={["users:update", "users:delete"]} checkAllPerms={true}>
-            <AppButton>Both of users:update & users:delete</AppButton>
+            <Button variant="outline">
+              Both of users:update & users:delete
+            </Button>
           </Can>
 
           {/* Either of multiple Permission Check */}
           <Can perms={["org:update", "reports:export"]} checkAllPerms={false}>
-            <AppButton>Either of org:update | reports:export</AppButton>
+            <Button variant="outline">
+              Either of org:update | reports:export
+            </Button>
           </Can>
 
           {/* Single permission check with hook */}
           {hasPermission("reports:export") && (
-            <AppButton>Export Reports</AppButton>
+            <Button variant="outline">Export Reports</Button>
           )}
 
           {/* Either of multiple Permission Check using hook */}
           {hasAnyPermission(["org:update", "reports:export"]) && (
-            <AppButton>Either of org:update | reports:export</AppButton>
+            <Button variant="outline">
+              Either of org:update | reports:export
+            </Button>
           )}
 
           {/* All of multiple Permission Check using hook */}
           {hasAllPermissions(["org:update", "reports:export"]) && (
-            <AppButton>Update Organization</AppButton>
+            <Button variant="outline">Update Organization</Button>
           )}
         </AppDiv>
       </AppDiv>
 
-      <AppButton>
+      <Button variant="outline">
         <Link to="/login">go back to login</Link>
-      </AppButton>
+      </Button>
     </AppDiv>
   );
 }
