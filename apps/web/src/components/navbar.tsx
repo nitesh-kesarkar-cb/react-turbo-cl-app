@@ -11,14 +11,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { Separator } from "@/components/ui/separator";
-import {
-  LayoutDashboard,
-  Map as MapIcon,
-  LogIn,
-  LogOut,
-  ShieldX,
-  FileSearch2,
-} from "lucide-react";
+import { LayoutDashboard, LogIn, LogOut, MapIcon } from "lucide-react";
 
 export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
   const { isLoggedIn, logout } = useAuth();
@@ -92,12 +85,30 @@ export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
                     asChild
                     className={navigationMenuTriggerStyle()}
                   >
-                    <a href="#" onClick={handleLogout}>
+                    <Link to="/map" activeProps={{ className: "bg-muted" }}>
+                      <span className="inline-flex items-center gap-2">
+                        <MapIcon className="h-4 w-4" />
+                        {t("nav.map")}
+                      </span>
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <button
+                      type="button"
+                      onClick={handleLogout}
+                      className="w-full text-left bg-transparent border-0 p-0 m-0 cursor-pointer"
+                    >
                       <span className="inline-flex items-center gap-2">
                         <LogOut className="h-4 w-4" />
                         {t("nav.logout")}
                       </span>
-                    </a>
+                    </button>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
               </>

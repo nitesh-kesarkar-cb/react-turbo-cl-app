@@ -11,7 +11,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 export default function LoginPage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login, isLoggedIn } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [touched, setTouched] = useState<{
@@ -20,6 +20,11 @@ export default function LoginPage() {
   }>({});
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+
+  if (isLoggedIn) {
+    navigate({ to: "/dashboard" });
+    return;
+  }
 
   const usernameError =
     touched.username && !username ? t("loginPage.usernameRequired") : "";
