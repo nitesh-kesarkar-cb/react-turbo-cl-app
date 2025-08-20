@@ -24,7 +24,7 @@ export function SectionCards() {
       trend: "up",
       trendText: "+12.5%",
       footMain: "Strong user retention",
-      footSecondary: "Engagement exceed targets",
+      footSecondary: "Engagement exceeds targets",
     },
     {
       description: "Growth Rate",
