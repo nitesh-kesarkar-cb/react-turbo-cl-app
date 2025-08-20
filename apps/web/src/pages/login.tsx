@@ -27,10 +27,6 @@ export default function LoginPage() {
     }
   }, [isLoggedIn, navigate]);
 
-  if (isLoggedIn) {
-    return null;
-  }
-
   const usernameError =
     touched.username && !username ? t("loginPage.usernameRequired") : "";
   const passwordError =
