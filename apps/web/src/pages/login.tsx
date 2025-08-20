@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Button } from "@/components/ui/button";
@@ -21,9 +21,14 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate({ to: "/dashboard" });
+    }
+  }, [isLoggedIn, navigate]);
+
   if (isLoggedIn) {
-    navigate({ to: "/dashboard" });
-    return;
+    return null;
   }
 
   const usernameError =
