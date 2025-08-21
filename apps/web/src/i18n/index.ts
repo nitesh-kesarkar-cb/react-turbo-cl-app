@@ -16,7 +16,6 @@ i18n.use(initReactI18next).init(translationConfig, () => {
 });
 
 i18n.on("languageChanged", (lng) => {
-    console.log("Language changed to:", lng);
     applyDir(lng);
     setLocalStorageItem(LANGUAGE_STORAGE_KEY, lng);
 });

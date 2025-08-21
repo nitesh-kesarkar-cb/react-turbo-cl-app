@@ -9,7 +9,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Link, useNavigate } from "@tanstack/react-router";
 
 export default function LoginPage() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("auth");
   const navigate = useNavigate();
   const { login, isLoggedIn } = useAuth();
   const [username, setUsername] = useState("");
@@ -58,7 +58,6 @@ export default function LoginPage() {
         <CardTitle className="text-2xl font-semibold tracking-tight">
           {t("loginPage.title")}
         </CardTitle>
-        <p className="text-sm text-muted-foreground">{t("common.appName")}</p>
       </CardHeader>
 
       <CardContent>

@@ -12,7 +12,6 @@ const IdleTimerContainer = () => {
   const { logout } = useAuth();
 
   const onIdle = () => {
-    console.log("User is idle. Logging out");
     logout();
 
     // To avoid navigating back to dashboard until auth context is cleared so kept timeout

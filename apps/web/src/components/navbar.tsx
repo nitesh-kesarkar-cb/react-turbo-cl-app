@@ -18,7 +18,7 @@ import { MOCK_LOGIN_REDIRECT_TIMEOUT } from "@/utils/constant";
 export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
   const { isLoggedIn, logout } = useAuth();
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useTranslation("auth");
 
   const handleLogout = (e?: React.MouseEvent) => {
     e?.preventDefault();

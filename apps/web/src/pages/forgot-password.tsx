@@ -24,7 +24,7 @@ import { MOCK_API_TIMEOUT, RESEND_OTP_TIMEOUT } from "@/utils/constant";
 
 export default function ForgotPasswordPage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useTranslation("auth");
 
   const [step, setStep] = useState<"email" | "otp">("email");
   const [email, setEmail] = useState("");

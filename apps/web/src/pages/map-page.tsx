@@ -16,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { LocateFixed, RotateCcw, Search } from "lucide-react";
 
 export const MapPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("auth");
   const mapApiRef = useRef<MapViewWithMarkerHandle>(null);
   const [query, setQuery] = useState("");
 
