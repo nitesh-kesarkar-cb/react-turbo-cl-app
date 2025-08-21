@@ -6,19 +6,6 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Connected Life 2.0</title>
-  <script>
-    (function () {
-      try {
-        var key = "ui-theme";
-        var stored = localStorage.getItem(key); // "light" | "dark" | "system"
-        var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        var theme = stored === "system" || !stored ? (systemDark ? "dark" : "light") : stored;
-        var root = document.documentElement;
-        if (theme === "dark") root.classList.add("dark"); else root.classList.remove("dark");
-        root.style.colorScheme = theme; // improves form/scrollbar colors
-      } catch (_) { }
-    })();
-  </script>
 </head>
 
 <body>

@@ -6,6 +6,10 @@ import { withSentryBoundary } from "./hoc/with-sentry-boundary";
 import "./i18n";
 import "./index.css";
 import { ThemeProvider } from "./components/theme/theme-provider";
+import { setInitialTheme } from "./components/theme/setTheme";
+
+// Set theme before rendering
+setInitialTheme();
 
 // For TypeScript support
 // declare module "@tanstack/react-router" {

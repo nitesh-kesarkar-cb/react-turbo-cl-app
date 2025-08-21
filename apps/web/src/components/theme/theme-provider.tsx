@@ -5,21 +5,33 @@ import React, {
   useMemo,
   useState,
 } from "react";
+import { Theme, ThemeEnum } from "./types";
+import { THEME_STORAGE_KEY } from "@/utils/constant";
 
-type Theme = "light" | "dark" | "system";
 type ThemeContextValue = {
   theme: Theme;
-  resolvedTheme: "light" | "dark";
+  resolvedTheme: Theme;
   setTheme: (t: Theme) => void;
 };
 
-const ThemeContext = createContext<ThemeContextValue | null>(null);
-const STORAGE_KEY = "ui-theme";
+function isTheme(value: string): value is Theme {
+  return (
+    value === ThemeEnum.Light ||
+    value === ThemeEnum.Dark ||
+    value === ThemeEnum.System
+  );
+}
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>(() => {
-    const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-    return stored ?? "system";
+const ThemeContext = createContext<ThemeContextValue | null>(null);
+
+export function ThemeProvider({
+  children,
+}: {
+  readonly children: React.ReactNode;
+}) {
+  const [theme, setTheme] = useState<Theme>(() => {
+    const stored = localStorage.getItem(THEME_STORAGE_KEY) || ThemeEnum.System;
+    return isTheme(stored) ? stored : ThemeEnum.System;
   });
 
   // system preference listener
@@ -34,18 +46,27 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     return () => mql.removeEventListener?.("change", handler);
   }, []);
 
-  const resolvedTheme =
-    theme === "system" ? (systemDark ? "dark" : "light") : theme;
+  let resolvedTheme: ThemeEnum;
+
+  if (theme === ThemeEnum.System) {
+    if (systemDark) {
+      resolvedTheme = ThemeEnum.Dark;
+    } else {
+      resolvedTheme = ThemeEnum.Light;
+    }
+  } else {
+    resolvedTheme = theme;
+  }
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.toggle("dark", resolvedTheme === "dark");
+    root.classList.toggle(ThemeEnum.Dark, resolvedTheme === ThemeEnum.Dark);
     root.style.colorScheme = resolvedTheme;
-    localStorage.setItem(STORAGE_KEY, theme);
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
   }, [theme, resolvedTheme]);
 
   const value = useMemo(
-    () => ({ theme, resolvedTheme, setTheme: (t: Theme) => setThemeState(t) }),
+    () => ({ theme, resolvedTheme, setTheme: (t: Theme) => setTheme(t) }),
     [theme, resolvedTheme]
   );
 

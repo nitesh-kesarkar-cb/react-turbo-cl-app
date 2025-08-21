@@ -7,6 +7,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useTheme } from "./theme-provider";
+import { ThemeEnum } from "./types";
 
 export function ThemeToggle() {
   const { theme, setTheme, resolvedTheme } = useTheme();
@@ -15,7 +16,7 @@ export function ThemeToggle() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" aria-label="Toggle theme">
-          {resolvedTheme === "dark" ? (
+          {resolvedTheme === ThemeEnum.Dark ? (
             <Moon className="h-4 w-4" />
           ) : (
             <Sun className="h-4 w-4" />
@@ -23,15 +24,17 @@ export function ThemeToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-40">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Sun className="mr-2 h-4 w-4" /> Light {theme === "light" ? "✓" : ""}
+        <DropdownMenuItem onClick={() => setTheme(ThemeEnum.Light)}>
+          <Sun className="mr-2 h-4 w-4" /> Light{" "}
+          {theme === ThemeEnum.Light ? "✓" : ""}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Moon className="mr-2 h-4 w-4" /> Dark {theme === "dark" ? "✓" : ""}
+        <DropdownMenuItem onClick={() => setTheme(ThemeEnum.Dark)}>
+          <Moon className="mr-2 h-4 w-4" /> Dark{" "}
+          {theme === ThemeEnum.Dark ? "✓" : ""}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => setTheme(ThemeEnum.System)}>
           <Monitor className="mr-2 h-4 w-4" /> System{" "}
-          {theme === "system" ? "✓" : ""}
+          {theme === ThemeEnum.System ? "✓" : ""}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
