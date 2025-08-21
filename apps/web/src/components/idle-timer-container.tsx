@@ -4,7 +4,7 @@ import { useAuth } from "../contexts/AuthContext";
 import {
   IDLE_THROTTLE,
   IDLE_TIMEOUT,
-  MOCK_API_TIMEOUT,
+  MOCK_LOGIN_REDIRECT_TIMEOUT,
 } from "@/utils/constant";
 
 const IdleTimerContainer = () => {
@@ -18,7 +18,7 @@ const IdleTimerContainer = () => {
     // To avoid navigating back to dashboard until auth context is cleared so kept timeout
     setTimeout(() => {
       navigate({ to: "/login" });
-    }, MOCK_API_TIMEOUT);
+    }, MOCK_LOGIN_REDIRECT_TIMEOUT);
   };
 
   useIdleTimer({
