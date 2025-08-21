@@ -5,6 +5,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { withSentryBoundary } from "./hoc/with-sentry-boundary";
 import "./i18n";
 import "./index.css";
+import { ThemeProvider } from "./components/theme/theme-provider";
 
 // For TypeScript support
 // declare module "@tanstack/react-router" {
@@ -22,8 +23,10 @@ if (import.meta.env.VITE_SENTRY_DSN) {
 
 createRoot(document.getElementById("app")!).render(
   <StrictMode>
-    <AuthProvider>
-      <MainComponent />
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <MainComponent />
+      </AuthProvider>
+    </ThemeProvider>
   </StrictMode>
 );
