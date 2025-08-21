@@ -20,6 +20,7 @@ import {
 import { H2 } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
 import { validateEmail } from "@/utils/email";
+import { MOCK_API_TIMEOUT, RESEND_OTP_TIMEOUT } from "@/utils/constant";
 
 export default function ForgotPasswordPage() {
   const navigate = useNavigate();
@@ -53,9 +54,9 @@ export default function ForgotPasswordPage() {
     setSubmitting(true);
     try {
       // TODO: send OTP to {email}
-      await new Promise((r) => setTimeout(r, 600));
+      await new Promise((r) => setTimeout(r, MOCK_API_TIMEOUT));
       setStep("otp");
-      setCooldown(30);
+      setCooldown(RESEND_OTP_TIMEOUT);
     } finally {
       setSubmitting(false);
     }
@@ -68,7 +69,7 @@ export default function ForgotPasswordPage() {
     setSubmitting(true);
     try {
       // TODO: verify OTP for {email}
-      await new Promise((r) => setTimeout(r, 600));
+      await new Promise((r) => setTimeout(r, MOCK_API_TIMEOUT));
       sessionStorage.setItem("resetEmail", email.trim());
       navigate({ to: "/reset-password" });
     } finally {
@@ -79,8 +80,8 @@ export default function ForgotPasswordPage() {
   const resendOtp = async () => {
     if (cooldown > 0) return;
     // TODO: call resend endpoint
-    await new Promise((r) => setTimeout(r, 400));
-    setCooldown(30);
+    await new Promise((r) => setTimeout(r, MOCK_API_TIMEOUT));
+    setCooldown(RESEND_OTP_TIMEOUT);
   };
 
   return (

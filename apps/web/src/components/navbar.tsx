@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Separator } from "@/components/ui/separator";
 import { LayoutDashboard, LogIn, LogOut, MapIcon } from "lucide-react";
+import { ThemeToggle } from "./theme/theme-toggle";
+import { MOCK_API_TIMEOUT } from "@/utils/constant";
 
 export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
   const { isLoggedIn, logout } = useAuth();
@@ -21,7 +23,7 @@ export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
   const handleLogout = (e?: React.MouseEvent) => {
     e?.preventDefault();
     logout();
-    setTimeout(() => navigate({ to: "/login" }), 0);
+    setTimeout(() => navigate({ to: "/login" }), MOCK_API_TIMEOUT);
   };
 
   return (
@@ -119,6 +121,7 @@ export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
         {/* Right side */}
         <div className="ml-auto flex items-center gap-2">
           <LanguageSelector />
+          <ThemeToggle />
         </div>
       </div>
     </nav>

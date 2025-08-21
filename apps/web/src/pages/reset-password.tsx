@@ -16,6 +16,7 @@ import { H2 } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text"; // ✅ use Text
 import { Eye, EyeOff } from "lucide-react";
 import { validatePassword, validatePasswordConfirm } from "@/utils/password";
+import { MOCK_API_TIMEOUT } from "@/utils/constant";
 
 export default function ResetPasswordPage() {
   const navigate = useNavigate();
@@ -61,7 +62,7 @@ export default function ResetPasswordPage() {
     setSubmitting(true);
     try {
       // TODO: replace with your API call
-      await new Promise((r) => setTimeout(r, 700));
+      await new Promise((r) => setTimeout(r, MOCK_API_TIMEOUT));
       sessionStorage.removeItem("resetEmail");
       navigate({ to: "/login" });
     } finally {

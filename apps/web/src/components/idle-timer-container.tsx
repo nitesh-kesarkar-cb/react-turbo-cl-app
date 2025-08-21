@@ -1,8 +1,11 @@
 import { useNavigate } from "@tanstack/react-router";
 import { useIdleTimer } from "react-idle-timer";
 import { useAuth } from "../contexts/AuthContext";
-
-const IDLE_TIMEOUT = 1000 * 60 * 15; // 15 minutes
+import {
+  IDLE_THROTTLE,
+  IDLE_TIMEOUT,
+  MOCK_API_TIMEOUT,
+} from "@/utils/constant";
 
 const IdleTimerContainer = () => {
   const navigate = useNavigate();
@@ -15,19 +18,15 @@ const IdleTimerContainer = () => {
     // To avoid navigating back to dashboard until auth context is cleared so kept timeout
     setTimeout(() => {
       navigate({ to: "/login" });
-    }, 0);
+    }, MOCK_API_TIMEOUT);
   };
 
   useIdleTimer({
     timeout: IDLE_TIMEOUT,
     onIdle,
-    onActive: () => {
-      // console.log("User is active again");
-    },
-    onAction: () => {
-      // console.log("User performed an action");
-    },
-    throttle: 500, // throttle calls to event handlers
+    onActive: () => {},
+    onAction: () => {},
+    throttle: IDLE_THROTTLE,
     events: ["mousemove", "keydown", "mousedown", "touchstart"], // custom events
     crossTab: true, // detect activity across tabs
   });
