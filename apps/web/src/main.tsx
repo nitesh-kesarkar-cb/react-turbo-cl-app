@@ -5,8 +5,11 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { withSentryBoundary } from "./hoc/with-sentry-boundary";
 import "./i18n";
 import "./index.css";
+import "./assets/styles/rtl.css";
 import { ThemeProvider } from "./components/theme/theme-provider";
 import { setInitialTheme } from "./components/theme/setTheme";
+import I18nDirectionProvider from "./contexts/DirectionProvider";
+
 
 // Set theme before rendering
 setInitialTheme();
@@ -25,12 +28,16 @@ if (import.meta.env.VITE_SENTRY_DSN) {
   MainComponent = RouterApp;
 }
 
+
 createRoot(document.getElementById("app")!).render(
+
   <StrictMode>
-    <ThemeProvider>
-      <AuthProvider>
-        <MainComponent />
-      </AuthProvider>
-    </ThemeProvider>
+    <I18nDirectionProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <MainComponent />
+        </AuthProvider>
+      </ThemeProvider>
+    </I18nDirectionProvider>
   </StrictMode>
 );

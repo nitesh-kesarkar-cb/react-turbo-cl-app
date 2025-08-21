@@ -1,0 +1,97 @@
+{
+  "translation": {
+    "common": {
+      "appName": "智慧生活",
+      "language_placeholder": "选择语言"
+    },
+    "nav": {
+      "login": "登录",
+      "logout": "退出登录",
+      "forgotPassword": "忘记密码",
+      "resetPassword": "重置密码",
+      "dashboard": "仪表盘",
+      "map": "地图",
+      "noAccess": "无访问权限",
+      "notFound": "页面未找到"
+    },
+    "loginPage": {
+      "title": "登录",
+      "username": "用户名",
+      "password": "密码",
+      "forgotPassword": "忘记密码？",
+      "signIn": "登录",
+      "authError": "用户名或密码错误。",
+      "usernameRequired": "用户名是必填项。",
+      "passwordRequired": "密码是必填项。"
+    },
+    "mapPage": {
+      "title": "地图页面",
+      "subtitle": "搜索地点、放置标记，或返回当前位置。",
+      "explore": "探索",
+      "description": "查找位置并通过快捷操作管理标记。",
+      "searchPlaceholder": "搜索地点...",
+      "btnSearch": "搜索",
+      "btnLocate": "定位",
+      "btnLocateTitle": "使用我的位置",
+      "btnReset": "重置",
+      "tipZoom": "提示：滚动或捏合以缩放，拖动以移动地图。",
+      "tipPerms": "如果位置访问被阻止，请在浏览器设置中启用。"
+    },
+    "noAccessPage": {
+      "title": "拒绝访问",
+      "description": "您没有权限查看此页面。",
+      "code": "错误代码: 403",
+      "hint": "如果您认为这是错误，请联系管理员。",
+      "back": "返回",
+      "home": "回到首页",
+      "support": "联系支持"
+    },
+    "notFoundPage": {
+      "title": "页面未找到",
+      "description": "抱歉！您访问的页面不存在。",
+      "code": "错误代码: 404",
+      "hint": "链接可能已损坏或页面已被移动。",
+      "back": "返回",
+      "home": "回到首页",
+      "login": "前往登录"
+    },
+    "forgotPasswordPage": {
+      "title": "忘记密码",
+      "subtitleEmail": "请输入您的邮箱以接收 6 位验证码。",
+      "subtitleOtp": "请输入我们发送到您邮箱的 6 位验证码。",
+      "cardTitleEmail": "请求验证码",
+      "cardTitleOtp": "验证验证码",
+      "cardDescEmail": "我们会将一次性验证码发送到您的收件箱。",
+      "cardDescOtp": "请输入 6 位验证码以继续。",
+      "labelEmail": "邮箱",
+      "labelOtp": "验证码",
+      "placeholderEmail": "you@example.com",
+      "actionSendCode": "发送验证码",
+      "actionResend": "重新发送验证码",
+      "actionResendIn": "{{s}} 秒后重新发送",
+      "actionVerify": "验证并继续",
+      "a11yOtp": "输入 6 位验证码",
+      "helpOtp": "请检查收件箱（以及垃圾邮件文件夹）以获取验证码。",
+      "errorEmailRequired": "邮箱是必填项。",
+      "errorEmailInvalid": "请输入有效的邮箱地址。"
+    },
+    "resetPasswordPage": {
+      "title": "重置密码",
+      "subtitle": "为以下账户设置新密码",
+      "cardTitle": "创建新密码",
+      "cardDesc": "请至少使用 8 个字符，包含字母和数字。",
+      "labelNewPassword": "新密码",
+      "labelConfirmPassword": "确认新密码",
+      "placeholderNewPassword": "输入新密码",
+      "placeholderConfirmPassword": "再次输入新密码",
+      "actionSubmit": "保存密码",
+      "helpPolicy": "至少 8 个字符，包含字母和数字。",
+      "errorNewPasswordRequired": "新密码是必填项。",
+      "errorConfirmPasswordRequired": "请确认新密码。",
+      "errorPasswordWeak": "密码必须至少 8 个字符，并包含字母和数字。",
+      "errorPasswordsMismatch": "两次输入的密码不一致。",
+      "a11yShowPassword": "显示密码",
+      "a11yHidePassword": "隐藏密码"
+    }
+  }
+}
