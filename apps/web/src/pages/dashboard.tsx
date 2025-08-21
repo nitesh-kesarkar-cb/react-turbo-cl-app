@@ -4,6 +4,7 @@ import { ChartBarInteractive } from "@/components/dashboard/chart-bar-interactiv
 import { ChartLineDotInteractive } from "@/components/dashboard/chart-line-dot-interactive";
 import { ChartPieInteractive } from "@/components/dashboard/chart-pie-chart-interactive";
 import { ChartRadialStackedInteractive } from "@/components/dashboard/chart-radial-stacked-interactive";
+import SleepChart from "@/components/dashboard/chart-sleep-interactive";
 
 export default function DashboardPage() {
   return (
@@ -32,6 +33,11 @@ export default function DashboardPage() {
 
             <div className="md:col-span-3">
               <ChartRadialStackedInteractive />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 px-4 lg:px-6">
+            <div className="md:col-span-12">
+              <SleepChart />
             </div>
           </div>
         </div>
