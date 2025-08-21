@@ -1,11 +1,12 @@
 import * as hindiLanguge from "./locales/hi.json";
 import * as usElishLanguage from "./locales/en.json";
+import * as arabicLanguage from "./locales/ar.json";
 
-export type Language = "en" | "hi";
+export type Language = "en" | "hi" | "ar";
 
 export const DEFAULT_LANGUAGE_CODE: Language = "en";
 
-export const languages: Language[] = ["en", "hi"];
+export const languages: Language[] = ["en", "hi", "ar"];
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -14,6 +15,7 @@ export const translationConfig = {
   resources: {
     en: usElishLanguage,
     hi: hindiLanguge,
+    ar: arabicLanguage,
   },
   fallbackLng: DEFAULT_LANGUAGE_CODE,
   supportedLngs: languages,
@@ -29,4 +31,5 @@ export const translationConfig = {
 export const languageNames: Record<Language, string> = {
   en: "English",
   hi: "हिंदी",
+  ar: "العربية",
 };

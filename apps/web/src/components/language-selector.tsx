@@ -26,8 +26,12 @@ const LanguageSelector: React.FC = () => {
   const handleChange = (code: string) => {
     const selectedLang = code as Language;
     i18n.changeLanguage(selectedLang);
-    localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLang);
     document.documentElement.lang = selectedLang;
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLang);
+    const dir = i18n.dir(selectedLang);
+    document.documentElement.dir = dir;
+
+
   };
 
   return (
