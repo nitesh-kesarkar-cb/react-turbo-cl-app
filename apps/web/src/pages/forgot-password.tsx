@@ -36,7 +36,10 @@ export default function ForgotPasswordPage() {
   const [cooldown, setCooldown] = useState(0);
   useEffect(() => {
     if (!cooldown) return;
-    const id = setInterval(() => setCooldown((c) => Math.max(0, c - 1)), 1000);
+    const id = setInterval(
+      () => setCooldown((c) => Math.max(0, c - 1000)),
+      1000
+    );
     return () => clearInterval(id);
   }, [cooldown]);
 
@@ -180,12 +183,16 @@ export default function ForgotPasswordPage() {
                 onClick={resendOtp}
                 title={
                   cooldown > 0
-                    ? t("forgotPasswordPage.actionResendIn", { s: cooldown })
+                    ? t("forgotPasswordPage.actionResendIn", {
+                        s: cooldown / 1000,
+                      })
                     : t("forgotPasswordPage.actionResend")
                 }
               >
                 {cooldown > 0
-                  ? t("forgotPasswordPage.actionResendIn", { s: cooldown })
+                  ? t("forgotPasswordPage.actionResendIn", {
+                      s: cooldown / 1000,
+                    })
                   : t("forgotPasswordPage.actionResend")}
               </Button>
 

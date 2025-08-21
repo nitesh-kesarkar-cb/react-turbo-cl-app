@@ -13,7 +13,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { LayoutDashboard, LogIn, LogOut, MapIcon } from "lucide-react";
 import { ThemeToggle } from "./theme/theme-toggle";
-import { MOCK_API_TIMEOUT } from "@/utils/constant";
+import { MOCK_LOGIN_REDIRECT_TIMEOUT } from "@/utils/constant";
 
 export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
   const { isLoggedIn, logout } = useAuth();
@@ -23,7 +23,7 @@ export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
   const handleLogout = (e?: React.MouseEvent) => {
     e?.preventDefault();
     logout();
-    setTimeout(() => navigate({ to: "/login" }), MOCK_API_TIMEOUT);
+    setTimeout(() => navigate({ to: "/login" }), MOCK_LOGIN_REDIRECT_TIMEOUT);
   };
 
   return (
