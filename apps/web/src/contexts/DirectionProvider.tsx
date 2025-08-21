@@ -16,7 +16,6 @@ export default function I18nDirectionProvider({ children }: PropsWithChildren) {
 
   useEffect(() => {
     document.documentElement.setAttribute("dir", dir);
-    document.documentElement.setAttribute("lang", i18n.language || (dir === "rtl" ? "ar" : "en"));
   }, [dir]);
 
   return <DirectionProvider dir={dir}>{children}</DirectionProvider>;

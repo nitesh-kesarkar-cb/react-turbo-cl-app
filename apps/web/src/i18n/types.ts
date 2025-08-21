@@ -4,7 +4,7 @@ import * as usElishLanguage from "./locales/en.json";
 import * as chineseLanguage from "./locales/zh.json";
 import * as cantoneseLanguage from "./locales/yue.json";
 import * as arabicLanguage from "./locales/ar.json";
-import { getLocastorageItem } from "@/contexts/useStorageContext";
+import { getLocalStorageItem } from "@/contexts/useStorageContext";
 import { LANGUAGE_STORAGE_KEY } from "@/utils/constant";
 
 export type Language = "en" | "hi" | "ar" | "zh" | "yue";
@@ -13,7 +13,7 @@ export const DEFAULT_LANGUAGE_CODE: Language = "en";
 
 export const languages: Language[] = ["en", "hi", "ar", "zh", "yue"];
 
-const savedLang = getLocastorageItem(LANGUAGE_STORAGE_KEY) as string || "en";
+const savedLang = getLocalStorageItem(LANGUAGE_STORAGE_KEY) as string || "en";
 
 // the translations
 // (tip move them in a JSON file and import them,

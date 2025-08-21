@@ -52,7 +52,7 @@ export const StorageProvider = ({ children }: { children: ReactNode }) => {
     )
 }
 
-export const getLocastorageItem = <T,>(key: string): T | null => {
+export const getLocalStorageItem = <T,>(key: string): T | null => {
     const cipher = localStorage.getItem(key)
     const decrypted = decryptData<string | null>(cipher)
     if (decrypted === null) return null
@@ -64,7 +64,7 @@ export const getLocastorageItem = <T,>(key: string): T | null => {
     }
 }
 
-export const setLocastorageItem = <T,>(key: string, value: T) => {
+export const setLocalStorageItem = <T,>(key: string, value: T) => {
     let toStore: string
     if (typeof value === 'object' && value !== null) {
         toStore = JSON.stringify(value)
