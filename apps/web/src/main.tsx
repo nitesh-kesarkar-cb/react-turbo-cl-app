@@ -5,9 +5,10 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { withSentryBoundary } from "./hoc/with-sentry-boundary";
 import "./i18n";
 import "./index.css";
+import "./assets/styles/rtl.css";
 import { ThemeProvider } from "./components/theme/theme-provider";
 import { setInitialTheme } from "./components/theme/setTheme";
-import { DirectionProvider } from "@radix-ui/react-direction";
+import I18nDirectionProvider from "./contexts/DirectionProvider";
 
 
 // Set theme before rendering
@@ -27,17 +28,16 @@ if (import.meta.env.VITE_SENTRY_DSN) {
   MainComponent = RouterApp;
 }
 
-const dir = document.documentElement.getAttribute("dir") || "ltr";
 
 createRoot(document.getElementById("app")!).render(
 
   <StrictMode>
-    <DirectionProvider dir={dir as "ltr" | "rtl"}>
+    <I18nDirectionProvider>
       <ThemeProvider>
         <AuthProvider>
           <MainComponent />
         </AuthProvider>
       </ThemeProvider>
-    </DirectionProvider>
+    </I18nDirectionProvider>
   </StrictMode>
 );

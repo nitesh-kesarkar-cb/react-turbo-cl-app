@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Global RTL fixes for shadcn/ui primitives.
+  Applied automatically when <html dir="rtl"> is set by i18n.
+*/
+
+@layer base {
+  /* --------------------
+   🔹 Buttons
+   -------------------- */
+  [dir="rtl"] .btn,
+  [dir="rtl"] button {
+    @apply flex-row-reverse space-x-reverse;
+  }
+
+  /* --------------------
+   🔹 Inputs / Textareas
+   -------------------- */
+  [dir="rtl"] .input,
+  [dir="rtl"] input,
+  [dir="rtl"] textarea {
+    @apply text-right;
+  }
+
+  /* --------------------
+   🔹 Labels
+   -------------------- */
+  [dir="rtl"] label {
+    @apply text-right;
+  }
+
+  /* --------------------
+   🔹 Cards
+   -------------------- */
+  [dir="rtl"] .card {
+    @apply text-right;
+  }
+
+  /* --------------------
+   🔹 Dialogs / Modals
+   -------------------- */
+  [dir="rtl"] .dialog,
+  [dir="rtl"] .alert-dialog,
+  [dir="rtl"] .sheet {
+    @apply text-right;
+  }
+
+  /* Dialog header/footer often flex horizontally */
+  [dir="rtl"] .dialog-header,
+  [dir="rtl"] .dialog-footer,
+  [dir="rtl"] .alert-dialog-header,
+  [dir="rtl"] .alert-dialog-footer {
+    @apply flex-row-reverse space-x-reverse;
+  }
+
+  /* --------------------
+   🔹 Dropdown Menus
+   -------------------- */
+  [dir="rtl"] .dropdown-menu {
+    @apply text-right;
+  }
+
+  [dir="rtl"] .dropdown-menu-item {
+    @apply flex-row-reverse space-x-reverse;
+  }
+
+  /* --------------------
+   🔹 Popovers
+   -------------------- */
+  [dir="rtl"] .popover {
+    @apply text-right;
+  }
+
+  /* --------------------
+   🔹 Tooltips
+   -------------------- */
+  [dir="rtl"] .tooltip {
+    @apply text-right;
+  }
+
+  /* --------------------
+   🔹 Navigation Menus
+   -------------------- */
+  [dir="rtl"] .nav,
+  [dir="rtl"] .navigation-menu,
+  [dir="rtl"] .menubar {
+    @apply flex-row-reverse space-x-reverse text-right;
+  }
+
+  [dir="rtl"] .navigation-menu-item,
+  [dir="rtl"] .menubar-item {
+    @apply flex-row-reverse space-x-reverse;
+  }
+
+  /* --------------------
+   🔹 Tables
+   -------------------- */
+  [dir="rtl"] table {
+    @apply text-right;
+  }
+
+  /* --------------------
+   🔹 Toasts
+   -------------------- */
+  [dir="rtl"] .toast {
+    @apply text-right;
+  }
+
+  /* --------------------
+   🔹 Avatars + Badges
+   -------------------- */
+  [dir="rtl"] .avatar,
+  [dir="rtl"] .badge {
+    @apply flex-row-reverse space-x-reverse;
+  }
+
+  /* --------------------
+   🔹 Tabs
+   -------------------- */
+  [dir="rtl"] .tabs-list {
+    @apply flex-row-reverse space-x-reverse;
+  }
+}

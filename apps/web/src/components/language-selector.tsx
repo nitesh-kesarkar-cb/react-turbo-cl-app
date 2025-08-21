@@ -11,7 +11,6 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Globe } from "lucide-react";
-import { LANGUAGE_STORAGE_KEY } from "@/utils/constant";
 
 function normalizeLanguageCode(lang?: string): Language {
   if (!lang) return "en";
@@ -26,12 +25,6 @@ const LanguageSelector: React.FC = () => {
   const handleChange = (code: string) => {
     const selectedLang = code as Language;
     i18n.changeLanguage(selectedLang);
-    document.documentElement.lang = selectedLang;
-    localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLang);
-    const dir = i18n.dir(selectedLang);
-    document.documentElement.dir = dir;
-
-
   };
 
   return (
