@@ -8,7 +8,7 @@ export const mockUsers: User[] = [
     password: hashPasswordSync("super-admin"),
     email: "super-admin@example.com",
     name: "Super Admin",
-    rolesMask: 1, // (1 << ROLES.super_admin) = 1
+    rolesMask: 1, // (1 << ROLES.SUPER_ADMIN) = 1
     permissionsMask: 15, // (1|2|4|8) = 15
     featuresMask: 89, // (1+8+16+64) = 89
   },

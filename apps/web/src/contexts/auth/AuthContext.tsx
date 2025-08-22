@@ -15,7 +15,19 @@ import {
 import { mockUsers } from "./mockUsers";
 import { hashPasswordSync } from "../../utils/password";
 
+/**
+ * Returns a bitmask with only the bit at the given index set to 1.
+ * Uses the unsigned right shift operator (>>> 0) to ensure the result is an unsigned 32-bit integer.
+ * @param index - The bit position to set (0-based).
+ * @returns The bitmask as an unsigned 32-bit integer.
+ */
 const bit = (index: number) => (1 << index) >>> 0;
+/**
+ * Checks if the bit at the given index is set in the provided mask.
+ * @param mask - The bitmask to check.
+ * @param index - The bit position to test (0-based).
+ * @returns True if the bit at the given index is set; otherwise, false.
+ */
 const hasBit = (mask: number, index: number) => (mask & bit(index)) !== 0;
 
 // kept for future reference
