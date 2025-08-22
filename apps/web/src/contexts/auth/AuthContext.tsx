@@ -5,9 +5,27 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import type { AuthContextType, Permission, Role, User } from "./auth.types";
+import {
+  FEATURES,
+  PERMISSIONS,
+  ROLES,
+  type AuthContextType,
+  type User,
+} from "./auth.types";
 import { mockUsers } from "./mockUsers";
-import { hashPasswordSync } from "../utils/password";
+import { hashPasswordSync } from "../../utils/password";
+
+const bit = (index: number) => (1 << index) >>> 0;
+const hasBit = (mask: number, index: number) => (mask & bit(index)) !== 0;
+
+// kept for future reference
+// const decodeMask = <T extends Record<string, number>>(
+//   mask: number,
+//   map: T
+// ): (keyof T)[] =>
+//   (Object.keys(map) as (keyof T)[]).filter((k) =>
+//     hasBit(mask, map[k as string])
+//   );
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const AuthContext = createContext<AuthContextType | null>(null);
@@ -46,48 +64,20 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     sessionStorage.removeItem("username");
   };
 
-  const hasPermission = (perm: Permission) => {
+  // ---- Bitmask-based checks ----
+  const hasPermission = (perm: keyof typeof PERMISSIONS) => {
     if (!user) return false;
-
-    return user.permissions.includes(perm);
+    return hasBit(user.permissionsMask, PERMISSIONS[perm]);
   };
 
-  const hasAnyPermission = (perms: Permission[]) => {
+  const hasFeature = (feature: keyof typeof FEATURES) => {
     if (!user) return false;
-
-    if (!Array.isArray(user.permissions)) return false;
-
-    return perms.some((p) => user.permissions.includes(p));
+    return hasBit(user.featuresMask, FEATURES[feature]);
   };
 
-  const hasAllPermissions = (perms: Permission[]) => {
+  const hasRole = (role: keyof typeof ROLES) => {
     if (!user) return false;
-    return perms.every((p) => user.permissions.includes(p));
-  };
-
-  const hasFeatureEnabled = (flag: string) => {
-    if (!user) return false;
-
-    return !!user.featureFlags?.[flag];
-  };
-
-  const hasRole = (role: Role) => {
-    if (!user) return false;
-    return Array.isArray(user.roles) && user.roles.includes(role);
-  };
-
-  const hasAnyRoles = (roles: Role[]) => {
-    if (!user) return false;
-
-    if (!Array.isArray(user.roles)) return false;
-
-    return roles.some((r) => user.roles.includes(r));
-  };
-
-  const hasAllRoles = (roles: Role[]) => {
-    if (!user) return false;
-    if (!Array.isArray(user.roles)) return false;
-    return roles.every((r) => user.roles.includes(r));
+    return hasBit(user.rolesMask, ROLES[role]);
   };
 
   const value: AuthContextType = {
@@ -96,12 +86,16 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     login,
     logout,
     hasPermission,
-    hasAnyPermission,
-    hasAllPermissions,
     hasRole,
-    hasAnyRoles,
-    hasAllRoles,
-    hasFeatureEnabled,
+    hasFeature,
+
+    // optional: decoders for debugging / UI - kept for future reference
+    // decode: {
+    //   roles: () => (user ? decodeMask(user.rolesMask, ROLES) : []),
+    //   permissions: () =>
+    //     user ? decodeMask(user.permissionsMask, PERMISSIONS) : [],
+    //   features: () => (user ? decodeMask(user.featuresMask, FEATURES) : []),
+    // },
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
@@ -112,16 +106,4 @@ export const useAuth = () => {
   const ctx = useContext(AuthContext);
   if (!ctx) throw new Error("useAuth must be used within AuthProvider");
   return ctx;
-};
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const useFeatureFlags = () => {
-  const { user } = useAuth();
-  return user?.featureFlags || {};
-};
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const usePermissions = () => {
-  const { user } = useAuth();
-  return user?.permissions || [];
 };

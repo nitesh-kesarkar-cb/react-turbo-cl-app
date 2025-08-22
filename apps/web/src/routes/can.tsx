@@ -1,33 +1,15 @@
-import { Permission, Role } from "@/contexts/auth.types";
-import { useAuth } from "../contexts/AuthContext";
+import React from "react";
+import { useAuth } from "../contexts/auth/AuthContext";
+import { PERMISSIONS, ROLES } from "@/contexts/auth/auth.types";
 
 type CanProps = {
-  perm?: Permission;
-  perms?: Permission[];
-  checkAllPerms?: boolean;
-  checkAllRoles?: boolean;
-  role?: Role;
-  roles?: Role[];
+  perm?: keyof typeof PERMISSIONS;
+  role?: keyof typeof ROLES;
   children: React.ReactNode;
 };
 
-export function Can({
-  perm,
-  perms,
-  role,
-  roles,
-  checkAllPerms,
-  checkAllRoles,
-  children,
-}: CanProps) {
-  const {
-    hasPermission,
-    hasAnyPermission,
-    hasRole,
-    hasAnyRoles,
-    hasAllRoles,
-    hasAllPermissions,
-  } = useAuth();
+export function Can({ perm, role, children }: CanProps) {
+  const { hasPermission, hasRole } = useAuth();
 
   let canRender = true;
 
@@ -36,24 +18,8 @@ export function Can({
     canRender = false;
   }
 
-  if (
-    perms?.length &&
-    ((checkAllPerms && !hasAllPermissions(perms)) ||
-      (!checkAllPerms && !hasAnyPermission(perms)))
-  ) {
-    canRender = false;
-  }
-
   // Role checks
-  if (role && !hasRole(role)) {
-    canRender = false;
-  }
-
-  if (
-    roles?.length &&
-    ((checkAllRoles && !hasAllRoles(roles)) ||
-      (!checkAllRoles && !hasAnyRoles(roles)))
-  ) {
+  if (canRender && role && !hasRole(role)) {
     canRender = false;
   }
 
