@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { translationConfig } from "./types";
+import { createTranslationConfig } from "./types";
 import { LANGUAGE_STORAGE_KEY } from "@/utils/constant";
 import { setLocalStorageItem } from "@/contexts/useStorageContext";
 
@@ -11,7 +11,7 @@ const applyDir = (lng: string) => {
     document.documentElement.setAttribute("lang", lng);
 };
 
-i18n.use(initReactI18next).init(translationConfig, () => {
+i18n.use(initReactI18next).init((await createTranslationConfig()), () => {
     applyDir(i18n.language || "en");
 });
 

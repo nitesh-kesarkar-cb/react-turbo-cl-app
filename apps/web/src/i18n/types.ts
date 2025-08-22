@@ -27,16 +27,20 @@ export const loadResources = async (): Promise<Record<Language, Record<Namespace
   return resources;
 };
 
-export const translationConfig: InitOptions = {
-  resources: await loadResources(),
-  fallbackLng: DEFAULT_LANGUAGE_CODE,
-  supportedLngs: languages,
-  lng: savedLang,
-  interpolation: {
-    escapeValue: false,
-  },
-  ns: namespaces,
-  defaultNS: "auth"
+// Use this function to asynchronously create the translation config
+export const createTranslationConfig = async (): Promise<InitOptions> => {
+  const resources = await loadResources();
+  return {
+    resources,
+    fallbackLng: DEFAULT_LANGUAGE_CODE,
+    supportedLngs: languages,
+    lng: savedLang,
+    interpolation: {
+      escapeValue: false,
+    },
+    ns: namespaces,
+    defaultNS: "auth"
+  };
 };
 
 export const languageNames: Record<Language, string> = {
