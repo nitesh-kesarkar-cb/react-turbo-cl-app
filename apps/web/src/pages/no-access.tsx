@@ -18,13 +18,12 @@ import {
 import { useNavigate, useRouter } from "@tanstack/react-router";
 
 function NoAccessPage() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("auth");
   const navigate = useNavigate();
   const router = useRouter();
   const supportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
 
   const goBack = () => {
-    console.log(router.history);
     if (router.history.length > 1) {
       router.history.back();
     } else {

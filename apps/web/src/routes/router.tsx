@@ -115,7 +115,6 @@ export function RouterApp() {
   }, []);
 
   const onMessageReceived = (payload: MessagePayload) => {
-    console.log("Message received:", payload);
     showNotification(payload);
   };
 

@@ -12,12 +12,11 @@ import { Button } from "@/components/ui/button";
 import { SearchX, Home, LogIn, ArrowLeft } from "lucide-react";
 
 function PageNotFoundPage() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("auth");
   const navigate = useNavigate();
   const router = useRouter();
 
   const goBack = () => {
-    console.log(router.history);
     if (router.history.length > 1) {
       router.history.back();
     } else {

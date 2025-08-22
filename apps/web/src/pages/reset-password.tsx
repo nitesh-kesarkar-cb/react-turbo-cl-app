@@ -20,7 +20,7 @@ import { MOCK_API_TIMEOUT } from "@/utils/constant";
 
 export default function ResetPasswordPage() {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useTranslation("auth");
 
   const email =
     (typeof window !== "undefined" && sessionStorage.getItem("resetEmail")) ||
