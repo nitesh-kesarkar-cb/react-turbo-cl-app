@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterApp } from "./routes/router";
-import { AuthProvider } from "./contexts/AuthContext";
+import { AuthProvider } from "./contexts/auth/AuthContext";
 import { withSentryBoundary } from "./hoc/with-sentry-boundary";
 import "./i18n";
 import "./index.css";

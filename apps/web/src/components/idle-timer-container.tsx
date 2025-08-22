@@ -1,6 +1,6 @@
 import { useNavigate } from "@tanstack/react-router";
 import { useIdleTimer } from "react-idle-timer";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/auth/AuthContext";
 import {
   IDLE_THROTTLE,
   IDLE_TIMEOUT,

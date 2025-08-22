@@ -1,8 +1,8 @@
 import type { JSX } from "react";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../contexts/auth/AuthContext";
 import { Navigate } from "@tanstack/react-router";
 import IdleTimerContainer from "../components/idle-timer-container";
-import { Permission, Role } from "@/contexts/auth.types";
+import { Permission, Role } from "@/contexts/auth/auth.types";
 
 export function ProtectedRoute({
   children,
