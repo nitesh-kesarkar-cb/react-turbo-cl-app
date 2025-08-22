@@ -13,7 +13,9 @@ export const DEFAULT_LANGUAGE_CODE: Language = "en";
 
 export const languages: Language[] = ["en", "hi", "ar", "zh", "yue"];
 
-const savedLang = getLocalStorageItem(LANGUAGE_STORAGE_KEY) as string || "en";
+const savedLang =
+  (getLocalStorageItem(LANGUAGE_STORAGE_KEY) as string) ||
+  DEFAULT_LANGUAGE_CODE;
 
 // the translations
 // (tip move them in a JSON file and import them,
@@ -39,14 +41,13 @@ export const translationConfig: InitOptions = {
     order: ["cookie", "localStorage", "navigator", "htmlTag"],
     caches: ["cookie"],
     cookieMinutes: 60 * 24 * 30,
-  }
-
+  },
 };
 
 export const languageNames: Record<Language, string> = {
   en: "English",
   hi: "हिंदी",
   ar: "العربية",
-  zh: "中文 (简体)",       
-  yue: "中文 (繁體, 粵語)" 
+  zh: "中文 (简体)",
+  yue: "中文 (繁體, 粵語)",
 };
