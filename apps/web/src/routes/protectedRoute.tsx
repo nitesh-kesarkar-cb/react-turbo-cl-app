@@ -2,7 +2,7 @@ import type { JSX } from "react";
 import { useAuth } from "../contexts/auth/AuthContext";
 import { Navigate } from "@tanstack/react-router";
 import IdleTimerContainer from "../components/idle-timer-container";
-import { Permission, Role } from "@/contexts/auth/auth.types";
+import { PERMISSIONS, ROLES } from "@/contexts/auth/auth.types";
 
 export function ProtectedRoute({
   children,
@@ -10,10 +10,10 @@ export function ProtectedRoute({
   permissions,
 }: Readonly<{
   children: JSX.Element;
-  roles?: Role[];
-  permissions?: Permission[];
+  roles?: (keyof typeof ROLES)[];
+  permissions?: (keyof typeof PERMISSIONS)[];
 }>) {
-  const { user, hasAnyRoles, hasAnyPermission } = useAuth();
+  const { user, hasAnyRole, hasAnyPermission } = useAuth();
 
   // Not logged in? Redirect to login
   if (!user) {
@@ -21,7 +21,7 @@ export function ProtectedRoute({
   }
 
   // Role-based check
-  if (roles && !hasAnyRoles(roles)) {
+  if (roles && !hasAnyRole(roles)) {
     return <Navigate to="/no-access" />;
   }
 

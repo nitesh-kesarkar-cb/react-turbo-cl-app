@@ -1,23 +1,40 @@
-import { create } from "zustand";
+
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { User } from "@/contexts/auth/auth.types";
 
-interface AuthState {
+export interface AuthState {
   user: User | null;
   accessToken: string | null;
   refreshToken: string | null;
-
-  setUser: (user: User | null) => void;
-  setTokens: (access: string, refresh: string) => void;
-  logout: () => void;
 }
 
-export const useAuthStore = create<AuthState>((set) => ({
+const initialState: AuthState = {
   user: null,
   accessToken: null,
   refreshToken: null,
+};
 
-  setUser: (user) => set({ user }),
-  setTokens: (accessToken, refreshToken) =>
-    set({ accessToken, refreshToken }),
-  logout: () => set({ user: null, accessToken: null, refreshToken: null }),
-}));
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
+  reducers: {
+    setUser: (state, action: PayloadAction<User | null>) => {
+      state.user = action.payload;
+    },
+    setTokens: (
+      state,
+      action: PayloadAction<{ accessToken: string; refreshToken: string }>
+    ) => {
+      state.accessToken = action.payload.accessToken;
+      state.refreshToken = action.payload.refreshToken;
+    },
+    logout: (state) => {
+      state.user = null;
+      state.accessToken = null;
+      state.refreshToken = null;
+    },
+  },
+});
+
+export const { setUser, setTokens, logout } = authSlice.actions;
+export const authReducer = authSlice.reducer;

@@ -92,6 +92,19 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     return hasBit(user.rolesMask, ROLES[role]);
   };
 
+  const hasAnyRole = (roles: (keyof typeof ROLES)[]) => {
+    if (!user) return false;
+    return roles.some((role) => hasBit(user.rolesMask, ROLES[role]));
+  };
+
+  const hasAnyPermission = (perms: (keyof typeof PERMISSIONS)[]) => {
+    if (!user) return false;
+    return perms.some((perm) => hasBit(user.permissionsMask, PERMISSIONS[perm]));
+  };
+
+
+
+
   const value: AuthContextType = {
     user,
     isLoggedIn: !!user,
@@ -100,6 +113,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     hasPermission,
     hasRole,
     hasFeature,
+    hasAnyRole,
+    hasAnyPermission
 
     // optional: decoders for debugging / UI - kept for future reference
     // decode: {

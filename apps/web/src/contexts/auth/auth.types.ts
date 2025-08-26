@@ -39,6 +39,9 @@ export interface AuthContextType {
   // Feature flags (bitmask-backed)
   hasFeature: (feature: keyof typeof FEATURES) => boolean;
 
+  hasAnyRole: (roles: (keyof typeof ROLES)[]) => boolean;
+  hasAnyPermission: (perms: (keyof typeof PERMISSIONS)[]) => boolean;
+
   // Optional helpers for debugging/UI (decoded lists)
   // decode?: {
   //   roles: () => Role[];
