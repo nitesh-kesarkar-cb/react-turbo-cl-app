@@ -1,33 +1,35 @@
-// src/api/authApi.ts
 import { useMutation, useQuery } from "@tanstack/react-query";
-import api from "@/lib/apiClient";
 import { useAuthStore } from "@/store/slice";
 import { User } from "@/contexts/auth/auth.types";
+import { getUserProfileApi, loginApi } from "../api/authApi";
+import { queryKeys } from "./queryKeys";
 
 type LoginPayload = { username: string; password: string };
 
 export const useLogin = () => {
   const setTokens = useAuthStore((s) => s.setTokens);
-  const setUser = useAuthStore((s) => s.setUser);
 
   return useMutation({
     mutationFn: async ({ username, password }: LoginPayload) => {
-      const { data } = await api.post("/auth/login", { username, password });
+      const data = await loginApi({ email: username, password }) as unknown as {
+        accessToken: string;
+        refreshToken: string
+      };
       return data;
     },
     onSuccess: (data) => {
       setTokens(data.accessToken, data.refreshToken);
-      setUser(data.user as User);
-      sessionStorage.setItem("username", data.user.username);
     },
   });
 };
 
-export const useProfileQuery = () => {
+export const useProfile = () => {
+  const { setUser } = useAuthStore();
   return useQuery<User>({
-    queryKey: ["profile"],
+    queryKey: [queryKeys.profile],
     queryFn: async () => {
-      const { data } = await api.get("/auth/profile");
+      const { data } = await getUserProfileApi() as unknown as { data: User };
+      setUser(data);
       return data as User;
     },
     enabled: !!useAuthStore.getState().accessToken,
