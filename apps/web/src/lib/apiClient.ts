@@ -10,8 +10,7 @@ const axiosInstance: AxiosInstance = axios.create({
   headers: {
     "Content-Type": "application/json",
     minVersion: API_BASE_URL_MIN_VERSION,
-  },
-  method: ''
+  }
 });
 
 axiosInstance.interceptors.request.use((config) => {
@@ -23,7 +22,7 @@ axiosInstance.interceptors.request.use((config) => {
 });
 // refresh token logic
 let isRefreshing = false;
-let failedQueue = [];
+let failedQueue: Array<{resolve: (value: any) => void, reject: (reason?: any) => void}> = [];
 
 // const processQueue = (error: any, token: string | null = null) => {
 //   failedQueue.forEach((prom) => {

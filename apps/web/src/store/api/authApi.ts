@@ -1,4 +1,4 @@
-import { apiRequest, ApiRequestOptions } from '@/lib/axiosClient';
+import { apiRequest, ApiRequestOptions } from '@/lib/apiClient';
 import { API_CONFIG } from './apis';
 import { HTTPMethods } from '@/utils/enums';
 
