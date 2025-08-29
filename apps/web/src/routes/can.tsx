@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth } from "../contexts/auth/AuthContext";
+import { useAuth } from "@/contexts/auth/AuthContext";
 import { PERMISSIONS, ROLES } from "@/contexts/auth/auth.types";
 
 type CanProps = {

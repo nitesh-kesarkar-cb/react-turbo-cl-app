@@ -8,17 +8,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
+} from "@repo/ui";
+import { Input } from "@repo/ui";
+import { Label } from "@repo/ui";
+import { Button } from "@repo/ui";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/components/ui/input-otp";
-import { H2 } from "@/components/ui/heading";
-import { Text } from "@/components/ui/text";
+} from "@repo/ui";
+import { H2 } from "@repo/ui";
+import { Text } from "@repo/ui";
 import { validateEmail } from "@/utils/email";
 import { MOCK_API_TIMEOUT, RESEND_OTP_TIMEOUT } from "@/utils/constant";
 
