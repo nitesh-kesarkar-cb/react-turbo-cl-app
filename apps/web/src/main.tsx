@@ -10,6 +10,9 @@ import { ThemeProvider } from "./components/theme/theme-provider";
 import { setInitialTheme } from "./components/theme/setTheme";
 import I18nDirectionProvider from "./contexts/DirectionProvider";
 
+import { Provider } from 'react-redux'
+import { store } from "./store";
+
 
 // Set theme before rendering
 setInitialTheme();
@@ -33,11 +36,12 @@ createRoot(document.getElementById("app")!).render(
 
   <StrictMode>
     <I18nDirectionProvider>
-      <ThemeProvider>
-        <AuthProvider>
-          <MainComponent />
-        </AuthProvider>
-      </ThemeProvider>
+      <Provider store={store}>
+        <ThemeProvider>
+          <AuthProvider>
+            <MainComponent />
+          </AuthProvider>
+        </ThemeProvider></Provider>
     </I18nDirectionProvider>
   </StrictMode>
 );
