@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@repo/ui";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea } from "./scroll-area";
 import { Button } from "@repo/ui";
 
 function safeStringify(value: unknown, space = 2) {
   const seen = new WeakSet();
   return JSON.stringify(
     value,
-    (key, val) => {
+    (_, val) => {
       if (typeof val === "object" && val !== null) {
         if (seen.has(val)) return "[Circular]";
         seen.add(val as object);

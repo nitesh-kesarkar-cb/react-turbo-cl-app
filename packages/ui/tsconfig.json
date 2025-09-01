@@ -1,18 +1,10 @@
 {
-  "include": [
-    "."
-  ],
-  "exclude": [
-    "node_modules"
-  ],
   "extends": "@repo/typescript-config/vite.json",
+  "include": ["src"],
   "compilerOptions": {
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+    "paths": { "@ui/*": ["./src/*"] },
+    "moduleResolution": "bundler"
   }
 }

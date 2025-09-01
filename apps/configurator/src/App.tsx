@@ -1,62 +1,103 @@
+import { useEffect, useState } from "react";
 
-import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@repo/ui";
+import { Button } from "@repo/ui";
+import { Input } from "@repo/ui";
+import { Label } from "@repo/ui";
+import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui";
+import { Navbar } from "@/components/navbar";
 
-function App() {
+export default function LoginPage() {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [touched, setTouched] = useState<{
+    username?: boolean;
+    password?: boolean;
+  }>({});
+  const [error, setError] = useState<string | null>(null);
+
+  const usernameError =
+    touched.username && !username ? "Username is required" : "";
+  const passwordError =
+    touched.password && !password ? "Password is required" : "";
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setTouched({ username: true, password: true });
+    setError(null);
+
+    if (!username || !password) return;
+
+    console.log("Logging in with", { username, password });
+  }
+
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">Shadcn Cards Example</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Card 1 */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Card Title 1</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              This is a simple card component using Shadcn UI.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-              Action
-            </button>
-          </CardFooter>
-        </Card>
-        {/* Card 2 */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Card Title 2</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              Cards are useful for displaying grouped content.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-              Learn More
-            </button>
-          </CardFooter>
-        </Card>
-        {/* Card 3 */}
-        <Card>
-          <CardHeader>
-            <CardTitle>Card Title 3</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">
-              You can customize cards with different colors and actions.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <button className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">
-              Details
-            </button>
-          </CardFooter>
-        </Card>
-      </div>
-    </div>
-  );
-}
+    <div>
+      <Navbar />
+    
+    <Card className="w-full max-w-md">
 
-export default App;
+      <CardHeader className="space-y-1">
+        <CardTitle className="text-2xl font-semibold tracking-tight">
+          Login
+        </CardTitle>
+      </CardHeader>
+
+      <CardContent>
+        <form className="space-y-4" onSubmit={onSubmit} noValidate>
+          <div className="grid gap-2">
+            <Label htmlFor="username">Username</Label>
+            <Input
+              id="username"
+              type="text"
+              autoComplete="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              onBlur={() => setTouched((s) => ({ ...s, username: true }))}
+              aria-invalid={!!usernameError}
+              aria-describedby={usernameError ? "username-error" : undefined}
+              placeholder="you@example.com"
+            />
+            {usernameError ? (
+              <p id="username-error" className="text-sm text-destructive">
+                {usernameError}
+              </p>
+            ) : null}
+          </div>
+
+          <div className="grid gap-2">
+            <Label htmlFor="password">Password</Label>
+            <Input
+              id="password"
+              type="password"
+              autoComplete="current-password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              onBlur={() => setTouched((s) => ({ ...s, password: true }))}
+              aria-invalid={!!passwordError}
+              aria-describedby={passwordError ? "password-error" : undefined}
+              placeholder="••••••••"
+            />
+            {passwordError ? (
+              <p id="password-error" className="text-sm text-destructive">
+                {passwordError}
+              </p>
+            ) : null}
+          </div>
+
+          {error ? (
+            <div className="rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive">
+              {error}
+            </div>
+          ) : null}
+
+          <div className="flex items-center justify-between">
+            
+            <Button type="submit">
+              Submit
+            </Button>
+          </div>
+        </form>
+      </CardContent>
+    </Card>
+  </div>
+)}
