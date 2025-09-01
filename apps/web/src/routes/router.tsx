@@ -10,15 +10,15 @@ import {
 import { onMessage, type MessagePayload } from "firebase/messaging";
 
 import { ProtectedRoute } from "./protectedRoute";
-import { MapPage } from "../pages/map-page";
-import { showNotification } from "../services/notificationService";
-import { generateToken, messaging } from "../utils/firebase";
-import ForgotPasswordPage from "../pages/forgot-password";
-import ResetPasswordPage from "../pages/reset-password";
-import DashboardPage from "../pages/dashboard";
-import NoAccessPage from "../pages/no-access";
-import LoginPage from "../pages/login";
-import PageNotFoundPage from "../pages/page-not-found";
+import { MapPage } from "@/pages/map-page";
+import { showNotification } from "@/services/notificationService";
+import { generateToken, messaging } from "@/utils/firebase";
+import ForgotPasswordPage from "@/pages/forgot-password";
+import ResetPasswordPage from "@/pages/reset-password";
+import DashboardPage from "@/pages/dashboard";
+import NoAccessPage from "@/pages/no-access";
+import LoginPage from "@/pages/login";
+import PageNotFoundPage from "@/pages/page-not-found";
 import AuthLayout from "./layouts/auth-layout";
 import AppLayout from "./layouts/app-layout";
 

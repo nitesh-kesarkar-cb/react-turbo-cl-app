@@ -10,9 +10,9 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from "@repo/ui";
+import { Input } from "@repo/ui";
+import { Button } from "@repo/ui";
 import { LocateFixed, RotateCcw, Search } from "lucide-react";
 
 export const MapPage = () => {
