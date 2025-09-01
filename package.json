@@ -21,6 +21,10 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
     "axios": "^1.11.0",
-    "react-redux": "^9.2.0"
+    "class-variance-authority": "^0.7.1",
+    "input-otp": "^1.4.2",
+    "lucide-react": "^0.542.0",
+    "react-redux": "^9.2.0",
+    "tailwind-merge": "^3.3.1"
   }
 }
