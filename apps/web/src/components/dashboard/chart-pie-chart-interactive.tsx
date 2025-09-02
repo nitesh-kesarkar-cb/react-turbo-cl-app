@@ -177,7 +177,7 @@ export function ChartPieInteractive() {
                       </text>
                     );
                   }
-                  return
+                  return null;
                 }}
               />
             </Pie>
