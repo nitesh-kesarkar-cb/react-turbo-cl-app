@@ -16,3 +16,5 @@ services:
         APP: web
     ports:
       - "5173:80"
+    env_file:
+      - ./apps/web/.env
