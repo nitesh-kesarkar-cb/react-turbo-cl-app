@@ -1,0 +1,20 @@
+services:
+  configurator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP: configurator
+    ports:
+      - "5174:80"
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        APP: web
+    ports:
+      - "5173:80"
+    env_file:
+      - ./apps/web/.env

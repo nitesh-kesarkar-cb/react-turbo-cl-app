@@ -1,0 +1,32 @@
+# Dev Dockerfile
+FROM node:22.18.0-alpine3.21 AS dev
+
+# Install dependencies
+RUN apk add --no-cache libc6-compat bash
+
+# Set working dir
+WORKDIR /app
+
+# Copy package manifests
+COPY package.json turbo.json ./
+COPY package-lock.json* ./
+
+# Install root dependencies
+RUN npm install
+
+# Copy rest of the monorepo (source)
+COPY . .
+
+# Default args
+ARG APP
+ENV APP=$APP
+ENV NODE_ENV=development
+
+# Install app-specific deps (ensures node_modules is complete)
+RUN npm install --workspace=apps/$APP
+
+# Expose Vite/Next/Nuxt dev server ports
+EXPOSE 5173 5174
+
+# Run dev server for the chosen app
+CMD ["sh", "-c", "npm run dev --workspace=apps/$APP"]
