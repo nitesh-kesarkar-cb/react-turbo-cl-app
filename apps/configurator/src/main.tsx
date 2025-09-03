@@ -6,8 +6,6 @@ import { ThemeProvider } from "./components/theme/theme-provider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
       <App />
-    </ThemeProvider>  
   </StrictMode>
 );

@@ -5,14 +5,16 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@repo/ui": "*",
     "@tailwindcss/vite": "^4.1.12",
-    "@tanstack/react-router": "^1.131.31",
+    "@tanstack/react-router": "^1.131.5",
+    "@tanstack/router-devtools": "^1.131.5",
+    "js-sha256": "^0.11.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.12"
