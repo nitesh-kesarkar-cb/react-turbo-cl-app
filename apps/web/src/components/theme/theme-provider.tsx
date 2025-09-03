@@ -10,16 +10,12 @@ import { THEME_STORAGE_KEY } from "@/utils/constant";
 
 type ThemeContextValue = {
   theme: Theme;
-  resolvedTheme: Theme;
+  resolvedTheme: Theme; // keep this for minimal impact; it's equal to theme now
   setTheme: (t: Theme) => void;
 };
 
 function isTheme(value: string): value is Theme {
-  return (
-    value === ThemeEnum.Light ||
-    value === ThemeEnum.Dark ||
-    value === ThemeEnum.System
-  );
+  return value === ThemeEnum.Light || value === ThemeEnum.Dark;
 }
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
@@ -30,45 +26,28 @@ export function ThemeProvider({
   readonly children: React.ReactNode;
 }) {
   const [theme, setTheme] = useState<Theme>(() => {
-    const stored = localStorage.getItem(THEME_STORAGE_KEY) || ThemeEnum.System;
-    return isTheme(stored) ? stored : ThemeEnum.System;
+    const stored = localStorage.getItem(THEME_STORAGE_KEY);
+    if (stored && isTheme(stored)) return stored as Theme;
+
+    // No stored theme? Respect initial system preference once, then persist.
+    const prefersDark =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+
+    return prefersDark ? ThemeEnum.Dark : ThemeEnum.Light;
   });
 
-  // system preference listener
-  const [systemDark, setSystemDark] = useState<boolean>(
-    window.matchMedia?.("(prefers-color-scheme: dark)").matches ?? false
-  );
-
-  useEffect(() => {
-    const mql = window.matchMedia("(prefers-color-scheme: dark)");
-    const handler = (e: MediaQueryListEvent) => setSystemDark(e.matches);
-    mql.addEventListener?.("change", handler);
-    return () => mql.removeEventListener?.("change", handler);
-  }, []);
-
-  let resolvedTheme: ThemeEnum;
-
-  if (theme === ThemeEnum.System) {
-    if (systemDark) {
-      resolvedTheme = ThemeEnum.Dark;
-    } else {
-      resolvedTheme = ThemeEnum.Light;
-    }
-  } else {
-    resolvedTheme = theme;
-  }
+  // resolvedTheme is simply theme now (no "system" mode)
+  const resolvedTheme: Theme = theme;
 
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.toggle(ThemeEnum.Dark, resolvedTheme === ThemeEnum.Dark);
-    root.style.colorScheme = resolvedTheme;
+    root.classList.toggle(ThemeEnum.Dark, theme === ThemeEnum.Dark);
+    root.style.colorScheme = theme;
     localStorage.setItem(THEME_STORAGE_KEY, theme);
-  }, [theme, resolvedTheme]);
+  }, [theme]);
 
-  const value = useMemo(
-    () => ({ theme, resolvedTheme, setTheme: (t: Theme) => setTheme(t) }),
-    [theme, resolvedTheme]
-  );
+  const value = useMemo(() => ({ theme, resolvedTheme, setTheme }), [theme]);
 
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>

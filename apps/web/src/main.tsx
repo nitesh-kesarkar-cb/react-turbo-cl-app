@@ -10,19 +10,11 @@ import { ThemeProvider } from "./components/theme/theme-provider";
 import { setInitialTheme } from "./components/theme/setTheme";
 import I18nDirectionProvider from "./contexts/DirectionProvider";
 
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux";
 import { store } from "./store";
-
 
 // Set theme before rendering
 setInitialTheme();
-
-// For TypeScript support
-// declare module "@tanstack/react-router" {
-//   interface Register {
-//     router: typeof router;
-//   }
-// }
 
 let MainComponent;
 if (import.meta.env.VITE_SENTRY_DSN) {
@@ -31,9 +23,7 @@ if (import.meta.env.VITE_SENTRY_DSN) {
   MainComponent = RouterApp;
 }
 
-
 createRoot(document.getElementById("app")!).render(
-
   <StrictMode>
     <I18nDirectionProvider>
       <Provider store={store}>
@@ -41,7 +31,8 @@ createRoot(document.getElementById("app")!).render(
           <AuthProvider>
             <MainComponent />
           </AuthProvider>
-        </ThemeProvider></Provider>
+        </ThemeProvider>
+      </Provider>
     </I18nDirectionProvider>
   </StrictMode>
 );
