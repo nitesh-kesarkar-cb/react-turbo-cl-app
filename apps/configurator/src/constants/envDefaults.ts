@@ -1,0 +1,10 @@
+export const CRYPTO_SECRET_KEY = import.meta.env.VITE_CRYPTO_SECRET_KEY || 'default_secret_key';
+export const CRUDCRUD_API_KEY = import.meta.env.VITE_CRUDCRUD_API_KEY || 'default_crudcrud_api_key';
+export const TODO_BACKEND = import.meta.env.VITE_TODO_BACKEND || 'local';
+export const SENTRY_DSN = import.meta.env.VITE_SENTRY_DSN || '';
+export const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'default_google_maps_api_key';
+export const FIREBASE_VAPID_KEY = import.meta.env.VITE_FIREBASE_VAPID_KEY || 'default_firebase_vapid_key';
+export const FIREBASE_CONFIG = JSON.parse(import.meta.env.VITE_FIREBASE_CONFIG || '{}');
+export const SUPPORT_EMAIL = import.meta.env.VITE_SUPPORT_EMAIL || 'support@connectedlife.io';
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000/api';
+export const API_BASE_URL_MIN_VERSION = import.meta.env.VITE_API_BASE_URL_MIN_VERSION || '1';

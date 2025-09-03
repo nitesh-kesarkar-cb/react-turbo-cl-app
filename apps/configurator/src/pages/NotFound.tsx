@@ -1,0 +1,74 @@
+import { Link, useNavigate, useRouter } from "@tanstack/react-router";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@repo/ui";
+import { Button } from "@repo/ui";
+import { SearchX, Home, LogIn, ArrowLeft } from "lucide-react";
+
+function PageNotFoundPage() {
+  const navigate = useNavigate();
+  const router = useRouter();
+
+  const goBack = () => {
+    if (router.history.length > 1) {
+      router.history.back();
+    } else {
+      navigate({ to: "/", replace: true });
+    }
+  };
+
+  return (
+    // If your root <Outlet /> is already vertically centered,
+    // you can remove this wrapper and just return the <Card>.
+    <div className="grid min-h-[calc(100svh-56px)] place-items-center p-4">
+      <Card className="w-full max-w-md">
+        <CardHeader className="space-y-3">
+          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+            <SearchX className="h-6 w-6 text-muted-foreground" aria-hidden />
+          </div>
+          <CardTitle className="text-center">
+            <span className="text-2xl font-bold">404</span>
+          </CardTitle>
+          <CardDescription className="text-center">
+            <span className="text-sm text-muted-foreground">
+              The page you are looking for does not exist.
+            </span>
+          </CardDescription>
+        </CardHeader>
+
+        <CardContent className="space-y-2 text-center text-sm text-muted-foreground">
+          <p>404</p>
+          <p>The page you are looking for does not exist.</p>
+        </CardContent>
+
+        <CardFooter className="flex flex-wrap items-center justify-center gap-2">
+          <Button variant="secondary" onClick={goBack}>
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Go Back
+          </Button>
+
+          <Button asChild>
+            <Link to="/" aria-label="Home">
+              <Home className="mr-2 h-4 w-4" />
+              Home
+            </Link>
+          </Button>
+
+          <Button variant="ghost" asChild>
+            <Link to="/login" aria-label="Login">
+              <LogIn className="mr-2 h-4 w-4" />
+              Login
+            </Link>
+          </Button>
+        </CardFooter>
+      </Card>
+    </div>
+  );
+}
+
+export default PageNotFoundPage;

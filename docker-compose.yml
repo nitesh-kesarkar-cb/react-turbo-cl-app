@@ -7,6 +7,38 @@ services:
         APP: configurator
     ports:
       - "5174:80"
+    profiles:
+      - "prod"
+
+  configurator-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        APP: configurator
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5174:5174"
+    profiles:
+      - "dev"
+
+  web-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+      args:
+        APP: web
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    env_file:
+      - ./apps/web/.env
+    profiles:
+      - "dev"
 
   web:
     build:
@@ -18,3 +50,5 @@ services:
       - "5173:80"
     env_file:
       - ./apps/web/.env
+    profiles:
+      - "prod"
