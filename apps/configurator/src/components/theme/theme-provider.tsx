@@ -47,10 +47,7 @@ export function ThemeProvider({
     localStorage.setItem(THEME_STORAGE_KEY, theme);
   }, [theme]);
 
-  const value = useMemo(
-    () => ({ theme, resolvedTheme, setTheme }),
-    [theme, resolvedTheme]
-  );
+  const value = useMemo(() => ({ theme, resolvedTheme, setTheme }), [theme]);
 
   return (
     <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
