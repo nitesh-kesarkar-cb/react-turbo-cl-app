@@ -16,3 +16,7 @@ export * from "./separator";
 export * from "./text";
 export * from "./toggle-group";
 export * from "./toggle";
+export * from "./avatar";
+export * from "./skeleton";
+export * from "./tooltip";
+export * from "./sheet";

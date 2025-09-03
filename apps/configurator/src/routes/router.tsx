@@ -11,6 +11,10 @@ import ScoreEnginePage from "@/pages/ScoreEngine";
 import PageNotFound from "@/pages/NotFound";
 import AuthLayout from "./layouts/auth-layout";
 import AppLayout from "./layouts/app-layout";
+import AccessControl from "@/pages/AccessControl";
+import Onboarding from "@/pages/Onboarding";
+import WhiteLabel from "@/pages/WhiteLabel";
+import Notifications from "@/pages/Notifications";
 
 const AUTH_PREFIXES: string[] = [];
 
@@ -46,8 +50,39 @@ const scoreEngineRoute = createRoute({
   component: () => <ScoreEnginePage />,
 });
 
+const onboardingRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/onboarding",
+  component: () => <Onboarding />,
+});
+
+const accessControlRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/access-control",
+  component: () => <AccessControl />,
+});
+
+const whiteLabelRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/white-label",
+  component: () => <WhiteLabel />,
+});
+
+const notificationsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/notifications",
+  component: () => <Notifications />,
+});
+
 // Combine routes
-const routeTree = rootRoute.addChildren([indexRoute, scoreEngineRoute]);
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  scoreEngineRoute,
+  onboardingRoute,
+  accessControlRoute,
+  whiteLabelRoute,
+  notificationsRoute,
+]);
 
 export const router = createRouter({ routeTree });
 

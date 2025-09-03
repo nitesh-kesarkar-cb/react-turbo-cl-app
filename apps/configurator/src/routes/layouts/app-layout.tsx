@@ -1,14 +1,14 @@
-import { Navbar } from "@/components/navbar";
+import { SidebarProvider } from "../../components/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 import { Outlet } from "@tanstack/react-router";
 
 export default function AppLayout() {
   return (
-    <div className="min-h-svh flex flex-col">
-      <Navbar />
-      {/* Let pages control their own width/padding */}
-      <main className="flex-1">
+    <SidebarProvider>
+      <AppSidebar />
+      <main className="p-5">
         <Outlet />
       </main>
-    </div>
+    </SidebarProvider>
   );
 }
