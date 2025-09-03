@@ -1,4 +1,3 @@
-import { createRoot } from "react-dom/client";
 import { RouterApp } from "./routes/router";
 import { AuthProvider } from "./contexts/auth/AuthContext";
 import "./index.css";
