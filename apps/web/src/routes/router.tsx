@@ -120,3 +120,10 @@ export function RouterApp() {
 
   return <RouterProvider router={router} />;
 }
+
+// For TypeScript support
+// declare module "@tanstack/react-router" {
+//   interface Register {
+//     router: typeof router;
+//   }
+// }

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   createRootRoute,
   createRouter,
@@ -8,13 +7,12 @@ import {
   useRouter,
 } from "@tanstack/react-router";
 
-import { ProtectedRoute } from "./protectedRoute";
 import ScoreEnginePage from "@/pages/ScoreEngine";
 import PageNotFound from "@/pages/NotFound";
 import AuthLayout from "./layouts/auth-layout";
 import AppLayout from "./layouts/app-layout";
 
-const AUTH_PREFIXES = [];
+const AUTH_PREFIXES: string[] = [];
 
 function isAuthPath(path: string) {
   // exact match or sub-routes like /login/2fa
@@ -45,16 +43,11 @@ const indexRoute = createRoute({
 const scoreEngineRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/score-engine",
-  component: () => (
-    <ScoreEnginePage />
-  ),
+  component: () => <ScoreEnginePage />,
 });
 
 // Combine routes
-const routeTree = rootRoute.addChildren([
-  indexRoute,
-  scoreEngineRoute,
-]);
+const routeTree = rootRoute.addChildren([indexRoute, scoreEngineRoute]);
 
 export const router = createRouter({ routeTree });
 
