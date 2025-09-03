@@ -59,7 +59,5 @@ const routeTree = rootRoute.addChildren([
 export const router = createRouter({ routeTree });
 
 export function RouterApp() {
-
-
   return <RouterProvider router={router} />;
 }
