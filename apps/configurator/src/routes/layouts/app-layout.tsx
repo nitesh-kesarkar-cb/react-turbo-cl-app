@@ -6,7 +6,7 @@ export default function AppLayout() {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <main className="p-5">
+      <main className="p-5 w-full bg-[#f7fafc]">
         <Outlet />
       </main>
     </SidebarProvider>

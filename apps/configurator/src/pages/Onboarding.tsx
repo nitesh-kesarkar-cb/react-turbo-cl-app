@@ -1,9 +1,7 @@
+import QuestionLibrary from "@/components/onboarding/QuestionLibrary";
+
 const Onboarding = () => {
-  return (
-    <div>
-      <h1 className="font-bold text-2xl">Onboarding</h1>
-    </div>
-  );
+  return <QuestionLibrary />;
 };
 
 export default Onboarding;
