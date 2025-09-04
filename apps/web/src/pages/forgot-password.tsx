@@ -8,7 +8,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@repo/ui";
+} from "@repo/ui/card";
 import { Input } from "@repo/ui";
 import { Label } from "@repo/ui";
 import { Button } from "@repo/ui";
