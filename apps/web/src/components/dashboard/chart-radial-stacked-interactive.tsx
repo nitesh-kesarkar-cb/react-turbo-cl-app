@@ -1,20 +1,28 @@
 "use client";
 
 import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from "recharts";
-
 import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-  Card, CardContent, CardHeader, CardTitle,
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@repo/ui";
-import React, { useMemo, useState } from "react";
+} from "@repo/ui/components/select";
+import * as React from "react";
+import { useMemo, useState } from "react";
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+
+} from "@repo/ui/components/chart";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/ui/components/card";
 
 export const description = "A radial chart with stacked sections";
 

@@ -9,8 +9,8 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
-} from "@repo/ui";
-import { Separator } from "@repo/ui";
+} from "@repo/ui/components/navigation-menu";
+import { Separator } from "@repo/ui/components/separator";
 import { LayoutDashboard, LogIn, LogOut, MapIcon } from "lucide-react";
 import { ThemeToggle } from "./theme/theme-toggle";
 import { MOCK_LOGIN_REDIRECT_TIMEOUT } from "@/utils/constant";

@@ -11,17 +11,19 @@ import {
   SheetDescription,
   SheetHeader,
   SheetTitle,
-  Separator,
-  Input,
-  Button,
-  cn,
+} from "@repo/ui/components/sheet";
+import { Button } from "@repo/ui/components/button";
+import { Input } from "@repo/ui/components/input";
+import { Skeleton } from "@repo/ui/components/skeleton";
+import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-  Skeleton,
-  useIsMobile,
-} from "@repo/ui";
+} from "@repo/ui/components/tooltip";
+import { Separator } from "@repo/ui/components/separator";
+import { useIsMobile } from "@repo/ui/hooks/use-mobile";
+import { cn } from "@repo/ui/lib/utils";
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;

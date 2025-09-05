@@ -1,5 +1,5 @@
 import { FC, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@repo/ui"; // shadcn/ui
+import { Card, CardHeader, CardTitle, CardContent } from "@repo/ui/components/card"; // shadcn/ui
 import {
   ResponsiveContainer,
   ComposedChart,

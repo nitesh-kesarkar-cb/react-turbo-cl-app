@@ -1,7 +1,7 @@
 import * as React from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@repo/ui";
+import { Card, CardHeader, CardTitle, CardContent } from "@repo/ui/components/card";
 import { ScrollArea } from "./scroll-area";
-import { Button } from "@repo/ui";
+import { Button } from "@repo/ui/components/button";
 
 function safeStringify(value: unknown, space = 2) {
   const seen = new WeakSet();

@@ -5,9 +5,10 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
-  Button,
-} from "@repo/ui";
-import { Separator } from "@repo/ui";
+ 
+} from "@repo/ui/components/navigation-menu";
+import { Button } from "@repo/ui/components/button";
+import { Separator } from "@repo/ui/components/separator";
 import {  LogIn } from "lucide-react";
 import { ThemeToggle } from "./theme/theme-toggle";
 

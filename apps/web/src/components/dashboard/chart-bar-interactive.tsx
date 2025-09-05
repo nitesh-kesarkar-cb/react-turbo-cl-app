@@ -7,11 +7,13 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
+} from "@repo/ui/components/card";
+import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@repo/ui";
+} from "@repo/ui/components/chart";
 
 export const description = "An interactive bar chart";
 

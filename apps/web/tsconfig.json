@@ -1,5 +1,4 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
   "include": [
     "src"
   ],
@@ -12,7 +11,11 @@
       ],
       "@repo/ui/*": [
         "../../packages/ui/src/*"
+      ],
+      "@repo/typescript-config/*": [
+        "../../packages/typescript-config/*"
       ]
     }
-  }
+  },
+  "extends": "@repo/typescript-config/vite.json",
 }

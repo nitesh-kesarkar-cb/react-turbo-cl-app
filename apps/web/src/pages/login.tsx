@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Button } from "@repo/ui";
-import { Input } from "@repo/ui";
-import { Label } from "@repo/ui";
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui";
+import { Button } from "@repo/ui/components/button";
+import { Input } from "@repo/ui/components/input";
+import { Label } from "@repo/ui/components/label";
+import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/components/card";
 import { useAuth } from "@/contexts/auth/AuthContext";
 import { Link, useNavigate } from "@tanstack/react-router";
 

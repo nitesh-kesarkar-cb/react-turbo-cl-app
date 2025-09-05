@@ -8,12 +8,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@repo/ui";
-import { Input } from "@repo/ui";
-import { Label } from "@repo/ui";
-import { Button } from "@repo/ui";
-import { H2 } from "@repo/ui";
-import { Text } from "@repo/ui";
+} from "@repo/ui/components/card";
+import { Input } from "@repo/ui/components/input";
+import { Label } from "@repo/ui/components/label";
+import { Button } from "@repo/ui/components/button";
+import { H2 } from "@repo/ui/components/heading";
+import { Text } from "@repo/ui/components/text";
 import { Eye, EyeOff } from "lucide-react";
 import { validatePassword, validatePasswordConfirm } from "@/utils/password";
 import { MOCK_API_TIMEOUT } from "@/utils/constant";

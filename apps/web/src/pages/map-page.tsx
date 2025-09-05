@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import MapViewWithMarker, {
   MapViewWithMarkerHandle,
-} from "../components/map-view-with-marker";
+} from "@/components/map-view-with-marker";
 import {
   Card,
   CardHeader,
@@ -10,9 +10,9 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@repo/ui";
-import { Input } from "@repo/ui";
-import { Button } from "@repo/ui";
+} from "@repo/ui/components/card";
+import { Input } from "@repo/ui/components/input";
+import { Button } from "@repo/ui/components/button";
 import { LocateFixed, RotateCcw, Search } from "lucide-react";
 
 export const MapPage = () => {

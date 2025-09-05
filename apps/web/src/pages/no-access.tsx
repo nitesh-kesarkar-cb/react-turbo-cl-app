@@ -6,8 +6,8 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@repo/ui";
-import { Button } from "@repo/ui";
+} from "@repo/ui/components/card";
+import { Button } from "@repo/ui/components/button";
 import {
   AlertTriangle,
   LockKeyhole,
@@ -16,12 +16,13 @@ import {
   LifeBuoy,
 } from "lucide-react";
 import { useNavigate, useRouter } from "@tanstack/react-router";
+import { SUPPORT_EMAIL } from "@/constants/envDefaults";
 
 function NoAccessPage() {
   const { t } = useTranslation("auth");
   const navigate = useNavigate();
   const router = useRouter();
-  const supportEmail = import.meta.env.VITE_SUPPORT_EMAIL;
+  const supportEmail = SUPPORT_EMAIL;
 
   const goBack = () => {
     if (router.history.length > 1) {
