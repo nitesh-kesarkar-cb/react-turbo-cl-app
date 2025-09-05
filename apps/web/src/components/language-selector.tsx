@@ -9,7 +9,7 @@ import {
   SelectContent,
   SelectItem,
   SelectValue,
-} from "@repo/ui";
+} from "@repo/ui/components/select";
 import { Globe } from "lucide-react";
 
 function normalizeLanguageCode(lang?: string): Language {

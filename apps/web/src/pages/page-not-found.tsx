@@ -7,8 +7,8 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@repo/ui";
-import { Button } from "@repo/ui";
+} from "@repo/ui/components/card";
+import { Button } from "@repo/ui/components/button";
 import { SearchX, Home, LogIn, ArrowLeft } from "lucide-react";
 
 function PageNotFoundPage() {

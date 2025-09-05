@@ -1,4 +1,4 @@
-import { cn } from "@repo/ui";
+import { cn } from "@repo/ui/lib/utils";
 import { useRouterState } from "@tanstack/react-router";
 import {
   BellIcon,

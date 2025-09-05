@@ -9,17 +9,21 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-  type ChartConfig,
+} from "@repo/ui/components/card";
+import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-  ToggleGroup, ToggleGroupItem
-} from "@repo/ui";
+} from "@repo/ui/components/select";
+import { ToggleGroup, ToggleGroupItem } from "@repo/ui/components/toggle-group";
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@repo/ui/components/chart";
 
 export const description = "An interactive line chart with dots";
 

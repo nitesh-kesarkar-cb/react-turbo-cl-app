@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Badge } from "@repo/ui";
+import { Badge } from "@repo/ui/components/badge";
 import { IconTrendingUp, IconTrendingDown } from "@tabler/icons-react";
 
 export type Trend = "up" | "down" | "neutral";

@@ -6,9 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@repo/ui";
+} from "@repo/ui/components/card";
 import { Trend, TrendBadge, TrendLine } from "./trend";
-import { cn } from "@repo/ui";
+import { cn } from "@repo/ui/lib/utils";
 
 export type StatCardProps = {
   description: string;
