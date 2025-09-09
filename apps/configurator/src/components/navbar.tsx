@@ -1,64 +1,99 @@
-
 import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
   NavigationMenuLink,
   navigationMenuTriggerStyle,
- 
 } from "@repo/ui/components/navigation-menu";
 import { Button } from "@repo/ui/components/button";
 import { Separator } from "@repo/ui/components/separator";
-import {  LogIn } from "lucide-react";
+import { LogIn, User } from "lucide-react";
 import { ThemeToggle } from "./theme/theme-toggle";
+import { useLocation } from "@tanstack/react-router";
+import { H2 } from "@repo/ui/components/heading";
 
-export function Navbar({ ...props }: Readonly<React.HTMLProps<HTMLElement>>) {
+type User = {
+  name: string;
+  email: string;
+  avatar?: string;
+};
 
+export function Navbar({
+  user,
+  ...props
+}: Readonly<React.HTMLProps<HTMLElement> & { user?: User }>) {
+  const location = useLocation();
 
   const handleLogin = (e?: React.MouseEvent) => {
     e?.preventDefault();
+    // 👉 trigger login flow here
   };
 
+  // Simple page title from pathname
+  const pageTitle =
+    location.pathname === "/"
+      ? "Home"
+      : location.pathname.slice(1).charAt(0).toUpperCase() +
+        location.pathname.slice(2).replace(/-/g, " ");
+
   return (
-    <nav
-      className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur"
-      {...props}
-    >
-      <div className="w-full flex h-14 items-center gap-3 px-4">
-        
+    <nav className="w-full border-b bg-white/80 backdrop-blur" {...props}>
+      <div className="flex h-14 items-center px-6">
+        {/* LEFT: Page Title */}
+        <H2 className="text-lg font-semibold">{pageTitle}</H2>
 
-        <Separator
-          orientation="vertical"
-          className="mx-1 hidden h-6 sm:block"
-        />
-
-        {/* Navigation (top-level links styled like triggers) */}
-        <NavigationMenu className="max-w-none">
-          <NavigationMenuList>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={navigationMenuTriggerStyle()}
-                >
-                  <Button>
-                    <span className="inline-flex items-center gap-2" onClick={handleLogin}>
+        {/* RIGHT: nav + user + theme */}
+        <div className="ml-auto flex items-center gap-4">
+          <NavigationMenu className="max-w-none">
+            <NavigationMenuList>
+              {!user ? (
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      onClick={handleLogin}
+                      className="flex items-center gap-2"
+                    >
                       <LogIn className="h-4 w-4" />
                       Login
-                    </span>
-                  </Button>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-            
+                    </Button>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ) : (
+                <NavigationMenuItem>
+                  <NavigationMenuLink
+                    asChild
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    <div className="flex flex-row items-center gap-2 px-2 py-1">
+                      {user.avatar ? (
+                        <img
+                          src={user.avatar}
+                          alt={user.name}
+                          className="h-7 w-7 rounded-full border"
+                        />
+                      ) : (
+                        <User className="h-5 w-5" />
+                      )}
+                      <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+                        {user.name}
+                      </span>
+                    </div>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              )}
+            </NavigationMenuList>
+          </NavigationMenu>
 
-          </NavigationMenuList>
-        </NavigationMenu>
-
-        {/* Right side */}
-        <div className="ml-auto flex items-center gap-2">
+          {/* Theme Toggle */}
           <ThemeToggle />
         </div>
       </div>
     </nav>
   );
 }
+

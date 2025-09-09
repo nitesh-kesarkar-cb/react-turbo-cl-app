@@ -1,4 +1,5 @@
-"use client";
+
+import * as React from "react";
 
 import {
   flexRender,
@@ -59,7 +60,7 @@ export function DataTable<TData, TValue>({
         <TableBody>
           {table.getRowModel().rows?.length ? (
             table.getRowModel().rows.map((row) => (
-              <>
+              <React.Fragment key={row.id}>
                 {/* Normal row */}
                 <TableRow
                   key={row.id}
@@ -83,7 +84,7 @@ export function DataTable<TData, TValue>({
                     </TableCell>
                   </TableRow>
                 )}
-              </>
+              </React.Fragment>
             ))
           ) : (
             <TableRow>

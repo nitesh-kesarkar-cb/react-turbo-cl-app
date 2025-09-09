@@ -8,7 +8,7 @@ import {
   TicketIcon,
   type LucideIcon,
 } from "lucide-react";
-import { SidebarFooter } from "./sidebar";
+import { SidebarFooter, SidebarProvider } from "./sidebar";
 import { NavUser } from "./nav-user";
 
 type MenuItem = {
@@ -39,13 +39,13 @@ export function AppSidebar() {
   };
 
   return (
-    <aside className="w-55 border-r bg-white">
-      {/* Make the inner container column + full height */}
+    <aside className="w-56 border-r bg-white">
+      {/* Inner container full height */}
       <div className="flex h-dvh flex-col">
         {/* Header / workspace switcher */}
         <div className="p-4">
-          <button className="flex w-full items-center gap-3 rounded-2xl p-2 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50">
-            <div className="grid h-9 w-9 place-items-center rounded-xl bg-foreground text-background text-sm font-semibold">
+          <button className="flex w-full items-center gap-3 rounded-xl p-2 transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50">
+            <div className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground text-sm font-semibold">
               ⌘
             </div>
             <div className="flex-1 text-left">
@@ -77,10 +77,11 @@ export function AppSidebar() {
         </div>
 
         {/* Footer fixed to bottom */}
-        <div className="mt-auto p-4 border-t">
-          <SidebarFooter>
+        <div className="mt-auto">
+          <SidebarProvider><SidebarFooter>
             <NavUser user={data.user} />
-          </SidebarFooter>
+          </SidebarFooter> </SidebarProvider>
+
         </div>
       </div>
     </aside>
@@ -102,23 +103,23 @@ function SidebarItem({
     <a
       href={href}
       className={cn(
-        "group flex items-center gap-3 rounded-2xl px-3 py-2 text-[15px] leading-none transition-colors",
+        "group flex items-center gap-3 rounded-lg px-3 py-2 text-[15px] font-medium transition-colors",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
         active
-          ? "bg-muted text-foreground"
-          : "text-foreground hover:bg-muted/60"
+          ? "bg-accent text-accent-foreground"
+          : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
       )}
       aria-current={active ? "page" : undefined}
     >
       <span
         className={cn(
-          "text-muted-foreground transition-colors",
-          active && "text-foreground"
+          "flex items-center",
+          active ? "text-accent-foreground" : "text-muted-foreground"
         )}
       >
         {icon}
       </span>
-      <span className="font-medium">{children}</span>
+      <span>{children}</span>
     </a>
   );
 }
