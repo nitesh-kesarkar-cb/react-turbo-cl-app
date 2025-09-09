@@ -10,6 +10,21 @@ export function RiskZoneConfig({ biomarker }: { biomarker: string }) {
     { label: "Optimal", color: "green", min: 60, max: 79, hazard: 0.9 },
   ];
 
+  // Mapping objects for Tailwind classes
+  const borderColorMap: Record<string, string> = {
+    red: "border-red-400",
+    orange: "border-orange-400",
+    yellow: "border-yellow-400",
+    green: "border-green-400",
+  };
+
+  const textColorMap: Record<string, string> = {
+    red: "text-red-500",
+    orange: "text-orange-500",
+    yellow: "text-yellow-500",
+    green: "text-green-500",
+  };
+
   return (
     <Card className="mt-2">
       <CardContent className="p-6">
@@ -18,9 +33,9 @@ export function RiskZoneConfig({ biomarker }: { biomarker: string }) {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {zones.map((zone) => (
-            <Card key={zone.label} className={`border border-${zone.color}-400`}>
+            <Card key={zone.label} className={`border ${borderColorMap[zone.color]}`}>
               <CardContent className="p-4 space-y-2">
-                <Text className={`font-medium text-${zone.color}-500`}>
+                <Text className={`font-medium ${textColorMap[zone.color]}`}>
                   {zone.label}
                 </Text>
                 <div className="flex items-center gap-2">
