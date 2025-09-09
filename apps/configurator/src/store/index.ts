@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { authReducer } from "./slice";
+import { authReducer, scoreEngineReducer } from "./slice";
 
 export const store = configureStore({
     reducer: {
         auth: authReducer,
+        scoreEngine: scoreEngineReducer,
     },
 });
 

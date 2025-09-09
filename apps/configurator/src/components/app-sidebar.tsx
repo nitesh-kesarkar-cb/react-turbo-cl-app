@@ -39,7 +39,7 @@ export function AppSidebar() {
   };
 
   return (
-    <aside className="w-72 border-r bg-background">
+    <aside className="w-55 border-r bg-white">
       {/* Make the inner container column + full height */}
       <div className="flex h-dvh flex-col">
         {/* Header / workspace switcher */}

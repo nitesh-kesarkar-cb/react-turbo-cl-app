@@ -1,0 +1,5082 @@
+[
+    {
+        "id": "heart_rate",
+        "name": "Heart Rate",
+        "group": "Cardiovascular",
+        "source": "face-scan",
+        "tier": "bronze",
+        "weight": 5,
+        "value": 0,
+        "unit": "bpm",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 100,
+                "max": 200,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 90,
+                "max": 99,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 80,
+                "max": 89,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 60,
+                "max": 79,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "resting_heart_rate",
+        "name": "Resting Heart Rate",
+        "group": "Cardiovascular",
+        "source": "wearable",
+        "tier": "bronze",
+        "weight": 5,
+        "value": 0,
+        "unit": "bpm",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 100,
+                "max": 200,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 80,
+                "max": 99,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 70,
+                "max": 79,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 50,
+                "max": 69,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "blood_pressure_systolic",
+        "name": "Systolic Blood Pressure",
+        "group": "Cardiovascular",
+        "source": "face-scan",
+        "tier": "bronze",
+        "weight": 6,
+        "value": 0,
+        "unit": "mmHg",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 160,
+                "max": 250,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 140,
+                "max": 159,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 120,
+                "max": 139,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 90,
+                "max": 119,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "blood_pressure_diastolic",
+        "name": "Diastolic Blood Pressure",
+        "group": "Cardiovascular",
+        "source": "face-scan",
+        "tier": "bronze",
+        "weight": 6,
+        "value": 0,
+        "unit": "mmHg",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 100,
+                "max": 150,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 90,
+                "max": 99,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 80,
+                "max": 89,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 60,
+                "max": 79,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "glucose_fasting",
+        "name": "Fasting Glucose",
+        "group": "Metabolic",
+        "source": "lab",
+        "tier": "bronze",
+        "weight": 5,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 126,
+                "max": 300,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 100,
+                "max": 125,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 90,
+                "max": 99,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 70,
+                "max": 89,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cholesterol_total",
+        "name": "Total Cholesterol",
+        "group": "Cardiovascular",
+        "source": "lab",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 240,
+                "max": 400,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 200,
+                "max": 239,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 180,
+                "max": 199,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 100,
+                "max": 179,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cholesterol_hdl",
+        "name": "HDL Cholesterol",
+        "group": "Cardiovascular",
+        "source": "lab",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 39,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 40,
+                "max": 49,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 50,
+                "max": 59,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 60,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cholesterol_ldl",
+        "name": "LDL Cholesterol",
+        "group": "Cardiovascular",
+        "source": "lab",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 160,
+                "max": 300,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 130,
+                "max": 159,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 100,
+                "max": 129,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 99,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "bmi",
+        "name": "Body Mass Index",
+        "group": "Metabolic",
+        "source": "derived",
+        "tier": "bronze",
+        "weight": 5,
+        "value": 0,
+        "unit": "kg/m²",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 35,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 30,
+                "max": 34.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 25,
+                "max": 29.9,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 18.5,
+                "max": 24.9,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "sleep_duration",
+        "name": "Sleep Duration",
+        "group": "Sleep",
+        "source": "wearable",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "hours",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4.1,
+                "max": 6,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6.1,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 7.1,
+                "max": 9,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "steps",
+        "name": "Daily Steps",
+        "group": "Physical & Fitness",
+        "source": "wearable",
+        "tier": "bronze",
+        "weight": 5,
+        "value": 0,
+        "unit": "steps/day",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3000,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3001,
+                "max": 5000,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5001,
+                "max": 10000,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 10001,
+                "max": 20000,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "triglycerides",
+        "name": "Triglycerides",
+        "group": "Metabolic",
+        "source": "lab",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 200,
+                "max": 500,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 150,
+                "max": 199,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 100,
+                "max": 149,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 99,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "stress_level",
+        "name": "Stress Level",
+        "group": "Mental Health",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "1-10",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 1,
+                "max": 3,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "mood_score",
+        "name": "Mood Score",
+        "group": "Mental Health",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3.1,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5.1,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 7.1,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "sleep_quality",
+        "name": "Sleep Quality",
+        "group": "Sleep",
+        "source": "wearable",
+        "tier": "bronze",
+        "weight": 5,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3.1,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5.1,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 7.1,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "body_fat_percentage",
+        "name": "Body Fat %",
+        "group": "Physical & Fitness",
+        "source": "derived",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 30,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 25,
+                "max": 29,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 20,
+                "max": 24,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 10,
+                "max": 19,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "crp",
+        "name": "C-Reactive Protein",
+        "group": "Cardiovascular",
+        "source": "lab",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "mg/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 3.0,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.0,
+                "max": 2.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 0.3,
+                "max": 0.9,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0.2,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "vitamin_d",
+        "name": "Vitamin D",
+        "group": "Hormonal",
+        "source": "lab",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 19,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 20,
+                "max": 29,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 30,
+                "max": 39,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 40,
+                "max": 80,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "alcohol_intake",
+        "name": "Alcohol Intake",
+        "group": "Environment",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "drinks/week",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 15,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 8,
+                "max": 14,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "smoking_status",
+        "name": "Smoking Status",
+        "group": "Environment",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 5,
+        "value": 0,
+        "unit": "packs/day",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 1,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0,
+                "max": 0,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 0,
+                "max": 0,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "water_intake",
+        "name": "Daily Water Intake",
+        "group": "Nutrition",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "liters",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 1,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.1,
+                "max": 1.5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.6,
+                "max": 2.0,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2.1,
+                "max": 4,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "exercise_frequency",
+        "name": "Exercise Frequency",
+        "group": "Physical & Fitness",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "days/week",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 1,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 2,
+                "max": 2,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 3,
+                "max": 4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 5,
+                "max": 7,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "weight_stability",
+        "name": "Weight Stability",
+        "group": "Metabolic",
+        "source": "derived",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "kg/month",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 5,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 2,
+                "max": 4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1,
+                "max": 1,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "energy_level",
+        "name": "Energy Level",
+        "group": "Mental Health",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "1-10",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "appetite_score",
+        "name": "Appetite Score",
+        "group": "Nutrition",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "1-10",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "balance_score",
+        "name": "Balance Score",
+        "group": "Physical & Fitness",
+        "source": "face-scan",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "flexibility",
+        "name": "Flexibility",
+        "group": "Physical & Fitness",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "cm",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 11,
+                "max": 20,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 21,
+                "max": 30,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 31,
+                "max": 50,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "hydration_level",
+        "name": "Hydration Level",
+        "group": "Nutrition",
+        "source": "face-scan",
+        "tier": "bronze",
+        "weight": 3,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 51,
+                "max": 65,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 66,
+                "max": 75,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 76,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "posture_score",
+        "name": "Posture Score",
+        "group": "Physical & Fitness",
+        "source": "face-scan",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cognitive_score",
+        "name": "Cognitive Score",
+        "group": "Mental Health",
+        "source": "self-report",
+        "tier": "bronze",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "hrv",
+        "name": "Heart Rate Variability",
+        "group": "Cardiovascular",
+        "source": "wearable",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "ms",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 21,
+                "max": 30,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 31,
+                "max": 50,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 51,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "hba1c",
+        "name": "HbA1c",
+        "group": "Metabolic",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 5,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 6.5,
+                "max": 15,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 5.7,
+                "max": 6.4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5.0,
+                "max": 5.6,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 4.0,
+                "max": 4.9,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "insulin",
+        "name": "Insulin",
+        "group": "Metabolic",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "mIU/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 25,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 15,
+                "max": 24,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 10,
+                "max": 14,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2,
+                "max": 9,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "homocysteine",
+        "name": "Homocysteine",
+        "group": "Cardiovascular",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "μmol/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 15,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 11,
+                "max": 14,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 4,
+                "max": 7,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "vo2_max",
+        "name": "VO2 Max",
+        "group": "Physical & Fitness",
+        "source": "derived",
+        "tier": "silver",
+        "weight": 6,
+        "value": 0,
+        "unit": "mL/kg/min",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 25,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 26,
+                "max": 35,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 36,
+                "max": 45,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 46,
+                "max": 80,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "muscle_mass",
+        "name": "Muscle Mass",
+        "group": "Physical & Fitness",
+        "source": "derived",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 30,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 31,
+                "max": 40,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 41,
+                "max": 50,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 51,
+                "max": 80,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "tsh",
+        "name": "TSH",
+        "group": "Hormonal",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "mIU/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 10,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4.5,
+                "max": 9.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 2.5,
+                "max": 4.4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0.4,
+                "max": 2.4,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cortisol_am",
+        "name": "Morning Cortisol",
+        "group": "Hormonal",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "mcg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 25,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 20,
+                "max": 24,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 15,
+                "max": 19,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 6,
+                "max": 14,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "alt_liver",
+        "name": "ALT (Liver)",
+        "group": "Liver Health",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "U/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 56,
+                "max": 200,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 40,
+                "max": 55,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 30,
+                "max": 39,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 7,
+                "max": 29,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "ast_liver",
+        "name": "AST (Liver)",
+        "group": "Liver Health",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "U/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 40,
+                "max": 200,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 31,
+                "max": 39,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 25,
+                "max": 30,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 10,
+                "max": 24,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "creatinine",
+        "name": "Creatinine",
+        "group": "Kidney Health",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 1.5,
+                "max": 5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.2,
+                "max": 1.4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.0,
+                "max": 1.1,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0.6,
+                "max": 0.9,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "uric_acid",
+        "name": "Uric Acid",
+        "group": "Kidney Health",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 8.0,
+                "max": 15,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6.5,
+                "max": 7.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5.0,
+                "max": 6.4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2.5,
+                "max": 4.9,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "rem_sleep",
+        "name": "REM Sleep",
+        "group": "Sleep",
+        "source": "wearable",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 11,
+                "max": 15,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 16,
+                "max": 20,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 21,
+                "max": 30,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "deep_sleep",
+        "name": "Deep Sleep",
+        "group": "Sleep",
+        "source": "wearable",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 11,
+                "max": 15,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 16,
+                "max": 20,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 21,
+                "max": 35,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "anxiety_score",
+        "name": "Anxiety Score",
+        "group": "Mental Health",
+        "source": "self-report",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "iron",
+        "name": "Iron",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 40,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 41,
+                "max": 60,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 61,
+                "max": 80,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 81,
+                "max": 150,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "b12",
+        "name": "Vitamin B12",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "pg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 200,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 201,
+                "max": 300,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 301,
+                "max": 400,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 401,
+                "max": 900,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "magnesium",
+        "name": "Magnesium",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 1.5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.51,
+                "max": 1.8,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.81,
+                "max": 2.0,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2.01,
+                "max": 2.6,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "air_quality",
+        "name": "Air Quality Index",
+        "group": "Environment",
+        "source": "self-report",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "AQI",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 150,
+                "max": 500,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 100,
+                "max": 149,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 51,
+                "max": 99,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 50,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "screen_time",
+        "name": "Daily Screen Time",
+        "group": "Environment",
+        "source": "self-report",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "hours/day",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 8,
+                "max": 24,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "testosterone",
+        "name": "Testosterone",
+        "group": "Hormonal",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 250,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 251,
+                "max": 350,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 351,
+                "max": 500,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 500,
+                "max": 1200,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "bilirubin",
+        "name": "Bilirubin",
+        "group": "Liver Health",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 4,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 2.0,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.5,
+                "max": 1.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.0,
+                "max": 1.4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0.2,
+                "max": 0.9,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "egfr",
+        "name": "eGFR",
+        "group": "Kidney Health",
+        "source": "derived",
+        "tier": "silver",
+        "weight": 5,
+        "value": 0,
+        "unit": "mL/min/1.73m²",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 30,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 31,
+                "max": 60,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 61,
+                "max": 89,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 90,
+                "max": 150,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "folate",
+        "name": "Folate",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3.1,
+                "max": 6,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6.1,
+                "max": 10,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 10.1,
+                "max": 20,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "calcium",
+        "name": "Calcium",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 11,
+                "max": 15,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 10.5,
+                "max": 10.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 9.5,
+                "max": 10.4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8.5,
+                "max": 9.4,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "phosphorus",
+        "name": "Phosphorus",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 5.5,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4.5,
+                "max": 5.4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 3.5,
+                "max": 4.4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2.5,
+                "max": 3.4,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "albumin",
+        "name": "Albumin",
+        "group": "Liver Health",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "g/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3.0,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3.1,
+                "max": 3.4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 3.5,
+                "max": 3.9,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 4.0,
+                "max": 5.0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "protein_total",
+        "name": "Total Protein",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "g/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 6.0,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6.1,
+                "max": 6.4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6.5,
+                "max": 6.9,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 7.0,
+                "max": 8.5,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "globulin",
+        "name": "Globulin",
+        "group": "Liver Health",
+        "source": "lab",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "g/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 4.0,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3.5,
+                "max": 3.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 2.8,
+                "max": 3.4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2.0,
+                "max": 2.7,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "ag_ratio",
+        "name": "Albumin/Globulin Ratio",
+        "group": "Liver Health",
+        "source": "derived",
+        "tier": "silver",
+        "weight": 3,
+        "value": 0,
+        "unit": "ratio",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 1.0,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.1,
+                "max": 1.4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.5,
+                "max": 1.7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 1.8,
+                "max": 2.5,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "omega3_index",
+        "name": "Omega-3 Index",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4.1,
+                "max": 6,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6.1,
+                "max": 8,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8.1,
+                "max": 15,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "telomere_length",
+        "name": "Telomere Length",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "kb",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 5.1,
+                "max": 7,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 7.1,
+                "max": 9,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 9.1,
+                "max": 15,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "biological_age",
+        "name": "Biological Age",
+        "group": "Longevity",
+        "source": "derived",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "years",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 70,
+                "max": 120,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 60,
+                "max": 69,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 50,
+                "max": 59,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 18,
+                "max": 49,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "methylation_age",
+        "name": "Methylation Age",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "years",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 70,
+                "max": 120,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 60,
+                "max": 69,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 50,
+                "max": 59,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 18,
+                "max": 49,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "menstrual_cycle",
+        "name": "Menstrual Cycle Length",
+        "group": "Female Health",
+        "source": "self-report",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "days",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 21,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 22,
+                "max": 24,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 25,
+                "max": 27,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 28,
+                "max": 35,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "estradiol",
+        "name": "Estradiol",
+        "group": "Female Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 15,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 16,
+                "max": 30,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 31,
+                "max": 50,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 51,
+                "max": 200,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "psa",
+        "name": "PSA (Prostate)",
+        "group": "Male Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 4.0,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 2.5,
+                "max": 3.9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.5,
+                "max": 2.4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 1.4,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "free_testosterone",
+        "name": "Free Testosterone",
+        "group": "Male Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 5.1,
+                "max": 10,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 10.1,
+                "max": 15,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 15.1,
+                "max": 25,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "dhea_sulfate",
+        "name": "DHEA-Sulfate",
+        "group": "Hormonal",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 101,
+                "max": 200,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 201,
+                "max": 300,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 301,
+                "max": 500,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "igf1",
+        "name": "IGF-1",
+        "group": "Hormonal",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 101,
+                "max": 150,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 151,
+                "max": 200,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 201,
+                "max": 400,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "growth_hormone",
+        "name": "Growth Hormone",
+        "group": "Hormonal",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 0.5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0.6,
+                "max": 1.0,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.1,
+                "max": 2.0,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2.1,
+                "max": 5.0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "leptin",
+        "name": "Leptin",
+        "group": "Metabolic",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 20,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 10,
+                "max": 19,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5,
+                "max": 9,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "adiponectin",
+        "name": "Adiponectin",
+        "group": "Metabolic",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 10,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 11,
+                "max": 15,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 16,
+                "max": 30,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "ghrelin",
+        "name": "Ghrelin",
+        "group": "Metabolic",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 300,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 301,
+                "max": 500,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 501,
+                "max": 800,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 801,
+                "max": 1500,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "melatonin",
+        "name": "Melatonin",
+        "group": "Sleep",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 11,
+                "max": 20,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 21,
+                "max": 40,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 41,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "serotonin",
+        "name": "Serotonin",
+        "group": "Mental Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 101,
+                "max": 150,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 151,
+                "max": 200,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 201,
+                "max": 400,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "dopamine",
+        "name": "Dopamine",
+        "group": "Mental Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 51,
+                "max": 100,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 101,
+                "max": 150,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 151,
+                "max": 300,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "norepinephrine",
+        "name": "Norepinephrine",
+        "group": "Mental Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 200,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 201,
+                "max": 350,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 351,
+                "max": 500,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 501,
+                "max": 750,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "gaba",
+        "name": "GABA",
+        "group": "Mental Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "nmol/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 51,
+                "max": 100,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 101,
+                "max": 150,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 151,
+                "max": 250,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "glutamate",
+        "name": "Glutamate",
+        "group": "Mental Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "μmol/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 150,
+                "max": 500,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 100,
+                "max": 149,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 50,
+                "max": 99,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 49,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "acetylcholine",
+        "name": "Acetylcholine",
+        "group": "Mental Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pmol/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 2,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 2.1,
+                "max": 4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 4.1,
+                "max": 6,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 6.1,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "zinc",
+        "name": "Zinc",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 60,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 61,
+                "max": 80,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 81,
+                "max": 100,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 101,
+                "max": 150,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "copper",
+        "name": "Copper",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 200,
+                "max": 500,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 150,
+                "max": 199,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 120,
+                "max": 149,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 80,
+                "max": 119,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "selenium",
+        "name": "Selenium",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 70,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 71,
+                "max": 90,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 91,
+                "max": 120,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 121,
+                "max": 200,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "manganese",
+        "name": "Manganese",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 2,
+        "value": 0,
+        "unit": "mcg/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 5,
+                "max": 8,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 9,
+                "max": 12,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 13,
+                "max": 20,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "chromium",
+        "name": "Chromium",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 2,
+        "value": 0,
+        "unit": "mcg/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 0.5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0.6,
+                "max": 1.0,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.1,
+                "max": 1.5,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 1.6,
+                "max": 3.0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "molybdenum",
+        "name": "Molybdenum",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 2,
+        "value": 0,
+        "unit": "mcg/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 1,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.1,
+                "max": 2,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 2.1,
+                "max": 3,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 3.1,
+                "max": 5,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cobalt",
+        "name": "Cobalt",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 2,
+        "value": 0,
+        "unit": "mcg/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 5,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3,
+                "max": 4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1,
+                "max": 2,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0.5,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "vitamin_a",
+        "name": "Vitamin A",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 21,
+                "max": 30,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 31,
+                "max": 40,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 41,
+                "max": 90,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "vitamin_e",
+        "name": "Vitamin E",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 0.5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0.6,
+                "max": 0.8,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 0.9,
+                "max": 1.2,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 1.3,
+                "max": 2.0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "vitamin_k",
+        "name": "Vitamin K",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 0.2,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0.3,
+                "max": 0.5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 0.6,
+                "max": 1.0,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 1.1,
+                "max": 2.5,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "vitamin_c",
+        "name": "Vitamin C",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mg/dL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 0.4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0.5,
+                "max": 0.7,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 0.8,
+                "max": 1.0,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 1.1,
+                "max": 2.0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "biotin",
+        "name": "Biotin",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 101,
+                "max": 200,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 201,
+                "max": 400,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 401,
+                "max": 1000,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "thiamine",
+        "name": "Thiamine (B1)",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 21,
+                "max": 40,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 41,
+                "max": 60,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 61,
+                "max": 120,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "riboflavin",
+        "name": "Riboflavin (B2)",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 11,
+                "max": 20,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 21,
+                "max": 30,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 31,
+                "max": 60,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "niacin",
+        "name": "Niacin (B3)",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 10,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 11,
+                "max": 15,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 16,
+                "max": 30,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "pantothenic_acid",
+        "name": "Pantothenic Acid (B5)",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 101,
+                "max": 200,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 201,
+                "max": 400,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 401,
+                "max": 800,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "pyridoxine",
+        "name": "Pyridoxine (B6)",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 10,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 11,
+                "max": 20,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 21,
+                "max": 50,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cobalamin",
+        "name": "Cobalamin Active B12",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "pmol/L",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 25,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 26,
+                "max": 50,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 51,
+                "max": 75,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 76,
+                "max": 150,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "mthfr_genetic",
+        "name": "MTHFR Genetic Variant",
+        "group": "Genetics",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "variant",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 2,
+                "max": 2,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1,
+                "max": 1,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 0,
+                "max": 0,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "apoe_genetic",
+        "name": "APOE Genetic Variant",
+        "group": "Genetics",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "variant",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 4,
+                "max": 4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3,
+                "max": 3,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 2,
+                "max": 2,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 2,
+                "max": 2,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "coq10",
+        "name": "CoQ10",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mcg/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 0.5,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0.6,
+                "max": 1.0,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1.1,
+                "max": 1.5,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 1.6,
+                "max": 3.0,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "alpha_lipoic_acid",
+        "name": "Alpha Lipoic Acid",
+        "group": "Nutrition",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "ng/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 51,
+                "max": 100,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 101,
+                "max": 200,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 201,
+                "max": 500,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "nad_ratio",
+        "name": "NAD+/NADH Ratio",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "ratio",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 1,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 1.1,
+                "max": 2,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 2.1,
+                "max": 4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 4.1,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "sirtuin_activity",
+        "name": "Sirtuin Activity",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "units",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 25,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 26,
+                "max": 50,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 51,
+                "max": 75,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 76,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "mtor_activity",
+        "name": "mTOR Activity",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "units",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 90,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 70,
+                "max": 89,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 40,
+                "max": 69,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 39,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "autophagy_markers",
+        "name": "Autophagy Markers",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "senescent_cells",
+        "name": "Senescent Cell Burden",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 20,
+                "max": 100,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 10,
+                "max": 19,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5,
+                "max": 9,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "dna_damage",
+        "name": "DNA Damage Score",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "mitochondrial_function",
+        "name": "Mitochondrial Function",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "glycation_markers",
+        "name": "Advanced Glycation End Products",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "AU/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 100,
+                "max": 500,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 50,
+                "max": 99,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 20,
+                "max": 49,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 19,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "inflammatory_age",
+        "name": "Inflammatory Age",
+        "group": "Longevity",
+        "source": "derived",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "years",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 70,
+                "max": 120,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 60,
+                "max": 69,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 50,
+                "max": 59,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 18,
+                "max": 49,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "protein_carbonylation",
+        "name": "Protein Carbonylation",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "nmol/mg",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 5,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3,
+                "max": 4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1,
+                "max": 2,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0.5,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "lipid_peroxidation",
+        "name": "Lipid Peroxidation",
+        "group": "Longevity",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "nmol/mL",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 10,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 5,
+                "max": 9,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 2,
+                "max": 4,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 1,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "oxidative_stress_score",
+        "name": "Oxidative Stress Score",
+        "group": "Longevity",
+        "source": "derived",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "cellular_hydration",
+        "name": "Cellular Hydration",
+        "group": "Physical & Fitness",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "%",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 50,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 51,
+                "max": 65,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 66,
+                "max": 75,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 76,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "phase_angle",
+        "name": "Phase Angle",
+        "group": "Physical & Fitness",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "degrees",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4.1,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 5.1,
+                "max": 6,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 6.1,
+                "max": 8,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "metabolic_flexibility",
+        "name": "Metabolic Flexibility",
+        "group": "Metabolic",
+        "source": "derived",
+        "tier": "gold",
+        "weight": 5,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "circadian_rhythm_score",
+        "name": "Circadian Rhythm Score",
+        "group": "Sleep",
+        "source": "derived",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "microbiome_diversity",
+        "name": "Microbiome Diversity",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "score",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 3,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6,
+                "max": 7,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8,
+                "max": 10,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "gut_permeability",
+        "name": "Intestinal Permeability",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "ratio",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0.1,
+                "max": 1.0,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 0.05,
+                "max": 0.09,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 0.02,
+                "max": 0.04,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0.01,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "scfa_levels",
+        "name": "Short Chain Fatty Acids",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "mmol/g",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 20,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 21,
+                "max": 40,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 41,
+                "max": 60,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 61,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "lactobacillus",
+        "name": "Lactobacillus Count",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "log CFU/g",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4.1,
+                "max": 6,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6.1,
+                "max": 8,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8.1,
+                "max": 12,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "bifidobacterium",
+        "name": "Bifidobacterium Count",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "log CFU/g",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 4,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4.1,
+                "max": 6,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 6.1,
+                "max": 8,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 8.1,
+                "max": 12,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "pathogenic_bacteria",
+        "name": "Pathogenic Bacteria",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 4,
+        "value": 0,
+        "unit": "log CFU/g",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 6,
+                "max": 12,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 4,
+                "max": 5,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 2,
+                "max": 3,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 1,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "candida_overgrowth",
+        "name": "Candida Overgrowth",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "log CFU/g",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 5,
+                "max": 10,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 3,
+                "max": 4,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 1,
+                "max": 2,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 0,
+                "max": 0.5,
+                "hazardRatio": 1.0
+            }
+        ]
+    },
+    {
+        "id": "digestive_enzymes",
+        "name": "Digestive Enzyme Activity",
+        "group": "Digestive Health",
+        "source": "lab",
+        "tier": "gold",
+        "weight": 3,
+        "value": 0,
+        "unit": "units",
+        "ranges": [
+            {
+                "name": "high",
+                "color": "#e53935",
+                "min": 0,
+                "max": 25,
+                "hazardRatio": 2.0
+            },
+            {
+                "name": "moderate",
+                "color": "#fb8c00",
+                "min": 26,
+                "max": 50,
+                "hazardRatio": 1.5
+            },
+            {
+                "name": "low",
+                "color": "#fdd835",
+                "min": 51,
+                "max": 75,
+                "hazardRatio": 1.2
+            },
+            {
+                "name": "optimal",
+                "color": "#43a047",
+                "min": 76,
+                "max": 100,
+                "hazardRatio": 1.0
+            }
+        ]
+    }
+]
