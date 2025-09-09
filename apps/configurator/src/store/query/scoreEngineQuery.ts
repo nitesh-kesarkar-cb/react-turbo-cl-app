@@ -20,7 +20,6 @@ export const useFetchTiers = () => {
 export const useFetchTierBioMarkers = (tier: string) => {
     const dispatch = useDispatch();
 
-    console.log("Fetching biomarkers for tier:", tier);
 
     return useQuery({
         queryKey: [queryKeys.scoreEngineTierBioMarkers, tier],
