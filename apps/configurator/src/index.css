@@ -4,12 +4,19 @@
 @import "@repo/ui/globals.css";
 
 :root {
-  --background: oklch(91.435% 0.00215 14.53);
-  --primary: oklch(55.052% 0.16731 264.886);
-  --primary-foreground: oklch(0.985 0 0);
+  /* Light theme */
+  --background: oklch(0.98 0.003 95);         /* near white */
+  --foreground: oklch(0.20 0.006 240);        /* dark gray text */
+
+  --primary: oklch(0.55 0.167 265);           /* blue-ish */
+  --primary-foreground: oklch(0.98 0 0);      /* white text on primary */
 }
 
 .dark {
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  /* Dark theme */
+  --background: oklch(0.15 0.006 240);        /* near black */
+  --foreground: oklch(0.96 0.003 95);         /* near white text */
+
+  --primary: oklch(0.65 0.15 265);            /* lighter blue */
+  --primary-foreground: oklch(0.98 0 0);      /* white text on primary */
 }

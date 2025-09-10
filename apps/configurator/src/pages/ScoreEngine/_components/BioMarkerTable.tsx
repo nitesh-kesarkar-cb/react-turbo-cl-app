@@ -36,18 +36,21 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
     enableSorting: false,
     enableHiding: false,
   },
-  { accessorKey: "name", header: "Biomarker" },
+  { accessorKey: "name", header: "Biomarker", id: "name" },
   {
+    id: "group",
     accessorKey: "group",
     header: "Group",
     cell: ({ row }) => <Badge>{row.original.group}</Badge>,
   },
   {
+    id: "source",
     accessorKey: "source",
     header: "Source",
     cell: ({ row }) => <Badge variant="secondary">{row.original.source}</Badge>,
   },
   {
+    id: "tier",
     accessorKey: "tier",
     header: "Tier",
     cell: ({ row }) => (
@@ -57,6 +60,7 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
     ),
   },
   {
+    id: "weight",
     accessorKey: "weight",
     header: "Weight",
     cell: ({ row }) => (
@@ -64,6 +68,7 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
     ),
   },
   {
+    id: "value",
     accessorKey: "value",
     header: "Value",
     cell: ({ row }) => (
@@ -74,6 +79,7 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
     ),
   },
   {
+    id: "riskZones",
     accessorKey: "riskZones",
     header: "Risk Zones",
     cell: ({ row }) => {

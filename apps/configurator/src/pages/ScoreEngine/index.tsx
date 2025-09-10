@@ -9,7 +9,7 @@ import { BiomarkerTable } from "./_components/BioMarkerTable";
 import { useFetchTierBioMarkers, useFetchTiers } from "@/store/query/scoreEngineQuery";
 import { useSelector } from "react-redux";
 import { Tier } from "@/types/ScoreEngine";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default function ScoreEngine() {
   const [selectedTier, setSelectedTier] = useState<Tier | null>(null);
@@ -21,26 +21,26 @@ export default function ScoreEngine() {
 
   useEffect(() => {
     if (tiers.length > 0 && !selectedTier) {
+      setSelectedTier(tiers[0]);
       handleTierSelect(tiers[0].value);
     }
   }, [tiers, selectedTier]);
 
 
-  const handleTierSelect = (val: string) => {
-    const tier = tiers.find((tier: Tier) => tier.value === val);
+    const handleTierSelect = useMemo(() => (val: string) => {
+      const tier = tiers.find((tier: Tier) => tier.value === val);
 
-    if (tier) {
-      setSelectedTier(tier);
-      refetchTierBiomarkers();
-    }
-  }
+      if (tier) {
+        setSelectedTier(tier);
+        refetchTierBiomarkers();
+      }
+    }, [selectedTier]);
 
   if (tiersLoading) return <div>Loading...</div>;
   return (
-    <div className="p-6 space-y-8 min-h-screen">
+    <div className="space-y-8 min-h-screen">
       {/* Header */}
       <div className="flex justify-between items-center">
-        <H1 className="text-xl font-bold">Score Engine</H1>
         <Button variant="outline" className="flex items-center gap-2 bg-white">
           <User className="w-4 h-4" />
           B2C Portal
@@ -133,7 +133,7 @@ export default function ScoreEngine() {
               </Card>
             </div>
             <div className="mt-4"> <BiomarkerTable biomarkers={biomarkers} /></div>
-            
+
           </CardContent>
 
         </CardContent>

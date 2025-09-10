@@ -6,7 +6,7 @@ import { setBiomarkers, setTiers } from "../slice/score-engine.slice";
 
 export const useFetchTiers = () => {
     const dispatch = useDispatch();
-    
+
     return useQuery({
         queryKey: [queryKeys.scoreEngineTiers],
         queryFn: async () => {
@@ -19,6 +19,7 @@ export const useFetchTiers = () => {
 
 export const useFetchTierBioMarkers = (tier: string) => {
     const dispatch = useDispatch();
+
 
     return useQuery({
         queryKey: [queryKeys.scoreEngineTierBioMarkers, tier],
