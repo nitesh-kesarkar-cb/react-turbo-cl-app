@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { authReducer, scoreEngineReducer } from "./slice";
+import { authReducer, onBoardingReducer, scoreEngineReducer } from "./slice";
 
 export const store = configureStore({
     reducer: {
         auth: authReducer,
         scoreEngine: scoreEngineReducer,
+        onboarding:onBoardingReducer
     },
 });
 
