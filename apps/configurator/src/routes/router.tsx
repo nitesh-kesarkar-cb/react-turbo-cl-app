@@ -15,6 +15,9 @@ import AccessControl from "@/pages/AccessControl";
 import Onboarding from "@/pages/Onboarding";
 import WhiteLabel from "@/pages/WhiteLabel";
 import Notifications from "@/pages/Notifications";
+import Tenants from "@/pages/Tenant";
+import FormBuilder from "@/pages/FormBuilder";
+import OnboardingOne from "@/pages/OnboardingOne";
 
 const AUTH_PREFIXES: string[] = [];
 
@@ -55,6 +58,11 @@ const onboardingRoute = createRoute({
   path: "/onboarding",
   component: () => <Onboarding />,
 });
+const onboardingOneRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/onboarding-one",
+  component: () => <OnboardingOne />,
+});
 
 const accessControlRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -74,14 +82,29 @@ const notificationsRoute = createRoute({
   component: () => <Notifications />,
 });
 
+const tenantsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/tenants",
+  component: () => <Tenants />,
+});
+
+const formBuilderRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/form-builder",
+  component: () => <FormBuilder />,
+});
+
 // Combine routes
 const routeTree = rootRoute.addChildren([
   indexRoute,
   scoreEngineRoute,
   onboardingRoute,
+  onboardingOneRoute,
   accessControlRoute,
   whiteLabelRoute,
   notificationsRoute,
+  tenantsRoute,
+  formBuilderRoute,
 ]);
 
 export const router = createRouter({ routeTree });
