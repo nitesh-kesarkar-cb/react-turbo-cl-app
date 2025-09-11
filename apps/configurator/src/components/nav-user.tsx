@@ -30,12 +30,14 @@ import {
 
 export function NavUser({
   user,
+  collapsed
 }: {
   user: {
     name: string;
     email: string;
     avatar: string;
   };
+  collapsed: boolean;
 }) {
   const { isMobile } = useSidebar();
 
@@ -61,7 +63,7 @@ export function NavUser({
           </DropdownMenuTrigger>
           <DropdownMenuContent
             className="w-(--radix-dropdown-menu-trigger-width) min-w-56 rounded-lg"
-            side={isMobile ? "bottom" : "right"}
+            side={isMobile || collapsed ? "bottom" : "right"}
             align="end"
             sideOffset={4}
           >
