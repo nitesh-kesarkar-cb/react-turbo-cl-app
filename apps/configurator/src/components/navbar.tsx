@@ -6,11 +6,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@repo/ui/components/navigation-menu";
 import { Button } from "@repo/ui/components/button";
-import { Separator } from "@repo/ui/components/separator";
 import { LogIn, User } from "lucide-react";
 import { ThemeToggle } from "./theme/theme-toggle";
 import { useLocation } from "@tanstack/react-router";
 import { H2 } from "@repo/ui/components/heading";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@repo/ui/components/dropdown-menu";
 
 type User = {
   name: string;
@@ -34,7 +34,7 @@ export function Navbar({
     location.pathname === "/"
       ? "Home"
       : location.pathname.slice(1).charAt(0).toUpperCase() +
-        location.pathname.slice(2).replace(/-/g, " ");
+      location.pathname.slice(2).replace(/-/g, " ");
 
   return (
     <nav className="w-full border-b bg-white/80 backdrop-blur" {...props}>
@@ -88,6 +88,24 @@ export function Navbar({
               )}
             </NavigationMenuList>
           </NavigationMenu>
+          <div className="relative">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="flex items-center gap-2 bg-white"
+                  id="portal-dropdown"
+                >
+                  <User className="w-4 h-4" />
+                  Portal
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-40">
+                <DropdownMenuItem>B2C Portal</DropdownMenuItem>
+                <DropdownMenuItem>Enterprise Portal</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
 
           {/* Theme Toggle */}
           <ThemeToggle />

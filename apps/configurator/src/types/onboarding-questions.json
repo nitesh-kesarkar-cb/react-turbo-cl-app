@@ -1,0 +1,227 @@
+[
+    {
+        "id": "demographics_age",
+        "category": "Demographics",
+        "type": "number",
+        "question": "What is your age?",
+        "required": true,
+        "options": null,
+        "order": 1
+    },
+    {
+        "id": "demographics_gender",
+        "category": "Demographics",
+        "type": "single_choice",
+        "question": "What is your biological sex?",
+        "required": true,
+        "options": ["Male", "Female", "Other"],
+        "order": 2
+    },
+    {
+        "id": "demographics_height",
+        "category": "Demographics",
+        "type": "number",
+        "question": "What is your height in centimeters?",
+        "required": true,
+        "options": null,
+        "order": 3
+    },
+    {
+        "id": "demographics_weight",
+        "category": "Demographics",
+        "type": "number",
+        "question": "What is your current weight in kilograms?",
+        "required": true,
+        "options": null,
+        "order": 4
+    },
+    {
+        "id": "medical_conditions",
+        "category": "Medical History",
+        "type": "multi_choice",
+        "question": "Do you have any of the following medical conditions?",
+        "required": false,
+        "options": ["Diabetes", "Hypertension", "Heart Disease", "Thyroid Disorder", "Asthma", "None of the above"],
+        "order": 5
+    },
+    {
+        "id": "medications",
+        "category": "Medical History",
+        "type": "text",
+        "question": "Please list any medications you are currently taking",
+        "required": false,
+        "options": null,
+        "order": 6
+    },
+    {
+        "id": "allergies",
+        "category": "Medical History",
+        "type": "text",
+        "question": "Do you have any known allergies?",
+        "required": false,
+        "options": null,
+        "order": 7
+    },
+    {
+        "id": "fitness_goals",
+        "category": "Lifestyle",
+        "type": "multi_choice",
+        "question": "What are your primary health and fitness goals?",
+        "required": true,
+        "options": ["Weight Loss", "Muscle Gain", "Better Sleep", "Stress Management", "Disease Prevention", "Improved Energy"],
+        "order": 8
+    },
+    {
+        "id": "exercise_frequency",
+        "category": "Fitness",
+        "type": "single_choice",
+        "question": "How often do you exercise per week?",
+        "required": true,
+        "options": ["Never", "1-2 times", "3-4 times", "5-6 times", "Daily"],
+        "order": 9
+    },
+    {
+        "id": "exercise_type",
+        "category": "Fitness",
+        "type": "multi_choice",
+        "question": "What types of exercise do you regularly do?",
+        "required": false,
+        "options": ["Cardio", "Weight Training", "Yoga", "Swimming", "Running", "Cycling", "Sports"],
+        "order": 10
+    },
+    {
+        "id": "sleep_hours",
+        "category": "Lifestyle",
+        "type": "single_choice",
+        "question": "How many hours of sleep do you get per night on average?",
+        "required": true,
+        "options": ["Less than 5", "5-6 hours", "7-8 hours", "9+ hours"],
+        "order": 11
+    },
+    {
+        "id": "sleep_quality",
+        "category": "Lifestyle",
+        "type": "single_choice",
+        "question": "How would you rate your sleep quality?",
+        "required": false,
+        "options": ["Poor", "Fair", "Good", "Excellent"],
+        "order": 12
+    },
+    {
+        "id": "stress_level",
+        "category": "Mental Health",
+        "type": "single_choice",
+        "question": "How would you rate your current stress level?",
+        "required": true,
+        "options": ["Very Low", "Low", "Moderate", "High", "Very High"],
+        "order": 13
+    },
+    {
+        "id": "diet_type",
+        "category": "Nutrition",
+        "type": "single_choice",
+        "question": "Which best describes your current diet?",
+        "required": true,
+        "options": ["Standard Diet", "Vegetarian", "Vegan", "Keto", "Paleo", "Mediterranean", "Other"],
+        "order": 14
+    },
+    {
+        "id": "water_intake",
+        "category": "Nutrition",
+        "type": "single_choice",
+        "question": "How many glasses of water do you drink per day?",
+        "required": false,
+        "options": ["1-2 glasses", "3-4 glasses", "5-6 glasses", "7-8 glasses", "9+ glasses"],
+        "order": 15
+    },
+    {
+        "id": "alcohol_consumption",
+        "category": "Lifestyle",
+        "type": "single_choice",
+        "question": "How often do you consume alcohol?",
+        "required": false,
+        "options": ["Never", "Rarely", "Weekly", "Daily", "Multiple times daily"],
+        "order": 16
+    },
+    {
+        "id": "smoking_status",
+        "category": "Lifestyle",
+        "type": "single_choice",
+        "question": "Do you smoke tobacco products?",
+        "required": true,
+        "options": ["Never", "Former smoker", "Occasional smoker", "Regular smoker"],
+        "order": 17
+    },
+    {
+        "id": "supplement_use",
+        "category": "Nutrition",
+        "type": "text",
+        "question": "What supplements or vitamins do you currently take?",
+        "required": false,
+        "options": null,
+        "order": 18
+    },
+    {
+        "id": "family_history_heart",
+        "category": "Medical History",
+        "type": "boolean",
+        "question": "Do you have a family history of heart disease?",
+        "required": false,
+        "options": null,
+        "order": 19
+    },
+    {
+        "id": "family_history_diabetes",
+        "category": "Medical History",
+        "type": "boolean",
+        "question": "Do you have a family history of diabetes?",
+        "required": false,
+        "options": null,
+        "order": 20
+    },
+    {
+        "id": "menstrual_cycle",
+        "category": "Demographics",
+        "type": "boolean",
+        "question": "Do you have regular menstrual cycles? (if applicable)",
+        "required": false,
+        "options": null,
+        "order": 21
+    },
+    {
+        "id": "pregnancy_status",
+        "category": "Demographics",
+        "type": "boolean",
+        "question": "Are you currently pregnant or trying to conceive?",
+        "required": false,
+        "options": null,
+        "order": 22
+    },
+    {
+        "id": "occupation_activity",
+        "category": "Lifestyle",
+        "type": "single_choice",
+        "question": "How would you describe your daily work activity level?",
+        "required": true,
+        "options": ["Sedentary (desk job)", "Light activity", "Moderate activity", "Heavy physical work"],
+        "order": 23
+    },
+    {
+        "id": "mental_health_support",
+        "category": "Mental Health",
+        "type": "boolean",
+        "question": "Are you currently receiving mental health support or therapy?",
+        "required": false,
+        "options": null,
+        "order": 24
+    },
+    {
+        "id": "data_consent",
+        "category": "Demographics",
+        "type": "boolean",
+        "question": "Do you consent to biometric data collection via face scan technology?",
+        "required": true,
+        "options": null,
+        "order": 25
+    }
+]

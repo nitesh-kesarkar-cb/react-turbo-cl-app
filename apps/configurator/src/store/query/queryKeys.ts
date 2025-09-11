@@ -4,4 +4,7 @@ export const queryKeys = {
   refresh: ["refresh"],
   scoreEngineTiers: ["scoreEngineTiers"],
   scoreEngineTierBioMarkers: "scoreEngineTierBioMarkers",
+
+  onboardingQuestions: ["onboardingQuestions"],
+  onboardingStats: ["onboardingStats"],
 };
