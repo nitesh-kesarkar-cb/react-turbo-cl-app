@@ -10,7 +10,6 @@ import { store } from "./store";
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from "./store/query";
 
-
 // Set theme before rendering
 setInitialTheme();
 
