@@ -16,17 +16,20 @@ import {
   TableHeader,
   TableRow,
 } from "@repo/ui/components/table";
+import { cn } from "../lib/utils";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
   renderSubComponent?: (row: TData) => React.ReactNode;
+  className?: string;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
   renderSubComponent,
+  className
 }: DataTableProps<TData, TValue>) {
   const table = useReactTable({
     data,
@@ -36,7 +39,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div className="rounded-md border">
+    <div className={cn("rounded-md border", className)}>
       <Table>
         {/* Header */}
         <TableHeader>
