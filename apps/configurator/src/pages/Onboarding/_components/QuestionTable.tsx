@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { ColumnDef } from "@tanstack/react-table";
 import { Checkbox } from "@repo/ui/components/checkbox";
