@@ -7,7 +7,7 @@ export interface BiomarkerConfig {
     weight: number;
     value: number;
     unit: string;
-    ranges: RiskZone[];
+    risk_zones: RiskZone[];
 }
 export interface RiskZone {
     name: string

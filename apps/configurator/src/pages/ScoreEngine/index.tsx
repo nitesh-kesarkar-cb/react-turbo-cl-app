@@ -2,14 +2,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/components/ca
 import { Button } from "@repo/ui/components/button";
 import { Separator } from "@repo/ui/components/separator";
 import { Checkbox } from "@repo/ui/components/checkbox";
-import { H1 } from "@repo/ui/components/heading";
-import { User } from "lucide-react";
-
 import { BiomarkerTable } from "./_components/BioMarkerTable";
 import { useFetchTierBioMarkers, useFetchTiers } from "@/store/query/scoreEngineQuery";
 import { useSelector } from "react-redux";
 import { Tier } from "@/types/ScoreEngine";
 import { useEffect, useMemo, useState } from "react";
+import ScoreEnginePageLoader from "@/components/skeleton/ScoreEngineLoader";
 
 export default function ScoreEngine() {
   const [selectedTier, setSelectedTier] = useState<Tier | null>(null);
@@ -27,30 +25,24 @@ export default function ScoreEngine() {
   }, [tiers, selectedTier]);
 
 
-    const handleTierSelect = useMemo(() => (val: string) => {
-      const tier = tiers.find((tier: Tier) => tier.value === val);
+  const handleTierSelect = useMemo(() => (val: string) => {
+    const tier = tiers.find((tier: Tier) => tier.value === val);
 
-      if (tier) {
-        setSelectedTier(tier);
-        refetchTierBiomarkers();
-      }
-    }, [selectedTier]);
+    if (tier) {
+      setSelectedTier(tier);
+      refetchTierBiomarkers();
+    }
+  }, [selectedTier]);
 
-  if (tiersLoading) return <div>Loading...</div>;
+
   return (
-    <div className="space-y-8 min-h-screen">
-      {/* Header */}
-      <div className="flex justify-between items-center">
-        <Button variant="outline" className="flex items-center gap-2 bg-white">
-          <User className="w-4 h-4" />
-          B2C Portal
-        </Button>
-      </div>
-
+    tiersLoading ? <div className="space-y-8 min-h-screen"><ScoreEnginePageLoader /> </div> : <div className="space-y-8 min-h-screen">
       {/* Tier Configuration */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold text-gray-700">Tier Configuration</CardTitle>
+          <div className="flex justify-between items-center">
+            <CardTitle className="text-xl font-semibold text-gray-700">Tier Configuration</CardTitle>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

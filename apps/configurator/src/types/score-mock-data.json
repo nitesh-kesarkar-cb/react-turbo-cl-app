@@ -8,7 +8,7 @@
         "weight": 5,
         "value": 0,
         "unit": "bpm",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -48,7 +48,7 @@
         "weight": 5,
         "value": 0,
         "unit": "bpm",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -88,7 +88,7 @@
         "weight": 6,
         "value": 0,
         "unit": "mmHg",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -128,7 +128,7 @@
         "weight": 6,
         "value": 0,
         "unit": "mmHg",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -168,7 +168,7 @@
         "weight": 5,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -208,7 +208,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -248,7 +248,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -288,7 +288,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -328,7 +328,7 @@
         "weight": 5,
         "value": 0,
         "unit": "kg/m²",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -368,7 +368,7 @@
         "weight": 4,
         "value": 0,
         "unit": "hours",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -408,7 +408,7 @@
         "weight": 5,
         "value": 0,
         "unit": "steps/day",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -448,7 +448,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -488,7 +488,7 @@
         "weight": 3,
         "value": 0,
         "unit": "1-10",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -528,7 +528,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -568,7 +568,7 @@
         "weight": 5,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -608,7 +608,7 @@
         "weight": 4,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -648,7 +648,7 @@
         "weight": 4,
         "value": 0,
         "unit": "mg/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -688,7 +688,7 @@
         "weight": 4,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -728,7 +728,7 @@
         "weight": 3,
         "value": 0,
         "unit": "drinks/week",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -768,7 +768,7 @@
         "weight": 5,
         "value": 0,
         "unit": "packs/day",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -808,7 +808,7 @@
         "weight": 3,
         "value": 0,
         "unit": "liters",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -848,7 +848,7 @@
         "weight": 4,
         "value": 0,
         "unit": "days/week",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -888,7 +888,7 @@
         "weight": 3,
         "value": 0,
         "unit": "kg/month",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -928,7 +928,7 @@
         "weight": 4,
         "value": 0,
         "unit": "1-10",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -968,7 +968,7 @@
         "weight": 3,
         "value": 0,
         "unit": "1-10",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1008,7 +1008,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1048,7 +1048,7 @@
         "weight": 3,
         "value": 0,
         "unit": "cm",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1088,7 +1088,7 @@
         "weight": 3,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1128,7 +1128,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1168,7 +1168,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1208,7 +1208,7 @@
         "weight": 4,
         "value": 0,
         "unit": "ms",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1248,7 +1248,7 @@
         "weight": 5,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1288,7 +1288,7 @@
         "weight": 4,
         "value": 0,
         "unit": "mIU/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1328,7 +1328,7 @@
         "weight": 4,
         "value": 0,
         "unit": "μmol/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1368,7 +1368,7 @@
         "weight": 6,
         "value": 0,
         "unit": "mL/kg/min",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1408,7 +1408,7 @@
         "weight": 4,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1448,7 +1448,7 @@
         "weight": 4,
         "value": 0,
         "unit": "mIU/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1488,7 +1488,7 @@
         "weight": 4,
         "value": 0,
         "unit": "mcg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1528,7 +1528,7 @@
         "weight": 4,
         "value": 0,
         "unit": "U/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1568,7 +1568,7 @@
         "weight": 4,
         "value": 0,
         "unit": "U/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1608,7 +1608,7 @@
         "weight": 4,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1648,7 +1648,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1688,7 +1688,7 @@
         "weight": 4,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1728,7 +1728,7 @@
         "weight": 4,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1768,7 +1768,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1808,7 +1808,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1848,7 +1848,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1888,7 +1888,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1928,7 +1928,7 @@
         "weight": 4,
         "value": 0,
         "unit": "AQI",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -1968,7 +1968,7 @@
         "weight": 3,
         "value": 0,
         "unit": "hours/day",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2008,7 +2008,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2048,7 +2048,7 @@
         "weight": 4,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2088,7 +2088,7 @@
         "weight": 5,
         "value": 0,
         "unit": "mL/min/1.73m²",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2128,7 +2128,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2168,7 +2168,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2208,7 +2208,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2248,7 +2248,7 @@
         "weight": 3,
         "value": 0,
         "unit": "g/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2288,7 +2288,7 @@
         "weight": 3,
         "value": 0,
         "unit": "g/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2328,7 +2328,7 @@
         "weight": 3,
         "value": 0,
         "unit": "g/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2368,7 +2368,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ratio",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2408,7 +2408,7 @@
         "weight": 4,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2448,7 +2448,7 @@
         "weight": 5,
         "value": 0,
         "unit": "kb",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2488,7 +2488,7 @@
         "weight": 5,
         "value": 0,
         "unit": "years",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2528,7 +2528,7 @@
         "weight": 5,
         "value": 0,
         "unit": "years",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2568,7 +2568,7 @@
         "weight": 4,
         "value": 0,
         "unit": "days",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2608,7 +2608,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2648,7 +2648,7 @@
         "weight": 4,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2688,7 +2688,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2728,7 +2728,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2768,7 +2768,7 @@
         "weight": 4,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2808,7 +2808,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2848,7 +2848,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2888,7 +2888,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2928,7 +2928,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -2968,7 +2968,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3008,7 +3008,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3048,7 +3048,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3088,7 +3088,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3128,7 +3128,7 @@
         "weight": 3,
         "value": 0,
         "unit": "nmol/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3168,7 +3168,7 @@
         "weight": 3,
         "value": 0,
         "unit": "μmol/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3208,7 +3208,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pmol/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3248,7 +3248,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3288,7 +3288,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3328,7 +3328,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3368,7 +3368,7 @@
         "weight": 2,
         "value": 0,
         "unit": "mcg/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3408,7 +3408,7 @@
         "weight": 2,
         "value": 0,
         "unit": "mcg/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3448,7 +3448,7 @@
         "weight": 2,
         "value": 0,
         "unit": "mcg/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3488,7 +3488,7 @@
         "weight": 2,
         "value": 0,
         "unit": "mcg/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3528,7 +3528,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3568,7 +3568,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3608,7 +3608,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3648,7 +3648,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mg/dL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3688,7 +3688,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3728,7 +3728,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3768,7 +3768,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3808,7 +3808,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3848,7 +3848,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3888,7 +3888,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3928,7 +3928,7 @@
         "weight": 3,
         "value": 0,
         "unit": "pmol/L",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -3968,7 +3968,7 @@
         "weight": 4,
         "value": 0,
         "unit": "variant",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4008,7 +4008,7 @@
         "weight": 5,
         "value": 0,
         "unit": "variant",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4048,7 +4048,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mcg/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4088,7 +4088,7 @@
         "weight": 3,
         "value": 0,
         "unit": "ng/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4128,7 +4128,7 @@
         "weight": 4,
         "value": 0,
         "unit": "ratio",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4168,7 +4168,7 @@
         "weight": 4,
         "value": 0,
         "unit": "units",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4208,7 +4208,7 @@
         "weight": 4,
         "value": 0,
         "unit": "units",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4248,7 +4248,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4288,7 +4288,7 @@
         "weight": 5,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4328,7 +4328,7 @@
         "weight": 5,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4368,7 +4368,7 @@
         "weight": 5,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4408,7 +4408,7 @@
         "weight": 4,
         "value": 0,
         "unit": "AU/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4448,7 +4448,7 @@
         "weight": 5,
         "value": 0,
         "unit": "years",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4488,7 +4488,7 @@
         "weight": 4,
         "value": 0,
         "unit": "nmol/mg",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4528,7 +4528,7 @@
         "weight": 4,
         "value": 0,
         "unit": "nmol/mL",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4568,7 +4568,7 @@
         "weight": 5,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4608,7 +4608,7 @@
         "weight": 3,
         "value": 0,
         "unit": "%",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4648,7 +4648,7 @@
         "weight": 4,
         "value": 0,
         "unit": "degrees",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4688,7 +4688,7 @@
         "weight": 5,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4728,7 +4728,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4768,7 +4768,7 @@
         "weight": 4,
         "value": 0,
         "unit": "score",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4808,7 +4808,7 @@
         "weight": 4,
         "value": 0,
         "unit": "ratio",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4848,7 +4848,7 @@
         "weight": 3,
         "value": 0,
         "unit": "mmol/g",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4888,7 +4888,7 @@
         "weight": 3,
         "value": 0,
         "unit": "log CFU/g",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4928,7 +4928,7 @@
         "weight": 3,
         "value": 0,
         "unit": "log CFU/g",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -4968,7 +4968,7 @@
         "weight": 4,
         "value": 0,
         "unit": "log CFU/g",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -5008,7 +5008,7 @@
         "weight": 3,
         "value": 0,
         "unit": "log CFU/g",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
@@ -5048,7 +5048,7 @@
         "weight": 3,
         "value": 0,
         "unit": "units",
-        "ranges": [
+        "risk_zones": [
             {
                 "name": "high",
                 "color": "#e53935",
