@@ -115,7 +115,7 @@ export default function ScoreEngine() {
                 <p className="text-gray-500 text-sm">Selected</p>
                 <p className="text-lg font-semibold">0</p>
               </Card>
-              <Card className="p-4 text-center bg-">
+              <Card className="p-4 text-center">
                 <p className="text-gray-500 text-sm">Total</p>
                 <p className="text-lg font-semibold">{selectedTier?.biomarkers_count}</p>
               </Card>
