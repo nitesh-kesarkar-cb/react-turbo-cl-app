@@ -5,7 +5,7 @@ export const store = configureStore({
     reducer: {
         auth: authReducer,
         scoreEngine: scoreEngineReducer,
-        onboarding:onBoardingReducer
+        onboarding: onBoardingReducer
     },
 });
 

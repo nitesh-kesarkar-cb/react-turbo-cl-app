@@ -23,7 +23,7 @@ export const useOnboardingQuestions = (categories: string[]) => {
 export const useOnboardingStats = () => {
   const dispatch = useDispatch();
   return useQuery({
-    queryKey: [queryKeys.scoreEngineTierBioMarkers],
+    queryKey: [queryKeys.onboardingStats],
     queryFn: async () => {
       const data = await fetchOnboardingStats();
       dispatch(setStats(data));

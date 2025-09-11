@@ -1,6 +1,5 @@
 import { Button } from "@repo/ui/components/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/components/card"
-
 import { useOnboardingQuestions, useOnboardingStats } from "@/store/query/onboardingQuery"
 import OnboardingPageLoader from "@/components/skeleton/OnboardingLoader"
 import { useSelector } from "react-redux"
@@ -12,20 +11,10 @@ export default function QuestionLibrary() {
 
   const { stats, questions } = useSelector((state: any) => state.onboarding);
 
-
-
   return (
     statsLoading || questionsLoading ? (
       <div className="space-y-8 min-h-screen">
         <OnboardingPageLoader />
-
-        {statsLoading || questionsLoading ? (
-          <div className="space-y-8 min-h-screen">
-            <OnboardingPageLoader />
-          </div>
-        ) : null}
-
-
       </div>
     ) :
       <div className="space-y-8 min-h-screen">
@@ -53,11 +42,7 @@ export default function QuestionLibrary() {
               </Card>
             </div>
             <div className="mt-4"> <QuestionTable questions={questions} /></div>
-
           </CardContent>
-
-
         </Card>
-
       </div>)
 }
