@@ -1,65 +1,78 @@
-import { Card, CardContent } from "@repo/ui/components/card";
-import { Input } from "@repo/ui/components/input";
-import { Text } from "@repo/ui/components/text";
+import { BiomarkerConfig } from "@/types/ScoreEngine"
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/ui/components/card"
+import { Input } from "@repo/ui/components/input"
+import { cn } from "@repo/ui/lib/utils"
+import { riskZoneTextColorMap } from "@/constants/mapColors"
 
-export function RiskZoneConfig({ biomarker }: { biomarker: string }) {
-  const zones = [
-    { label: "High Risk", color: "red", min: 100, max: 200, hazard: 2.0 },
-    { label: "Moderate Risk", color: "orange", min: 90, max: 99, hazard: 1.5 },
-    { label: "Low Risk", color: "yellow", min: 80, max: 89, hazard: 1.1 },
-    { label: "Optimal", color: "green", min: 60, max: 79, hazard: 0.9 },
-  ];
-
-  // Mapping objects for Tailwind classes
-  const borderColorMap: Record<string, string> = {
-    red: "border-red-400",
-    orange: "border-orange-400",
-    yellow: "border-yellow-400",
-    green: "border-green-400",
-  };
-
-  const textColorMap: Record<string, string> = {
-    red: "text-red-500",
-    orange: "text-orange-500",
-    yellow: "text-yellow-500",
-    green: "text-green-500",
-  };
-
+export function RiskZoneConfig({ biomarker }: { biomarker: BiomarkerConfig }) {
   return (
     <Card className="mt-2">
-      <CardContent className="p-6">
-        <h2 className="font-semibold mb-4">
-          Risk Zone Configuration for {biomarker}
+      <CardContent className="p-6 space-y-4">
+        <h2 className="text-xl font-semibold">
+          Risk Zone Configuration for {biomarker.name}
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          {zones.map((zone) => (
-            <Card key={zone.label} className={`border ${borderColorMap[zone.color]}`}>
-              <CardContent className="p-4 space-y-2">
-                <Text className={`font-medium ${textColorMap[zone.color]}`}>
-                  {zone.label}
-                </Text>
-                <div className="flex items-center gap-2">
-                  <span>Min:</span>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {biomarker.risk_zones.map((zone) => (
+            <Card
+              key={zone.name}
+              className="relative overflow-hidden shadow-sm border"
+            >
+              {/* Left colored side border */}
+              <div
+                className="absolute left-0 top-0 h-full w-2 rounded-l-lg"
+                style={{ backgroundColor: zone.color }}
+              />
+
+              <CardHeader>
+                <CardTitle
+                  className={cn(
+                    "flex items-center space-x-2 font-medium",
+                    riskZoneTextColorMap[zone.color]
+                  )}
+                >
+                  <span
+                    className="w-6 h-3 rounded-full"
+                    style={{ backgroundColor: zone.color }}
+                  />
+                  <span>
+                    {zone.name.charAt(0).toUpperCase() + zone.name.slice(1)} Risk
+                  </span>
+                </CardTitle>
+              </CardHeader>
+
+              <CardContent className="space-y-3">
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm font-medium">Min:</span>
                   <Input type="number" defaultValue={zone.min} className="w-20" />
-                </div>
-                <div className="flex items-center gap-2">
-                  <span>Max:</span>
+                  <span className="text-sm font-medium">Max:</span>
                   <Input type="number" defaultValue={zone.max} className="w-20" />
                 </div>
-                <div className="flex items-center gap-2">
-                  <span>Hazard Ratio:</span>
+
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm font-medium">Hazard Ratio:</span>
                   <Input
                     type="number"
                     step="0.1"
-                    defaultValue={zone.hazard}
-                    className="w-20"
+                    defaultValue={zone.hazardRatio}
+                    className="w-24"
                   />
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
+
+        <p className="text-sm text-muted-foreground italic">
+          <strong>Unit:</strong> {biomarker.unit} | <strong>Tier:</strong>{" "}
+          {biomarker.tier} | Evidence-based ranges from medical guidelines
+        </p>
       </CardContent>
     </Card>
-  );
+  )
 }

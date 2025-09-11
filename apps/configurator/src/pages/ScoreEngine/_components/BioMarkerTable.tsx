@@ -83,7 +83,7 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
     accessorKey: "riskZones",
     header: "Risk Zones",
     cell: ({ row }) => {
-      const riskZones = row.original.ranges as RiskZone[];
+      const riskZones = row.original.risk_zones as RiskZone[];
       return (
         <div className="flex gap-1">
           {riskZones.map((zone) => (
@@ -123,7 +123,7 @@ export const BiomarkerTable = ({ biomarkers }: { biomarkers: BiomarkerConfig[] }
       columns={biomarkerColumns}
       data={biomarkers}
       renderSubComponent={(row) => (
-        <RiskZoneConfig biomarker={row.name} />
+        <RiskZoneConfig biomarker={row} />
       )}
     />
   );
