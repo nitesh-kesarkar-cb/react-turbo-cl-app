@@ -35,5 +35,5 @@ const onboardingSlice = createSlice({
   },
 });
 
-export const { setQuestions, setSelected, setStats, setError,} = onboardingSlice.actions;
+export const { setQuestions, setSelected, setStats, setError } = onboardingSlice.actions;
 export const onBoardingReducer = onboardingSlice.reducer;
