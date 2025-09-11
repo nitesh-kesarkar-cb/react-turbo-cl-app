@@ -1,9 +1,7 @@
+import React from "react";
+
 const Onboarding = () => {
-  return (
-    <div>
-      <h1 className="font-bold text-2xl">Onboarding</h1>
-    </div>
-  );
+  return <div>Onboarding</div>;
 };
 
 export default Onboarding;

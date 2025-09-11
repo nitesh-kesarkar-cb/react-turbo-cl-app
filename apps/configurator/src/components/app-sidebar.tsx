@@ -2,6 +2,8 @@ import { cn } from "@repo/ui/lib/utils";
 import { useRouterState } from "@tanstack/react-router";
 import {
   BellIcon,
+  Building2Icon,
+  FileIcon,
   LockIcon,
   RocketIcon,
   Settings,
@@ -24,6 +26,9 @@ const menus: MenuItem[] = [
   { label: "Onboarding", route: "/onboarding", icon: RocketIcon },
   { label: "White Label", route: "/white-label", icon: TicketIcon },
   { label: "Access Control", route: "/access-control", icon: LockIcon },
+  { label: "Tenants", route: "/tenants", icon: Building2Icon },
+  { label: "Form Builder", route: "/form-builder", icon: FileIcon },
+  { label: "Onboarding One", route: "/onboarding-one", icon: RocketIcon },
 ];
 
 export function AppSidebar() {
@@ -78,10 +83,11 @@ export function AppSidebar() {
 
         {/* Footer fixed to bottom */}
         <div className="mt-auto">
-          <SidebarProvider><SidebarFooter>
-            <NavUser user={data.user} />
-          </SidebarFooter> </SidebarProvider>
-
+          <SidebarProvider>
+            <SidebarFooter>
+              <NavUser user={data.user} />
+            </SidebarFooter>{" "}
+          </SidebarProvider>
         </div>
       </div>
     </aside>
