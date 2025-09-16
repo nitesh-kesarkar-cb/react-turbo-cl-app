@@ -1,11 +1,9 @@
-import { useState } from "react";
 import { ColumnDef } from "@tanstack/react-table";
 import { Checkbox } from "@repo/ui/components/checkbox";
 import { Badge } from "@repo/ui/components/badge";
 import { DataTable } from "@repo/ui/components/data-table";
 import { Pencil, Trash } from "lucide-react";
 import { OnboardingQuestion } from "@/types/OnboardingQuestion";
-import { EditQuestionForm } from "./EditQuestionForm";
 
 const getQuestionColumns = (
     onEdit: (q: OnboardingQuestion) => void,
@@ -95,29 +93,7 @@ const getQuestionColumns = (
         },
     ];
 
-export const QuestionTable = ({ questions: initial }: { questions: OnboardingQuestion[] }) => {
-    const [questions, setQuestions] = useState<OnboardingQuestion[]>(initial);
-    const [editing, setEditing] = useState<OnboardingQuestion | null>(null);
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleEdit = (q: OnboardingQuestion) => {
-        setEditing(q);
-        setIsOpen(true);
-    };
-
-    const handleDelete = (id: string) => {
-        setQuestions((prev) => prev.filter((q) => q.id !== id));
-    };
-
-    const handleSave = (updated: OnboardingQuestion) => {
-        setQuestions((prev) => {
-            const exists = prev.find((q) => q.id === updated.id);
-            if (exists) {
-                return prev.map((q) => (q.id === updated.id ? updated : q));
-            }
-            return [...prev, updated];
-        });
-    };
+export const QuestionTable = ({ questions, handleDelete, handleEdit }: { questions: OnboardingQuestion[], handleEdit: (q: OnboardingQuestion) => void, handleDelete: (id: string) => void }) => {
 
     return (
         <div className="space-y-4">
@@ -127,14 +103,7 @@ export const QuestionTable = ({ questions: initial }: { questions: OnboardingQue
                 data={questions}
                 className="border rounded-md shadow-sm [&_tr]:border-b [&_td]:py-3"
             />
-            {editing && (
-                <EditQuestionForm
-                    question={editing}
-                    open={isOpen}
-                    onClose={() => setIsOpen(false)}
-                    onSave={handleSave}
-                />
-            )}
+
         </div>
     );
 };
