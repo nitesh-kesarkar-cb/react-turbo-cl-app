@@ -26,5 +26,5 @@ RUN npm install --workspace=apps/web
 # Expose dev ports
 EXPOSE 5173
 
-# Run dev server for configurator
+# Run dev server for web
 CMD ["npm", "run", "dev", "--workspace=apps/web"]
