@@ -13,7 +13,7 @@ services:
   configurator-dev:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: ./apps/configurator/Dockerfile
       args:
         APP: configurator
     volumes:
@@ -27,7 +27,7 @@ services:
   web-dev:
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: ./apps/web/Dockerfile
       args:
         APP: web
     volumes:

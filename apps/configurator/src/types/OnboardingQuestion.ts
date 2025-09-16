@@ -12,7 +12,7 @@ export interface OnboardingQuestion {
     type: QuestionType;
     question: string;
     required: boolean;
-    options?: string[];
+    options: string[] | null;
     order: number;
 }
 
