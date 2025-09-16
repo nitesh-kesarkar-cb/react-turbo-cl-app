@@ -1,4 +1,4 @@
-# Dev Dockerfile for configurator
+# Dev Dockerfile for web
 FROM node:22.18.0-alpine3.21 AS dev
 
 # Install dependencies
