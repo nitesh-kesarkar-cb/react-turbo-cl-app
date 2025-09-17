@@ -1,15 +1,15 @@
-import { BiomarkerConfig } from "@/types/ScoreEngine"
+import { riskZoneTextColorMap } from "@/constants/mapColors";
+import { BiomarkerConfig } from "@/types/ScoreEngine";
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-} from "@repo/ui/components/card"
-import { Input } from "@repo/ui/components/input"
-import { cn } from "@repo/ui/lib/utils"
-import { riskZoneTextColorMap } from "@/constants/mapColors"
+} from "@repo/ui/components/card";
+import { Input } from "@repo/ui/components/input";
+import { cn } from "@repo/ui/lib/utils";
 
-export function RiskZoneConfig({ biomarker }: { biomarker: BiomarkerConfig }) {
+function RiskZoneConfig({ biomarker }: { biomarker: BiomarkerConfig }) {
   return (
     <Card className="mt-2">
       <CardContent className="p-6 space-y-4">
@@ -41,7 +41,8 @@ export function RiskZoneConfig({ biomarker }: { biomarker: BiomarkerConfig }) {
                     style={{ backgroundColor: zone.color }}
                   />
                   <span>
-                    {zone.name.charAt(0).toUpperCase() + zone.name.slice(1)} Risk
+                    {zone.name.charAt(0).toUpperCase() + zone.name.slice(1)}{" "}
+                    Risk
                   </span>
                 </CardTitle>
               </CardHeader>
@@ -49,9 +50,17 @@ export function RiskZoneConfig({ biomarker }: { biomarker: BiomarkerConfig }) {
               <CardContent className="space-y-3">
                 <div className="flex items-center space-x-2">
                   <span className="text-sm font-medium">Min:</span>
-                  <Input type="number" defaultValue={zone.min} className="w-20" />
+                  <Input
+                    type="number"
+                    defaultValue={zone.min}
+                    className="w-20"
+                  />
                   <span className="text-sm font-medium">Max:</span>
-                  <Input type="number" defaultValue={zone.max} className="w-20" />
+                  <Input
+                    type="number"
+                    defaultValue={zone.max}
+                    className="w-20"
+                  />
                 </div>
 
                 <div className="flex items-center space-x-2">
@@ -74,5 +83,7 @@ export function RiskZoneConfig({ biomarker }: { biomarker: BiomarkerConfig }) {
         </p>
       </CardContent>
     </Card>
-  )
+  );
 }
+
+export default RiskZoneConfig;

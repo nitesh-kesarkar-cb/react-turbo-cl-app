@@ -1,27 +1,40 @@
-import { Button } from "@repo/ui/components/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/components/card"
-import { useOnboardingQuestions, useOnboardingStats } from "@/store/query/onboardingQuery"
-import OnboardingPageLoader from "@/components/skeleton/OnboardingLoader"
-import { useSelector } from "react-redux"
-import { QuestionTable } from "./_components/QuestionTable"
-import { useState } from "react"
-import { OnboardingQuestion } from "@/types/OnboardingQuestion"
-import { EditQuestionForm } from "./_components/EditQuestionForm"
+import {
+  useGetOnboardingQuestions,
+  useGetOnboardingStats,
+} from "@/api/query/onboarding";
+import { EditQuestionForm, QuestionTable } from "@/components/onboarding";
+import OnboardingPageLoader from "@/components/skeleton/OnboardingLoader";
+import { OnboardingQuestion } from "@/types/OnboardingQuestion";
+import { Button } from "@repo/ui/components/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@repo/ui/components/card";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export default function QuestionLibrary() {
-  const { isLoading: questionsLoading } = useOnboardingQuestions([])
-  const { isLoading: statsLoading } = useOnboardingStats()
+  const { isLoading: questionsLoading } = useGetOnboardingQuestions([]);
+  const { isLoading: statsLoading } = useGetOnboardingStats();
 
-  const { stats, questions: initial } = useSelector((state: any) => state.onboarding)
+  const { stats, questions: initial } = useSelector(
+    (state: any) => state.onboarding
+  );
 
-  const [questions, setQuestions] = useState<OnboardingQuestion[]>(initial)
-  const [editing, setEditing] = useState<OnboardingQuestion | null>(null)
-  const [isOpen, setIsOpen] = useState(false)
+  const [questions, setQuestions] = useState<OnboardingQuestion[]>(initial);
+  const [editing, setEditing] = useState<OnboardingQuestion | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setQuestions(initial);
+  }, [initial]);
 
   const handleEdit = (q: OnboardingQuestion) => {
-    setEditing(q)
-    setIsOpen(true)
-  }
+    setEditing(q);
+    setIsOpen(true);
+  };
 
   const handleAdd = () => {
     setEditing({
@@ -32,26 +45,29 @@ export default function QuestionLibrary() {
       required: false,
       question: "",
       order: 0,
-      options: null
-    } as OnboardingQuestion)
-    setIsOpen(true)
-  }
+      options: null,
+    } as OnboardingQuestion);
+    setIsOpen(true);
+  };
 
   const handleDelete = (id: string) => {
-    setQuestions((prev) => prev.filter((q) => q.id !== id))
-  }
+    setQuestions((prev) => prev.filter((q) => q.id !== id));
+  };
 
   const handleSave = (updated: OnboardingQuestion) => {
     setQuestions((prev) => {
-      const exists = prev.find((q) => q.id === updated.id)
+      const exists = prev.find((q) => q.id === updated.id);
       if (exists) {
-        return prev.map((q) => (q.id === updated.id ? updated : q))
+        return prev.map((q) => (q.id === updated.id ? updated : q));
       }
-      return [...prev, updated]
-    })
-    setIsOpen(false)
-    setEditing(null)
-  }
+      return [...prev, updated];
+    });
+    setIsOpen(false);
+    setEditing(null);
+  };
+
+  console.log(initial);
+  console.log("questions", questions);
 
   return statsLoading || questionsLoading ? (
     <div className="space-y-8 min-h-screen">
@@ -101,12 +117,12 @@ export default function QuestionLibrary() {
           question={editing}
           open={isOpen}
           onClose={() => {
-            setIsOpen(false)
-            setEditing(null)
+            setIsOpen(false);
+            setEditing(null);
           }}
           onSave={handleSave}
         />
       )}
     </div>
-  )
+  );
 }

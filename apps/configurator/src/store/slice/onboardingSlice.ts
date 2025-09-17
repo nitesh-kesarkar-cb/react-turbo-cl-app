@@ -1,5 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { OnboardingState, OnboardingQuestion, OnboardingStats } from "@/types/OnboardingQuestion";
+import {
+  OnboardingState,
+  OnboardingQuestion,
+  OnboardingStats,
+} from "@/types/OnboardingQuestion";
 
 const initialState: OnboardingState = {
   questions: [],
@@ -35,5 +39,6 @@ const onboardingSlice = createSlice({
   },
 });
 
-export const { setQuestions, setSelected, setStats, setError, setStatus } = onboardingSlice.actions;
+export const { setQuestions, setSelected, setStats, setError, setStatus } =
+  onboardingSlice.actions;
 export const onBoardingReducer = onboardingSlice.reducer;
