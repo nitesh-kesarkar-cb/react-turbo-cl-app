@@ -1,4 +1,4 @@
 export * from "./authSlice";
-export * from "./score-engine.slice";
-export * from "./onboarding.slice";
+export * from "./scoreEngineSlice";
+export * from "./onboardingSlice";
 export * from "./tenantSlice";

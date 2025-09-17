@@ -1,12 +1,12 @@
-import { ColumnDef } from "@tanstack/react-table";
-import { Checkbox } from "@repo/ui/components/checkbox";
-import { Input } from "@repo/ui/components/input";
 import { Badge } from "@repo/ui/components/badge";
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { Checkbox } from "@repo/ui/components/checkbox";
 import { DataTable } from "@repo/ui/components/data-table";
-import { RiskZoneConfig } from "./RiskZoneConfig"
+import { Input } from "@repo/ui/components/input";
+import { ColumnDef } from "@tanstack/react-table";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 import { BiomarkerConfig, RiskZone } from "@/types/ScoreEngine";
+import RiskZoneConfig from "./RiskZoneConfig";
 
 export type Biomarker = {
   id: string;
@@ -62,7 +62,11 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
     accessorKey: "weight",
     header: "Weight",
     cell: ({ row }) => (
-      <Input type="number" defaultValue={row.original.weight} className="w-14" />
+      <Input
+        type="number"
+        defaultValue={row.original.weight}
+        className="w-14"
+      />
     ),
   },
   {
@@ -71,8 +75,14 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
     header: "Value",
     cell: ({ row }) => (
       <div className="flex items-center gap-1">
-        <Input type="number" defaultValue={row.original.value} className="w-14" />
-        <span className="text-xs text-muted-foreground">{row.original.unit}</span>
+        <Input
+          type="number"
+          defaultValue={row.original.value}
+          className="w-14"
+        />
+        <span className="text-xs text-muted-foreground">
+          {row.original.unit}
+        </span>
       </div>
     ),
   },
@@ -113,16 +123,14 @@ export const biomarkerColumns: ColumnDef<BiomarkerConfig>[] = [
   },
 ];
 
-export const BiomarkerTable = ({ biomarkers }: { biomarkers: BiomarkerConfig[] }) => {
-
-
+const BiomarkerTable = ({ biomarkers }: { biomarkers: BiomarkerConfig[] }) => {
   return (
     <DataTable
       columns={biomarkerColumns}
       data={biomarkers}
-      renderSubComponent={(row) => (
-        <RiskZoneConfig biomarker={row} />
-      )}
+      renderSubComponent={(row) => <RiskZoneConfig biomarker={row} />}
     />
   );
-}
+};
+
+export default BiomarkerTable;

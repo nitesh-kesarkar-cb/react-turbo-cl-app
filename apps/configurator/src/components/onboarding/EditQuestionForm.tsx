@@ -1,30 +1,43 @@
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useSelector } from "react-redux"; // or context if you have one
 import { OnboardingQuestion, QuestionType } from "@/types/OnboardingQuestion";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@repo/ui/components/button";
+import { Checkbox } from "@repo/ui/components/checkbox";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from "@repo/ui/components/dialog";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@repo/ui/components/select";
-import { Button } from "@repo/ui/components/button";
-import { Checkbox } from "@repo/ui/components/checkbox";
 import { Input } from "@repo/ui/components/input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@repo/ui/components/select";
+import { useForm } from "react-hook-form";
+import { useSelector } from "react-redux"; // or context if you have one
+import { z } from "zod";
 
 // ✅ Zod schema
 const QuestionSchema = z.object({
   question: z.string().min(5, "Question text is required"),
   category: z.string().min(1, "Category is required"),
-  type: z.enum(["number", "single_choice", "multi_choice", "text", "date", "boolean"]),
+  type: z.enum([
+    "number",
+    "single_choice",
+    "multi_choice",
+    "text",
+    "date",
+    "boolean",
+  ]),
   required: z.boolean(),
 });
 
 type QuestionFormValues = z.infer<typeof QuestionSchema>;
 
-export function EditQuestionForm({
+function EditQuestionForm({
   question,
   open,
   onClose,
@@ -68,10 +81,10 @@ export function EditQuestionForm({
         <form onSubmit={handleSubmit(submitHandler)} className="space-y-4">
           {/* Question Text */}
           <div>
-            <label className="block text-sm font-medium mb-1">Question Text</label>
-            <Input
-              {...register("question")}
-            />
+            <label className="block text-sm font-medium mb-1">
+              Question Text
+            </label>
+            <Input {...register("question")} />
             {errors.question && (
               <p className="text-sm text-red-500">{errors.question.message}</p>
             )}
@@ -102,7 +115,9 @@ export function EditQuestionForm({
 
           {/* Question Type */}
           <div className="mt-2">
-            <label className="block text-sm font-medium mb-1">Question Type</label>
+            <label className="block text-sm font-medium mb-1">
+              Question Type
+            </label>
             <Select
               defaultValue={question.type}
               onValueChange={(val) =>
@@ -149,3 +164,5 @@ export function EditQuestionForm({
     </Dialog>
   );
 }
+
+export default EditQuestionForm;
