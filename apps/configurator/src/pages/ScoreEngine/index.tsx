@@ -53,7 +53,7 @@ export default function ScoreEngine() {
       <Card>
         <CardHeader>
           <div className="flex justify-between items-center">
-            <CardTitle className="text-xl font-semibold text-gray-700">
+            <CardTitle className="text-xl font-semibold text-gray-700 dark:text-gray-200">
               Tier Configuration
             </CardTitle>
           </div>
@@ -66,7 +66,7 @@ export default function ScoreEngine() {
                 className={`p-6 rounded-lg cursor-pointer transition-all ${
                   selectedTier?.value === tier.value
                     ? "bg-blue-500 text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
                 }`}
                 onClick={() => handleTierSelect(tier.value)}
               >
@@ -85,7 +85,7 @@ export default function ScoreEngine() {
       {/* Score Types */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-xl font-semibold text-gray-700">
+          <CardTitle className="text-xl font-semibold text-gray-700 dark:text-gray-200">
             Score Types
           </CardTitle>
         </CardHeader>
@@ -121,7 +121,7 @@ export default function ScoreEngine() {
       <Card>
         <CardHeader>
           <div className="flex justify-between items-center">
-            <CardTitle className="text-xl font-semibold text-gray-700">
+            <CardTitle className="text-xl font-semibold text-gray-700 dark:text-gray-200">
               Biomarker Configuration
             </CardTitle>
             <div className="flex gap-2">

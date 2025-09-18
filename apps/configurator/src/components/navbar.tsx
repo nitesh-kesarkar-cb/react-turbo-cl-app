@@ -10,7 +10,12 @@ import { LogIn, User } from "lucide-react";
 import { ThemeToggle } from "./theme/theme-toggle";
 import { useLocation } from "@tanstack/react-router";
 import { H2 } from "@repo/ui/components/heading";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@repo/ui/components/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@repo/ui/components/dropdown-menu";
 
 type User = {
   name: string;
@@ -34,10 +39,13 @@ export function Navbar({
     location.pathname === "/"
       ? "Home"
       : location.pathname.slice(1).charAt(0).toUpperCase() +
-      location.pathname.slice(2).replace(/-/g, " ");
+        location.pathname.slice(2).replace(/-/g, " ");
 
   return (
-    <nav className="w-full border-b bg-white/80 backdrop-blur" {...props}>
+    <nav
+      className="w-full border-b bg-white/80 backdrop-blur dark:bg-gray-800"
+      {...props}
+    >
       <div className="flex h-14 items-center px-6">
         {/* LEFT: Page Title */}
         <H2 className="text-lg font-semibold">{pageTitle}</H2>
@@ -114,4 +122,3 @@ export function Navbar({
     </nav>
   );
 }
-
