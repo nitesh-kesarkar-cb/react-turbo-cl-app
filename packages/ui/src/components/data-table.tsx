@@ -1,4 +1,3 @@
-
 import * as React from "react";
 
 import {
@@ -29,7 +28,7 @@ export function DataTable<TData, TValue>({
   columns,
   data,
   renderSubComponent,
-  className
+  className,
 }: DataTableProps<TData, TValue>) {
   const table = useReactTable({
     data,
@@ -51,7 +50,7 @@ export function DataTable<TData, TValue>({
                     ? null
                     : flexRender(
                         header.column.columnDef.header,
-                        header.getContext(),
+                        header.getContext()
                       )}
                 </TableHead>
               ))}
@@ -73,7 +72,7 @@ export function DataTable<TData, TValue>({
                     <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
-                        cell.getContext(),
+                        cell.getContext()
                       )}
                     </TableCell>
                   ))}
@@ -82,7 +81,10 @@ export function DataTable<TData, TValue>({
                 {/* Expanded row (if renderSubComponent is passed) */}
                 {row.getIsExpanded() && renderSubComponent && (
                   <TableRow>
-                    <TableCell colSpan={columns.length} className="bg-gray-50">
+                    <TableCell
+                      colSpan={columns.length}
+                      className="bg-gray-50 p-0"
+                    >
                       {renderSubComponent(row.original)}
                     </TableCell>
                   </TableRow>
