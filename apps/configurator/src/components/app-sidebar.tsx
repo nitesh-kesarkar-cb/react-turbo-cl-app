@@ -51,7 +51,7 @@ export function AppSidebar() {
   return (
     <aside
       className={cn(
-        "border-r bg-white transition-all duration-300 flex flex-col",
+        "border-r bg-white dark:bg-gray-800 dark:border-gray-700 transition-all duration-300 flex flex-col",
         collapsed ? "w-16" : "w-56"
       )}
     >
@@ -62,10 +62,10 @@ export function AppSidebar() {
           {!collapsed && (
             <button className="flex items-center rounded-xl p-2 transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50">
               <p className="grid h-9 w-9 place-items-center rounded-lg bg-primary text-primary-foreground text-sm font-semibold">
-              ⌘ 
+                ⌘
               </p>
               <p className="text-base font-medium leading-none ml-2">
-              Wellness Portal
+                Wellness Portal
               </p>
             </button>
           )}
@@ -135,7 +135,7 @@ function SidebarItem({
         "group flex items-center rounded-lg px-3 py-2 text-[15px] font-medium transition-colors",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
         active
-          ? "bg-accent text-accent-foreground"
+          ? "bg-accent dark:bg-gray-600 text-accent-foreground"
           : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
         collapsed ? "justify-center" : "gap-3"
       )}

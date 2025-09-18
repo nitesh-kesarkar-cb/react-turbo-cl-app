@@ -87,17 +87,17 @@ export default function QuestionLibrary() {
         </CardHeader>
         <CardContent className="p-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Card className="p-4 text-center">
+            <Card className="p-4 text-center dark:bg-gray-800">
               <p className="text-gray-500 text-sm">Selected</p>
               <p className="text-lg font-semibold">0</p>
             </Card>
-            <Card className="p-4 text-center">
+            <Card className="p-4 text-center dark:bg-gray-800">
               <p className="text-gray-500 text-sm">Categories</p>
               <p className="text-lg font-semibold">
                 {stats?.categories.length}
               </p>
             </Card>
-            <Card className="p-4 text-center">
+            <Card className="p-4 text-center dark:bg-gray-800">
               <p className="text-gray-500 text-sm">Total Questions</p>
               <p className="text-lg font-semibold">{stats?.total_questions}</p>
             </Card>

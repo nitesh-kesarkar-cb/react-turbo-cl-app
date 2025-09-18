@@ -11,12 +11,15 @@ const getQuestionColumns = (
 ): ColumnDef<OnboardingQuestion>[] => [
   {
     id: "select",
-    header: () => <Checkbox aria-label="Select all" />,
+    header: () => (
+      <Checkbox aria-label="Select all" className="dark:border-gray-300" />
+    ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(val) => row.toggleSelected(!!val)}
         aria-label="Select row"
+        className="dark:border-gray-300"
       />
     ),
     enableSorting: false,
@@ -27,7 +30,7 @@ const getQuestionColumns = (
     header: "Question",
     size: 280,
     cell: ({ row }) => (
-      <span className="font-medium text-gray-900 max-w-[260px] whitespace-normal break-words block">
+      <span className="font-medium max-w-[260px] whitespace-normal break-words block">
         {row.original.question}
       </span>
     ),

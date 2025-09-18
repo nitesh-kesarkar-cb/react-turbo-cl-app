@@ -30,7 +30,7 @@ import {
 
 export function NavUser({
   user,
-  collapsed
+  collapsed,
 }: {
   user: {
     name: string;
